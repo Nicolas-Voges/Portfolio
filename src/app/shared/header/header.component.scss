@@ -1,7 +1,7 @@
  @use './../../../styles.scss' as *;
 
  :host {
-     background-image: linear-gradient(#000, rgba(0, 0, 0, 0.6));
+     background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
      position: absolute;
      top: 0;
      left: 0;

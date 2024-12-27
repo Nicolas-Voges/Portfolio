@@ -31,10 +31,14 @@ main {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
   border: unset;
+  background-color: unset;
+  color: $color-contrast;
+  cursor: pointer;
 }
 
 body {
@@ -42,15 +46,72 @@ body {
   width: 100vw;
   max-width: 100%;
   background-color: $color-main;
+  color: $color-contrast;
+  font-family: Karla;
+}
+
+h1 {
+  font-size: 128px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 700;
+  color: $color-accent;
+  font-family: Fira Code;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: Fira Code;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $color-accent;
 }
 
 .max-width {
   max-width: 1980px;
 }
 
+@keyframes move-left {
+  0%{
+    transform: translateX(140px);
+  }
+  50%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-140px);
+  }
+}
+
+.primary-btn-text {
+  color: $color-contrast;
+  transition: all 0.1s ease-in-out;
+  display: inline-block;
+}
+
 .primary-btn {
   padding: 12px 24px;
-  border: 1px solid;
+  border: 1px solid $color-contrast;
+  border-radius: 100px;
+  transition: all 0.1s ease-in-out;
+  overflow: hidden;
+
+  &:hover {
+    border-color: $color-accent;
+  }
+
+  &:hover .primary-btn-text {
+    color: $color-accent;
+    animation: move-left 2s linear infinite;
+    animation-delay: -1s;
+  }
 }
 
 .translation-box {
@@ -83,6 +144,7 @@ body {
     border-radius: 14px;
     border: 1px solid $color-accent;
     content: "EN";
+    font-weight: 400;
     text-align: center;
     @include flex($j: flex-start);
     padding: 0 12px;
@@ -106,6 +168,7 @@ body {
     background-color: $color-accent;
     pointer-events: all;
     content: "DE";
+    font-weight: 700;
     color: $color-contrast;
     @include flex();
     transition: all 0.1s linear;
