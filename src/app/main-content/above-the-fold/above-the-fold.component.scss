@@ -1,0 +1,8 @@
+ @use './../../../styles.scss' as *;
+
+ :host {
+     background-image: linear-gradient(35deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59));
+     height: 100vh;
+     width: 100%;
+     @include flex();
+ }
