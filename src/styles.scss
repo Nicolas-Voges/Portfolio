@@ -26,7 +26,7 @@ main {
   height: 98px;
   @include flex($j: space-between);
   max-width: 1980px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 a {
@@ -79,28 +79,30 @@ h4 {
 }
 
 @keyframes move-left {
-  0%{
+  0% {
     transform: translateX(140px);
   }
-  50%{
+
+  50% {
     transform: translateX(0);
   }
-  100%{
+
+  100% {
     transform: translateX(-140px);
   }
 }
 
 .primary-btn-text {
   color: $color-contrast;
-  transition: all 0.1s ease-in-out;
   display: inline-block;
+  font-size: 18px;
 }
 
 .primary-btn {
   padding: 12px 24px;
   border: 1px solid $color-contrast;
   border-radius: 100px;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.125s ease-in-out;
   overflow: hidden;
 
   &:hover {
@@ -109,6 +111,7 @@ h4 {
 
   &:hover .primary-btn-text {
     color: $color-accent;
+    transition: all 0.125s ease-in-out;
     animation: move-left 2s linear infinite;
     animation-delay: -1s;
   }

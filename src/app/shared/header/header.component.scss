@@ -8,11 +8,42 @@
      right: 0;
  }
 
- .link-box {
+ .link-underline {
+     position: absolute;
+     width: 8px;
+     height: 8px;
+     object-fit: cover;
+     left: 50%;
+     bottom: -8px;
+     opacity: 0;
+     transition: all 0.125s ease-in-out;
+ }
+
+ .logo {
+    width: 35px;
+    height: 48px;
+    object-fit: cover;
+  }
+
+ .links-box {
      @include flex($g: 24px);
+
+
+ }
+
+ .link-box {
+     position: relative;
+
+     &:hover .link-underline {
+         opacity: 1;
+     }
 
      &>a {
          color: $color-contrast;
          font-family: Fira Code;
      }
+
+     //  &>a:hover .link-underline {
+     //     opacity: 1;
+     //  }
  }

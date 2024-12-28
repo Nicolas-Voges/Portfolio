@@ -1,16 +1,68 @@
  @use './../../../styles.scss' as *;
 
  :host {
-     background-image: linear-gradient(35deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59), rgb(8, 70, 59), rgb(8, 70, 59));
-     height: 100vh;
-     width: 100%;
-     @include flex();
+    background-image: linear-gradient(35deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59), rgb(8, 70, 59), rgb(8, 70, 59));
+    height: 100vh;
+    width: 100%;
+    @include flex();
  }
 
  main {
+    position: relative;
     @include flex($d: column);
+    text-align: center;
  }
 
  .btn-box {
-    @include flex($g:48px);
+    @include flex($g: 48px);
+ }
+
+ .left-decorator {
+    align-self: baseline;
+    position: absolute;
+    bottom: calc(-50vh + 50%);
+    left: 96px;
+    @include flex($d: column, $a: center, $g: 24px)
+ }
+
+ .right-decorator {
+    align-self: baseline;
+    position: absolute;
+    bottom: calc(-50vh + 50%);
+    right: 96px;
+    @include flex($d: column, $a: center, $g: 24px)
+ }
+
+ .social-box {
+   @include flex($g:15px, $d: column, );
+ }
+
+ .e-mail {
+   writing-mode: vertical-lr;
+   transform: rotateZ(180deg);
+ }
+
+ .vertical-line {
+    height: 240px;
+    width: 0;
+    border: 1px solid $color-accent;
+ }
+
+ .vertical-line-small {
+    height: 186px;
+    width: 0;
+    border: 1px solid $color-accent;
+ }
+
+ .arrow-box {
+    width: 30px;
+    height: 48px;
+    border: 1px solid $color-accent;
+    border-radius: 32px;
+    @include flex();
+ }
+
+ .arrow-down {
+    width: 12px;
+    height: 18px;
  }
