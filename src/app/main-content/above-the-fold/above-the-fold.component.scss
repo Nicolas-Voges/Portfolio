@@ -14,32 +14,39 @@
  }
 
  .btn-box {
+    margin-top: 40px;
     @include flex($g: 48px);
  }
 
- .left-decorator {
+ .decorator {
     align-self: baseline;
     position: absolute;
     bottom: calc(-50vh + 50%);
-    left: 96px;
     @include flex($d: column, $a: center, $g: 24px)
  }
 
- .right-decorator {
-    align-self: baseline;
-    position: absolute;
-    bottom: calc(-50vh + 50%);
-    right: 96px;
-    @include flex($d: column, $a: center, $g: 24px)
+ .left-96 {
+    left: 96px
+ }
+
+ .right-96 {
+    right: 96px
  }
 
  .social-box {
-   @include flex($g:15px, $d: column, );
+    padding: 3px;
+    @include flex($g: 16px, $d: column, );
+ }
+
+ .single-icon-box {
+    width: 26px;
+    height: 26px;
  }
 
  .e-mail {
-   writing-mode: vertical-lr;
-   transform: rotateZ(180deg);
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
+    font-size: 18px;
  }
 
  .vertical-line {
@@ -54,6 +61,20 @@
     border: 1px solid $color-accent;
  }
 
+ @keyframes bounce {
+    0% {
+       transform: translateY(0);
+    }
+
+    50% {
+       transform: translateY(8px);
+    }
+
+    100% {
+       transform: translateY(0);
+    }
+ }
+
  .arrow-box {
     width: 30px;
     height: 48px;
@@ -63,6 +84,53 @@
  }
 
  .arrow-down {
-    width: 12px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
+    animation: bounce 1.25s ease-in-out infinite;
+ }
+
+ .social-icon {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    object-position: center;
+    filter: invert(68%) sepia(25%) saturate(963%) hue-rotate(120deg) brightness(200%) contrast(89%);
+    transition: all 0.125s ease-in-out;
+
+    &:hover {
+       filter: unset;
+    }
+
+    &:hover~.social-green-dot {
+       opacity: 1;
+    }
+ }
+
+ .social-green-dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -16px;
+    opacity: 0;
+    transition: all 0.125s ease-in-out;
+ }
+
+ .text-tape {
+    position: absolute;
+    z-index: 50;
+    transform: rotateZ(-3deg);
+    bottom: calc(-50vh + 100%);
+    width: 100vw;
+    padding: 12px 108px;
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    background-color: rgba($color: #fff, $alpha: 0.12);
+    @include flex($g: 56px);
+ }
+
+ .text-tape-text {
+    font-size: 32px;
+    color: $color-accent;
+    white-space: nowrap;
  }

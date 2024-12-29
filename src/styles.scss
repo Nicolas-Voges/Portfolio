@@ -48,6 +48,7 @@ body {
   background-color: $color-main;
   color: $color-contrast;
   font-family: Karla;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -76,6 +77,10 @@ h4 {
 
 .max-width {
   max-width: 1980px;
+}
+
+.position-relative {
+  position: relative;
 }
 
 @keyframes move-left {
