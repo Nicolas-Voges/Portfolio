@@ -1,1 +1,20 @@
-<p>about-me works!</p>
+<main>
+    <img class="photo" src="assets/img/photo.png" alt="photo">
+    <section>
+        <h4>Who I Am</h4>
+        <div class="card">
+            <h2>About me</h2>
+            <p class="main-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsum quisquam iusto accusamus dolores tenetur quis corrupti, similique, natus laboriosam magnam deleniti dolore. Sint explicabo dolor itaque, porro inventore officia!</p>
+            <div class="sub-text-box"> <!-- @for  -->
+                @for (item of aboutMeTexts; track $index) {
+                    <div class="icon-text-box">
+                        <div class="icon-box">
+                            <img class="img-contain" src="assets/img/{{ item.name }}.svg" alt="{{ item.name }}">
+                        </div>
+                         <span>{{ item.text }}</span>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

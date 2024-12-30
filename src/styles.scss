@@ -2,9 +2,9 @@ $color-main: #1c1c1c;
 $color-accent: #3dcfb6;
 $color-accent-50: rgba(61, 207, 182, 0.5);
 $color-contrast: white;
-$main-padding: 0 96px;
+$padding-main-sides: 96px;
 
-@mixin flex($d: row, $a: center, $j: center, $g: 8px, $w: nowrap, $f: unset) {
+@mixin flex($d: row, $a: center, $j: center, $g: 0, $w: nowrap, $f: unset) {
   display: flex;
   flex-direction: $d;
   align-items: $a;
@@ -14,17 +14,28 @@ $main-padding: 0 96px;
   flex: $f;
 }
 
+@mixin img($f: cover) {
+  object-fit: $f;
+  object-position: center;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
+.img-cover {
+  @include img();
+}
+
+.img-contain {
+  @include img($f: contain);
+}
+
 main {
-  padding: $main-padding;
   width: 100%;
-  height: 98px;
-  @include flex($j: space-between);
+  @include flex();
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -54,6 +65,8 @@ body {
 h1 {
   font-size: 128px;
   font-weight: 700;
+  white-space: nowrap;
+  cursor: default;
 }
 
 h2 {
@@ -61,18 +74,26 @@ h2 {
   font-weight: 700;
   color: $color-accent;
   font-family: Fira Code;
+  white-space: nowrap;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  cursor: default;
 }
 
 h3 {
   font-size: 40px;
   font-weight: 400;
   font-family: Fira Code;
+  white-space: nowrap;
+  cursor: default;
 }
 
 h4 {
   font-size: 24px;
   font-weight: 700;
   color: $color-accent;
+  white-space: nowrap;
+  cursor: default;
 }
 
 .max-width {

@@ -11,6 +11,8 @@
     position: relative;
     @include flex($d: column);
     text-align: center;
+    padding: 0 $padding-main-sides;
+    height: 100vh;
  }
 
  .btn-box {
@@ -25,17 +27,17 @@
     @include flex($d: column, $a: center, $g: 24px)
  }
 
- .left-96 {
-    left: 96px
+ .left-decorator-position {
+    left: $padding-main-sides;
  }
 
- .right-96 {
-    right: 96px
+ .right-decorator-position {
+    right: $padding-main-sides;
  }
 
  .social-box {
     padding: 3px;
-    @include flex($g: 16px, $d: column, );
+    @include flex($g: 16px, $d: column);
  }
 
  .single-icon-box {
@@ -58,7 +60,7 @@
  .vertical-line-small {
     height: 186px;
     width: 0;
-    border: 1px solid $color-accent;
+    border: 1px solid $color-contrast;
  }
 
  @keyframes bounce {
@@ -91,6 +93,7 @@
 
  .social-icon {
     position: relative;
+    cursor: pointer;
     width: 26px;
     height: 26px;
     object-fit: contain;
@@ -119,18 +122,28 @@
  .text-tape {
     position: absolute;
     z-index: 50;
-    transform: rotateZ(-3deg);
-    bottom: calc(-50vh + 100%);
+    transform: rotateZ(-3deg) translateY(-2.6205vw);  // make media query for big screens with --> transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205));
+    bottom: 0;
     width: 100vw;
     padding: 12px 108px;
     backdrop-filter: blur(3px);
     overflow: hidden;
-    background-color: rgba($color: #fff, $alpha: 0.12);
-    @include flex($g: 56px);
- }
+    background-color: rgba($color: $color-contrast, $alpha: 0.12);
+   @include flex($g: 0);
+   cursor: default;
+}
 
  .text-tape-text {
     font-size: 32px;
     color: $color-accent;
     white-space: nowrap;
+ }
+
+ .text-box {
+   @include flex($g: 56px, $j: flex-start);
+ }
+
+ .text-view-box {
+   overflow: hidden;
+   max-width: 1980px;
  }

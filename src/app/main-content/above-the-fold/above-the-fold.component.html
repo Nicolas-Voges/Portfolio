@@ -5,13 +5,13 @@
         <button class="primary-btn"><span class="primary-btn-text">Check my work</span></button>
         <button class="primary-btn"><span class="primary-btn-text">Contact me</span></button>
     </div>
-    <aside class="decorator left-96">
+    <aside class="decorator left-decorator-position">
         <div class="arrow-box">
             <img class="arrow-down" src="./../../../assets/img/arrow_down.svg" alt="arrow down">
         </div>
         <div class="vertical-line"></div>
     </aside>
-    <aside class="decorator right-96">
+    <aside class="decorator right-decorator-position">
         <span class="e-mail">Nicolas.voges&#64;hotmail.com</span>
         <div class="social-box">
             <div class="single-icon-box position-relative">
@@ -26,13 +26,13 @@
         <div class="vertical-line-small"></div>
     </aside>
     <section class="text-tape">
-        <span class="text-tape-text">Open to work</span>
-        <img src="assets/img/green_dot.svg" alt="">
-        <span class="text-tape-text">Also available for remote work</span>
-        <img src="assets/img/green_dot.svg" alt="">
-        <span class="text-tape-text">Frontend Developer</span>
-        <img src="assets/img/green_dot.svg" alt="">
-        <span class="text-tape-text">Based in Wolfenbüttel</span>
-        <img src="assets/img/green_dot.svg" alt="">
+        <div class="text-view-box">
+            <div class="text-box">
+                @for (item of texts; track $index) {
+                    <span class="text-tape-text">{{ item }}</span>
+                    <img src="assets/img/green_dot.svg" alt="">
+                }
+            </div>
+        </div>
     </section>
 </main>

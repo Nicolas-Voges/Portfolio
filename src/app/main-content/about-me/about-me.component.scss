@@ -1,0 +1,45 @@
+@use './../../../styles.scss' as *;
+
+main {
+    padding: 144px $padding-main-sides;
+    @include flex($a: flex-start, $j: space-evenly, $g: 96px);
+}
+
+section {
+    width: 560px;
+}
+
+.photo {
+    width: 560px;
+    height: 560px;
+    @include img();
+}
+
+.icon-box {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+    height: 32px;
+    @include flex();
+}
+
+.icon-text-box {
+    @include flex($j: space-between, $a: flex-start, $g: 24px);
+    color: rgba($color-contrast, 0.8);
+
+    &:hover {
+    color: rgba($color-contrast, 1);
+    }
+}
+
+.main-text {
+    margin: 40px 0 32px 0;
+}
+
+.sub-text-box {
+    @include flex($g: 16px, $d: column);
+}
+
+.card {
+    cursor: default;
+}
