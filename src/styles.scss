@@ -89,6 +89,7 @@ h3 {
 }
 
 h4 {
+  margin-bottom: 20px;
   font-size: 24px;
   font-weight: 700;
   color: $color-accent;
@@ -102,6 +103,14 @@ h4 {
 
 .position-relative {
   position: relative;
+}
+
+.card {
+  cursor: default;
+  padding: 32px;
+  border: 1px solid $color-accent;
+  border-radius: 30px;
+  background-color: rgba($color-accent, 0.1);
 }
 
 @keyframes move-left {

@@ -9,10 +9,33 @@ section {
     width: 560px;
 }
 
+.photo-box {
+    position: relative;
+
+    &:hover .photo-background {
+        opacity: 1;
+    }
+}
+
 .photo {
     width: 560px;
     height: 560px;
     @include img();
+}
+
+.photo-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 560px;
+    height: 560px;
+    @include img();
+    z-index: -1;
+    transform: translate(-46px, 30px);
+    opacity: 0;
+    transition: all 0.125s ease-in-out;
 }
 
 .icon-box {
@@ -28,7 +51,7 @@ section {
     color: rgba($color-contrast, 0.8);
 
     &:hover {
-    color: rgba($color-contrast, 1);
+        color: rgba($color-contrast, 1);
     }
 }
 
@@ -38,8 +61,4 @@ section {
 
 .sub-text-box {
     @include flex($g: 16px, $d: column);
-}
-
-.card {
-    cursor: default;
 }
