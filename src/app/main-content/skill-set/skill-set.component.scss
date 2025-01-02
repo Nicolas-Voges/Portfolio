@@ -1,0 +1,39 @@
+@use './../../../styles.scss' as *;
+
+.background {
+    background-image: radial-gradient(circle at left, rgba($color-accent, 0.3) 0%, $color-main 300px);
+    @include flex($a: flex-start, $d: column);
+}
+
+main {
+    @include flex($d: column);
+    padding: 0 $padding-main-sides $padding-main-bottom $padding-main-sides;
+    max-width: calc(1288px + (2 * $padding-main-sides));
+}
+
+.skill-content {
+    @include flex($a: flex-start, $j: center, $g: 96px);
+}
+
+.skills-box {
+    max-width: 632px;
+    @include flex($g: 72px, $w: wrap, $a: flex-start, $j: flex-start);
+}
+
+.skill-box {
+    width: 104px;
+    padding: 0 22px;
+    @include flex($d: column, $g: 8px, $j: space-between);
+
+    &>p {
+        font-family: Fira Code;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+.skill-icon {
+    @include img($f: contain);
+    width: 56px;
+    height: 65px;
+}

@@ -1,12 +1,8 @@
 @use './../../../styles.scss' as *;
 
 main {
-    padding: 144px $padding-main-sides;
+    padding: $padding-main-bottom $padding-main-sides;
     @include flex($a: flex-start, $j: space-evenly, $g: 96px);
-}
-
-section {
-    width: 560px;
 }
 
 .photo-box {
@@ -53,10 +49,6 @@ section {
     &:hover {
         color: rgba($color-contrast, 1);
     }
-}
-
-.main-text {
-    margin: 40px 0 32px 0;
 }
 
 .sub-text-box {

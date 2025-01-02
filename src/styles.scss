@@ -3,6 +3,7 @@ $color-accent: #3dcfb6;
 $color-accent-50: rgba(61, 207, 182, 0.5);
 $color-contrast: white;
 $padding-main-sides: 96px;
+$padding-main-bottom: 144px;
 
 @mixin flex($d: row, $a: center, $j: center, $g: 0, $w: nowrap, $f: unset) {
   display: flex;
@@ -97,6 +98,20 @@ h4 {
   cursor: default;
 }
 
+h5 {
+  margin-bottom: 16px;
+  font-family: Fira Code;
+  font-size: 24px;
+  font-weight: 700;
+  color: $color-accent;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.color-contrast {
+  color: $color-contrast;
+}
+
 .max-width {
   max-width: 1980px;
 }
@@ -105,12 +120,21 @@ h4 {
   position: relative;
 }
 
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
 .card {
+  width: 560px;
   cursor: default;
   padding: 32px;
   border: 1px solid $color-accent;
   border-radius: 30px;
   background-color: rgba($color-accent, 0.1);
+}
+
+.main-text {
+  margin: 40px 0 32px 0;
 }
 
 @keyframes move-left {

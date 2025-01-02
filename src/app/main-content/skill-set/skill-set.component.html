@@ -1,1 +1,22 @@
-<p>skill-set works!</p>
+<div class="background">
+    <main>
+        <h4 class="align-self-flex-start">Technologies</h4>
+        <div class="skill-content">
+            <section class="card">
+                <h2>Skill Set</h2>
+                <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod animi esse eaque quae quasi doloremque dolor, veritatis nulla asperiores? Corrupti perferendis labore aliquid dolor deserunt nobis exercitationem ea quibusdam porro!</p>
+                <h5><span class="color-contrast">You need</span> another skill?</h5>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod animi esse eaque quae quasi doloremque dolor, </span>
+            </section>
+            <section class="skills-box">
+                @for (item of skills; track $index) {
+                    <div class="skill-box">
+                        <img class="skill-icon" src="assets/img/skill_set_icons/{{ item.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ item }}">
+                        <p>{{ item.replaceAll('-','&#8209;') }}</p>
+                    </div>
+                }
+            </section>
+        </div>
+    </main>
+</div>
+

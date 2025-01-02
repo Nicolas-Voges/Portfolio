@@ -8,5 +8,17 @@ import { Component } from '@angular/core';
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent {
-
+  public skills: string[] = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'Material Design',
+    'TypeScript',
+    'Angular',
+    'Firebase',
+    'GIT',
+    'Rest-Api',
+    'Scrum',
+    'Growth mindset'
+  ];
 }
