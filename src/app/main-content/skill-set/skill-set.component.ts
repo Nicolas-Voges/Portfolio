@@ -21,4 +21,9 @@ export class SkillSetComponent {
     'Scrum',
     'Growth mindset'
   ];
+
+  public interests: string[] = [
+    'React',
+    'Vue Js'
+  ];
 }

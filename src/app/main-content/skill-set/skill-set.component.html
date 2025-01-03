@@ -7,13 +7,34 @@
                 <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod animi esse eaque quae quasi doloremque dolor, veritatis nulla asperiores? Corrupti perferendis labore aliquid dolor deserunt nobis exercitationem ea quibusdam porro!</p>
                 <h5><span class="color-contrast">You need</span> another skill?</h5>
                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod animi esse eaque quae quasi doloremque dolor, </span>
+                <div class="margin-top-40">
+                    <button class="primary-btn"><span class="primary-btn-text">Let´s talk</span></button>
+                </div>
             </section>
             <section class="skills-box">
-                @for (item of skills; track $index) {
-                    <div class="skill-box">
-                        <img class="skill-icon" src="assets/img/skill_set_icons/{{ item.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ item }}">
-                        <p>{{ item.replaceAll('-','&#8209;') }}</p>
-                    </div>
+                @for (item of skills; track item; let i = $index) {
+                    @if (i === skills.length -1) {
+                        <div class="skill-box position-relative">
+                            <img class="skill-icon" src="assets/img/skill_set_icons/{{ item.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ item }}">
+                            <p>{{ item.replaceAll('-','&#8209;') }}</p>
+                            <div class="speech-bubble">
+                                <p>I have a special interest in lerning</p>
+                                <div class="interests-box">
+                                    @for (interest of interests; track $index) {
+                                        <div class="interest-box">
+                                            <img src="assets/img/skill_set_icons/{{ interest.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ interest }}">
+                                            <p>{{ interest }}</p>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    } @else {
+                        <div class="skill-box">
+                            <img class="skill-icon" src="assets/img/skill_set_icons/{{ item.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ item }}">
+                            <p>{{ item.replaceAll('-','&#8209;') }}</p>
+                        </div>
+                    }
                 }
             </section>
         </div>

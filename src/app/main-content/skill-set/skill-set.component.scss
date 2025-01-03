@@ -21,6 +21,7 @@ main {
 }
 
 .skill-box {
+    cursor: default;
     width: 104px;
     padding: 0 22px;
     @include flex($d: column, $g: 8px, $j: space-between);
@@ -30,10 +31,51 @@ main {
         font-size: 18px;
         text-align: center;
     }
+
+    &:hover .skill-icon{
+        transform: scale(1.05);
+    }
+
+    &:hover .speech-bubble{
+        opacity: 1;
+    }
 }
 
 .skill-icon {
     @include img($f: contain);
     width: 56px;
     height: 65px;
+    transition: all 0.125s ease-in-out;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.speech-bubble {
+    background-image: url('./../../../assets/img/speech_bubble.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 188px;
+    height: 128px;
+    padding: 8px 10px 24px 10px;
+    @include flex($d: column, $g: 10px);
+    color: $color-accent;
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, calc(-50% - 25px));
+    opacity: 0;
+    transition: all 0.125s ease-in-out;
+}
+
+.interests-box {
+    @include flex($g: 16px);
+}
+
+.interest-box {
+    @include flex($d: column);
 }
