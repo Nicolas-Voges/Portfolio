@@ -41,6 +41,15 @@ main {
     }
 }
 
+.last-skill-box {
+    color: $color-contrast;
+    transition: all 0.125s ease-in-out;
+
+    &:hover {
+    color: $color-accent;
+    }
+}
+
 .skill-icon {
     @include img($f: contain);
     width: 56px;

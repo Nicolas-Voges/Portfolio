@@ -14,7 +14,7 @@
             <section class="skills-box">
                 @for (item of skills; track item; let i = $index) {
                     @if (i === skills.length -1) {
-                        <div class="skill-box position-relative">
+                        <div class="skill-box position-relative last-skill-box">
                             <img class="skill-icon" src="assets/img/skill_set_icons/{{ item.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ item }}">
                             <p>{{ item.replaceAll('-','&#8209;') }}</p>
                             <div class="speech-bubble">

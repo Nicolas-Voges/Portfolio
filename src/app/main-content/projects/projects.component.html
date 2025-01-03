@@ -1,1 +1,47 @@
-<p>projects works!</p>
+<main>
+    <div class="flex-evenly width-100">
+        <div>
+            <h4>Portfolio</h4>
+            <h2>Featured Projects</h2>
+            <p class="margin-bottom-40">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+        </div>
+        <div>
+            <!-- Placeholder -->
+        </div>
+    </div>
+    @for (project of projects; track project; let i = $index) {
+        <div class="project">
+            <div class="project-btn">
+                <span class="name">{{ project.name }}</span>
+                <span class="skill">
+                    @for (skill of project.skills; track skill; let j = $index) {
+                        @if (j === project.skills.length -1) {
+                            {{ skill }}
+                        } @else {
+                            {{ skill }} <span class="seperator">|</span>
+                        }
+                    }
+                </span>
+            </div>
+
+            @if (i + 0.5 < projects.length / 2) {
+            <div [ngStyle]="{ transform: 'translateY(-30px)' }" class="img-box position-relative">
+                <img class="project-img" src="assets/img/{{ project.name.toLocaleLowerCase().replaceAll(' ','_') }}.png" alt="{{ project.name }}">
+                <img class="project-img background" src="assets/img/project_background.svg" alt="project background">
+            </div>
+            }
+            @else if (i + 0.5 == projects.length / 2) {
+            <div class="img-box position-relative">
+                <img class="project-img" src="assets/img/{{ project.name.toLocaleLowerCase().replaceAll(' ','_') }}.png" alt="{{ project.name }}">
+                <img class="project-img background" src="assets/img/project_background.svg" alt="project background">
+            </div>
+            }
+            @else {
+                <div [ngStyle]="{ transform: 'translateY(30px)' }" class="img-box position-relative">
+                    <img class="project-img" src="assets/img/{{ project.name.toLocaleLowerCase().replaceAll(' ','_') }}.png" alt="{{ project.name }}">
+                    <img class="project-img background" src="assets/img/project_background.svg" alt="project background">
+                </div>
+            }
+        </div>
+    }
+</main>

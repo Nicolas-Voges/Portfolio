@@ -1,0 +1,68 @@
+ @use './../../../styles.scss' as *;
+
+ main {
+     @include flex($a: flex-start, $d: column);
+     padding: 0 $padding-main-sides $padding-main-bottom $padding-main-sides;
+ }
+
+ .flex-evenly {
+    @include flex($j: space-evenly);
+ }
+
+ .project {
+     @include flex($j: space-evenly);
+     width: 100%;
+ }
+
+ .project-img {
+     @include img();
+     width: 296px;
+     height: 192px;
+     border-radius: 16px;
+     position: absolute;
+     top: 0;
+     // bottom: 0;
+     left: 0;
+     right: 0;
+     transform: translateY(-50%);
+ }
+
+ .img-box {
+     margin-left: 80px;
+     width: 296px;
+     opacity: 0;
+     transition: all 0.125s ease-in-out;
+ }
+
+ .project-btn {
+     max-width: 880px;
+     width: 880px;
+     padding: 40px 32px;
+     border: 1px solid $color-accent;
+     border-left: unset;
+     border-right: unset;
+     cursor: pointer;
+     @include flex($j: space-between);
+
+     &:hover~.img-box {
+         opacity: 1;
+     }
+
+     &:hover {
+         background-color: rgba($color-accent, 0.3);
+     }
+ }
+
+ .margin-bottom-40 {
+     margin-bottom: 40px;
+ }
+
+ .background {
+     margin-right: 96px;
+     z-index: -1;
+     transform: translate(32px, calc(10px - 50%));
+ }
+
+ .seperator {
+     color: $color-accent;
+ }
