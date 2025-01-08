@@ -1,1 +1,22 @@
-<p>slider works!</p>
+<main class="position-relative">
+    <div class="overlay"></div>
+    <h6>By The Way</h6>
+    <div class="slider-cards-box">
+        @for (card of slides; track card.text; let i = $index) {
+            <div class="slider-card" [ngClass]="{'active-card': i === activIndex, 'passive-card': i !== activIndex}">
+                <span>{{ card.text }}</span>
+                @if (card.link) {
+                    <br>
+                    <a href="{{ card.link }}">See Project</a>
+                }
+            </div>
+        }
+    </div>
+    <nav>
+        <button><img src="" alt=""></button>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <button><img src="" alt=""></button>
+    </nav>
+</main>

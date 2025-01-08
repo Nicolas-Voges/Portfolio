@@ -5,12 +5,20 @@
      padding: 0 $padding-main-sides $padding-main-bottom $padding-main-sides;
  }
 
- .flex-evenly {
-    @include flex($j: space-evenly);
+ p {
+    max-width: 456px;
  }
 
- .project {
+ .flex-evenly {
      @include flex($j: space-evenly);
+ }
+
+ .flex-between {
+    @include flex($j: space-between);
+}
+
+ .project {
+     @include flex($j: space-between);
      width: 100%;
  }
 
@@ -60,9 +68,14 @@
  .background {
      margin-right: 96px;
      z-index: -1;
-     transform: translate(32px, calc(10px - 50%));
+     transform: translate(20px, calc(20px - 50%));
  }
 
  .seperator {
      color: $color-accent;
+ }
+
+ .name {
+     font-family: Fira Code;
+     font-weight: 700;
  }

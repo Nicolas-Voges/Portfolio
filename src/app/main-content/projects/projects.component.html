@@ -1,5 +1,5 @@
 <main>
-    <div class="flex-evenly width-100">
+    <div class="flex-between width-100">
         <div>
             <h4>Portfolio</h4>
             <h2>Featured Projects</h2>
@@ -25,7 +25,7 @@
             </div>
 
             @if (i + 0.5 < projects.length / 2) {
-            <div [ngStyle]="{ transform: 'translateY(-30px)' }" class="img-box position-relative">
+            <div [ngStyle]="{ transform: 'translateY(24px)' }" class="img-box position-relative">
                 <img class="project-img" src="assets/img/{{ project.name.toLocaleLowerCase().replaceAll(' ','_') }}.png" alt="{{ project.name }}">
                 <img class="project-img background" src="assets/img/project_background.svg" alt="project background">
             </div>
@@ -37,7 +37,7 @@
             </div>
             }
             @else {
-                <div [ngStyle]="{ transform: 'translateY(30px)' }" class="img-box position-relative">
+                <div [ngStyle]="{ transform: 'translateY(-24px)' }" class="img-box position-relative">
                     <img class="project-img" src="assets/img/{{ project.name.toLocaleLowerCase().replaceAll(' ','_') }}.png" alt="{{ project.name }}">
                     <img class="project-img background" src="assets/img/project_background.svg" alt="project background">
                 </div>

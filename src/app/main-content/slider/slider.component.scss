@@ -1,0 +1,42 @@
+@use './../../../styles.scss' as *;
+
+main {
+    @include flex($d: column);
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, $color-main, transparent, transparent, $color-main);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.slider-cards-box {
+    @include flex($g: 64px);
+}
+
+.slider-card {
+    padding: 48px 40px;
+    @include flex();
+    width: 44vw;
+    max-width: 632px;
+    max-height: 274px;
+    height: 274px;
+    border: 1px solid $color-accent;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.active-card {
+    background-color: rgba($color-accent, 0.3);
+}
+
+.passive-card {
+    background-color: rgba($color-accent, 0.1);
+    transform: scaleY(0.9);
+}
