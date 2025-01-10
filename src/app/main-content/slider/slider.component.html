@@ -3,13 +3,31 @@
     <h6>By The Way</h6>
     <div class="slider-cards-box">
         @for (card of slides; track card.text; let i = $index) {
-            <div class="slider-card" [ngClass]="{'active-card': i === 1, 'passive-card': i !== 1, '{{ animateLeftClasses[i] }}': animateLeft,  '{{ animateRightClasses[i] }}': animateRight}">
+            @if (i === 0) {
+                <div class="slider-card passive-card" [ngClass]="{'move-left-from-out': animateRight}">
+                    <span>{{ slides[2].text }}</span>
+                    @if (slides[2].link) {
+                        <br>
+                        <a href="{{ slides[2].link }}">See Project</a>
+                    }
+                </div>
+            }
+            <div class="slider-card" [ngClass]="{'active-card': i === 1, 'passive-card': i !== 1,  'move-out-from-left': animateLeft && i === 0,  'move-center-from-left': animateRight && i === 0,  'move-left-from-center': animateLeft && i === 1,  'move-right-from-center': animateRight && i === 1,  'move-center-from-right': animateLeft && i === 2,   'move-out-from-right': animateRight && i === 2}">
                 <span>{{ card.text }}</span>
                 @if (card.link) {
                     <br>
                     <a href="{{ card.link }}">See Project</a>
                 }
             </div>
+            @if (i === slides.length - 1) {
+                <div class="slider-card passive-card" [ngClass]="{'move-right-from-out': animateLeft}">
+                    <span>{{ slides[0].text }}</span>
+                    @if (slides[0].link) {
+                        <br>
+                        <a href="{{ slides[0].link }}">See Project</a>
+                    }
+                </div>
+            }
         }
     </div>
     <nav>

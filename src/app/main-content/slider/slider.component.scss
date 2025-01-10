@@ -54,6 +54,40 @@ nav {
     filter: unset;
 }
 
+@keyframes out-right {
+    0% {
+        
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9) translateX(calc(-100% - 64px));
+    }
+}
+
+.move-right-from-out {
+    animation: out-right 1s ease-in-out backwards;
+}
+
+@keyframes right-center {
+    0% {
+        
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        background-color: rgba($color-accent, 0.3);
+        transform: scaleY(1) translateX(calc(-100% - 64px));
+    }
+}
+
+.move-center-from-right {
+    animation: right-center 1s ease-in-out backwards;
+}
+
 @keyframes center-left {
     0% {
         background-color: rgba($color-accent, 0.3);
@@ -68,4 +102,87 @@ nav {
 
 .move-left-from-center {
     animation: center-left 1s ease-in-out backwards;
+}
+
+@keyframes left-out {
+    0% {
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9) translateX(calc(-100% - 64px));
+    }
+}
+
+.move-out-from-left {
+    animation: left-out 1s ease-in-out backwards;
+}
+
+
+@keyframes out-left {
+    0% {
+        
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9) translateX(calc(100% + 64px));
+    }
+}
+
+.move-left-from-out {
+    animation: out-left 1s ease-in-out backwards;
+}
+
+@keyframes left-center {
+    0% {
+        
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        background-color: rgba($color-accent, 0.3);
+        transform: scaleY(1) translateX(calc(100% + 64px));
+    }
+}
+
+.move-center-from-left {
+    animation: left-center 1s ease-in-out backwards;
+}
+
+@keyframes center-right {
+    0% {
+        background-color: rgba($color-accent, 0.3);
+        transform: scaleY(1);
+    }
+
+    100% {
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9) translateX(calc(100% + 64px));
+    }
+}
+
+.move-right-from-center {
+    animation: center-right 1s ease-in-out backwards;
+}
+
+@keyframes right-out {
+    0% {
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9);
+    }
+
+    100% {
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9) translateX(calc(100% + 64px));
+    }
+}
+
+.move-out-from-right {
+    animation: right-out 1s ease-in-out backwards;
 }

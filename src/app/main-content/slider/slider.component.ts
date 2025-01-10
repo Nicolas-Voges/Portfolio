@@ -27,42 +27,50 @@ export class SliderComponent {
         link: '',
       }
     ];
-    public animateLeftClasses: string[] = ['move-out-from-left', 'move-left-from-center', 'move-left-from-right'];
-    public animateRightClasses: string[] = ['move-right-from-left', 'move-right-from-center', 'move-out-from-right'];
-    public animateLeft = true;
-    public animateRight = false;
-
-  decreaseActiveIndex() {
-    this.activIndex--
-    if (this.activIndex < 0) {
-      this.activIndex = this.slides.length - 1;
-    }
-    this.animateLeft = true;
-    console.log(this.animateLeft);    
-    let id = setTimeout( () => {
-      let obj: {
-        text: string;
-        link?: string;
-      } | undefined = this.slides.pop();
-      if (obj != undefined) {
-        this.slides.unshift(obj);
-      }
-    this.animateLeft = false;
-    clearTimeout(id);
-    }, 1000);
-  }
+    
+  public animateLeft = false;
+  public animateRight = false;
 
   increaseActiveIndex() {
-    this.activIndex++
-    if (this.activIndex >= this.slides.length) {
-      this.activIndex = 0;
+    if (!this.animateLeft) {
+      this.animateLeft = true;
+      this.activIndex++
+      if (this.activIndex >= this.slides.length) {
+        this.activIndex = 0;
+      }
+      console.log(this.animateLeft);
+      let id = setTimeout(() => {
+        let obj: {
+          text: string;
+          link?: string;
+        } | undefined = this.slides.shift(); //pop
+        if (obj != undefined) {
+          this.slides.push(obj);  //unshift
+        }
+        this.animateLeft = false;
+        clearTimeout(id);
+      }, 1000);
     }
-    let obj: {
-      text: string;
-      link?: string;
-    } | undefined = this.slides.shift();
-    if (obj != undefined) {
-      this.slides.push(obj);
+  }
+
+  decreaseActiveIndex() {
+    if (!this.animateRight) {
+      this.animateRight = true;
+      this.activIndex--
+      if (this.activIndex < 0) {
+        this.activIndex = this.slides.length - 1;
+      }
+      let id = setTimeout(() => {
+        let obj: {
+          text: string;
+          link?: string;
+        } | undefined = this.slides.pop();
+        if (obj != undefined) {
+          this.slides.unshift(obj);
+        }
+        this.animateRight = false;
+        clearTimeout(id);
+      }, 1000);
     }
   }
 }
