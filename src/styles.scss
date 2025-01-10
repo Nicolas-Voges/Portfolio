@@ -2,6 +2,7 @@ $color-main: #1c1c1c;
 $color-accent: #3dcfb6;
 $color-accent-50: rgba(61, 207, 182, 0.5);
 $color-contrast: white;
+$filter-accent: invert(68%) sepia(25%) saturate(963%) hue-rotate(120deg) brightness(200%) contrast(89%);
 $padding-main-sides: 96px;
 $padding-main-bottom: 144px;
 
@@ -60,7 +61,7 @@ body {
   background-color: $color-main;
   color: $color-contrast;
   font-family: Karla;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 h1 {
@@ -265,6 +266,58 @@ h6 {
     content: "EN";
     right: unset;
     left: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 88px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+  
+  h3 {
+    font-size: 32px;
+  }
+  
+  h4 {
+    font-size: 20px;
+  }
+  
+  h5 {
+    font-size: 20px;
+  }
+  
+  h6 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 62px;
+  }
+
+  h2 {
+    font-size: 56px;
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  
+  h4 {
+    font-size: 20px;
+  }
+  
+  h5 {
+    font-size: 20px;
+  }
+  
+  h6 {
+    font-size: 24px;
   }
 }
 

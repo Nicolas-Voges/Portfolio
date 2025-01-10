@@ -5,6 +5,11 @@ main {
     overflow-x: hidden;
 }
 
+nav {
+    margin-top: 48px;
+    @include flex($g: 20px);
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -39,4 +44,28 @@ main {
 .passive-card {
     background-color: rgba($color-accent, 0.1);
     transform: scaleY(0.9);
+}
+
+.active-dot {
+    filter: $filter-accent;
+}
+
+.passive-dot {
+    filter: unset;
+}
+
+@keyframes center-left {
+    0% {
+        background-color: rgba($color-accent, 0.3);
+        transform: scaleY(1);
+    }
+
+    100% {
+        background-color: rgba($color-accent, 0.1);
+        transform: scaleY(0.9) translateX(calc(-100% - 64px));
+    }
+}
+
+.move-left-from-center {
+    animation: center-left 1s ease-in-out backwards;
 }

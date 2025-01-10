@@ -3,7 +3,7 @@
     <h6>By The Way</h6>
     <div class="slider-cards-box">
         @for (card of slides; track card.text; let i = $index) {
-            <div class="slider-card" [ngClass]="{'active-card': i === activIndex, 'passive-card': i !== activIndex}">
+            <div class="slider-card" [ngClass]="{'active-card': i === 1, 'passive-card': i !== 1, '{{ animateLeftClasses[i] }}': animateLeft,  '{{ animateRightClasses[i] }}': animateRight}">
                 <span>{{ card.text }}</span>
                 @if (card.link) {
                     <br>
@@ -13,10 +13,10 @@
         }
     </div>
     <nav>
-        <button><img src="" alt=""></button>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
-        <button><img src="" alt=""></button>
+        <button (click)="decreaseActiveIndex()"><img src="assets/img/arrow_back.svg" alt="back"></button>
+        @for (card of slides; track card.text; let i = $index) {
+            <img src="assets/img/dot.svg" alt="" [ngClass]="{'active-dot': i === activIndex, 'passive-dot': i !== activIndex}">            
+        }
+        <button (click)="increaseActiveIndex()"><img src="assets/img/arrow_forward.svg" alt="forward"></button>
     </nav>
 </main>

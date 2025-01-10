@@ -54,3 +54,10 @@ main {
 .sub-text-box {
     @include flex($g: 16px, $d: column);
 }
+
+@media (max-width: 1430px) {
+    main {
+        padding: $padding-main-bottom $padding-main-sides;
+        @include flex($d: column, $g: 96px);
+    }
+}

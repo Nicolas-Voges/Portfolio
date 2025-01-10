@@ -5,6 +5,7 @@
     height: 100vh;
     width: 100%;
     @include flex();
+    overflow-x: hidden;
  }
 
  main {
@@ -98,7 +99,7 @@
     height: 26px;
     object-fit: contain;
     object-position: center;
-    filter: invert(68%) sepia(25%) saturate(963%) hue-rotate(120deg) brightness(200%) contrast(89%);
+    filter: $filter-accent;
     transition: all 0.125s ease-in-out;
 
     &:hover {
@@ -121,17 +122,17 @@
 
  .text-tape {
     position: absolute;
-    z-index: 50;
-    transform: rotateZ(-3deg) translateY(-2.6205vw);  // make media query for big screens with --> transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205));
-    bottom: 0;
-    width: 100vw;
+    bottom: 020px;
+    transform: rotateZ(-3deg) translateY(-2.6205vw);
+    z-index: 1;
+    width: 105vw;
     padding: 12px 108px;
     backdrop-filter: blur(3px);
     overflow: hidden;
     background-color: rgba($color: $color-contrast, $alpha: 0.12);
-   @include flex($g: 0);
-   cursor: default;
-}
+    @include flex($g: 0);
+    cursor: default;
+ }
 
  .text-tape-text {
     font-size: 32px;
@@ -140,10 +141,26 @@
  }
 
  .text-box {
-   @include flex($g: 56px, $j: flex-start);
+    @include flex($g: 56px, $j: flex-start);
  }
 
  .text-view-box {
-   overflow: hidden;
-   max-width: 1980px;
+    overflow: hidden;
+    max-width: 1980px;
+ }
+
+ @media (min-width: 1980px) {
+   .text-tape {
+      transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.2));
+   }
+ }
+
+ @media (min-width: 3000px) {
+   :host {
+      overflow: hidden;
+   }
+
+   .text-tape {
+      transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.5));
+   }
  }
