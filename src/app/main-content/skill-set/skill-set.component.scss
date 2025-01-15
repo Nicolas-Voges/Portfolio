@@ -90,3 +90,13 @@ main {
 .interest-box {
     @include flex($d: column);
 }
+
+@media (max-width: 1150px) {
+    .skill-content {
+        @include flex($d: column, $g: 96px);
+    }
+
+    main {
+        width: unset;
+    }
+}

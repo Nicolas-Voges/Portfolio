@@ -5,6 +5,7 @@ $color-contrast: white;
 $filter-accent: invert(68%) sepia(25%) saturate(963%) hue-rotate(120deg) brightness(200%) contrast(89%);
 $padding-main-sides: 96px;
 $padding-main-bottom: 144px;
+$linear-gradient: linear-gradient(35deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59), rgb(8, 70, 59), rgb(8, 70, 59));
 
 @mixin flex($d: row, $a: center, $j: center, $g: 0, $w: nowrap, $f: unset) {
   display: flex;
@@ -319,6 +320,10 @@ h6 {
   h6 {
     font-size: 24px;
   }
+}
+
+.display-none {
+  display: none !important;
 }
 
 /* karla-200 - latin */
