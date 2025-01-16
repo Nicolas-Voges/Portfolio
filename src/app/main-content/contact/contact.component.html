@@ -1,6 +1,10 @@
 <main>
     <section class="text-box">
-
+        <h4 class="h4">Contact me</h4>
+        <h2>Let's work together</h2>
+        <h4 class="font-fira">Got a problem to solve?</h4>
+        <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+        <p>Need a Frondend developer? <span class="color-accent">Let's talk!</span></p>
     </section>
     <section class="form-box">
         <form (ngSubmit)="onSubmit()">
@@ -17,8 +21,18 @@
                 <input id="message" type="text" placeholder="Hello Nicolas, I am interested in..." required>
             </div>
             <div class="checkbox-box">
-                <input type="checkbox" required>
-                <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                <div class="position-relative">
+                    <label for="policy-check">
+                        @if (readPolicy) {
+                            <img class="checkbox-icon" src="assets/img/checkbox_checked.svg" alt="">
+                        } @else {
+                            <img class="checkbox-icon" src="assets/img/checkbox_unchecked.svg" alt="">
+                        }
+                    </label>
+                    <input ngModel #readPolicy="ngModel" id="policy-check" class="policy-check" type="checkbox" required>
+                </div>
+                <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as
+                    outlined.</span>
             </div>
             <button class="btn-primary"><span class="btn-primary-text">Say Hallo :)</span></button>
         </form>

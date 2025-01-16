@@ -1,7 +1,27 @@
 @use './../../../styles.scss' as *;
 
 main {
-    @include flex($j: space-between, $g: 88px);
+    @include flex($j: space-between, $a: flex-start, $g: 88px);
+}
+
+section {
+    max-width: 45%;
+}
+
+h2 {
+    white-space: pre-wrap;
+}
+
+.h4 {
+    font-weight: 500;
+}
+
+.font-fira {
+    font-family: Fira Code;
+}
+
+.color-accent {
+    color: $color-accent;
 }
 
 .text-box {
@@ -52,10 +72,36 @@ main {
 
 .checkbox-box {
     margin: 46px 0;
-    @include flex($g: 12px);
+    @include flex($g: 24px);
     align-self: flex-start;
-    
+
     &>span>a {
         color: $color-accent;
     }
+
+    &>label {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+#policy-check {
+    opacity: 0;
+    // visibility: hidden;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.checkbox-icon {
+    @include img();
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
 }
