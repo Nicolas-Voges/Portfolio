@@ -9,6 +9,14 @@
      max-width: 456px;
  }
 
+ h1 {
+    color: $color-accent;
+ }
+
+ h2 {
+    color: $color-contrast;
+ }
+
  .flex-evenly {
      @include flex($j: space-evenly);
  }
@@ -96,19 +104,63 @@
      height: 70vh;
      width: 80vw;
      max-width: calc(1980px - (2 * $padding-main-sides));
+     padding: 80px;
      background-image: $linear-gradient;
      border-radius: 32px;
      @include flex($g: 88px);
  }
 
- .project-card-left {
-    
- }
-
  .project-card-right {
+    @include flex($d: column, $a: flex-end, $j: space-between, $f: 1);
+    height: 100%;
 
+    &>.btn-close {
+        cursor: pointer;
+    }
  }
 
+ .project-card-img {
+    width: 100%;
+    @include img();
+    border-radius: 30px;
+ }
+
+ .btn-next {
+    @include flex($g: 4px);
+    font-size: 18px;
+    color: $color-accent;
+
+    &>img {
+        width: 24px;
+        height: 18px;
+        @include img();
+        filter: $filter-accent;
+    }
+ }
+
+ .project-card-left {
+    @include flex($d: column, $a: flex-start, $f: 1);
+ }
+
+ .project-card-skills-box {
+    margin: 32px 0 40px 0;
+    @include flex($j: flex-start, $g: 16px);
+ }
+
+ .project-card-skill {
+    @include flex($g: 4px);
+ }
+
+ .project-card-skill-img {
+    @include img();
+    width: 24px;
+    height: 24px;
+    filter: $filter-accent;
+ }
+
+ .project-card-describtion {
+    font-size: 18px;
+ }
 
  @media (max-width: 1200px) {
      .img-box {

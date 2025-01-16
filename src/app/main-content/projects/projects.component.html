@@ -11,7 +11,7 @@
     </div>
     @for (project of projects; track project; let i = $index) {
         <div class="project">
-            <div class="project-btn">
+            <div class="project-btn" (click)="openProjectCard(i)">
                 <span class="name">{{ project.name }}</span>
                 <span class="skill">
                     @for (skill of project.skills; track skill; let j = $index) {
@@ -43,17 +43,29 @@
                 </div>
             }
         </div>
+        <section class="overlay" [ngClass]="{'display-none': !project.displayCard}" (click)="closeProjectCard(i)">
+            <div class="project-card">
+                <div class="project-card-left">
+                    @if (project.number < 10) {
+                        <h1>0{{ project.number }}</h1>
+                    } @else {
+                        <h1>{{ project.number }}</h1>
+                    }
+                    <h2>{{  project.name}}</h2>
+                    <h4>What is this project about?</h4>
+                    <p class="project-card-describtion">{{ project.description }}</p>
+                    <p class="project-card-skills-box">
+                        @for (skill of project.skills; track $index) {
+                            <span class="project-card-skill"><img class="project-card-skill-img" src="assets/img/skill_set_icons/{{ skill.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ skill }}">{{ skill }}</span>
+                        }
+                    </p>
+                </div>
+                <div class="project-card-right">
+                    <img (click)="closeProjectCard(i)" class="btn-close" src="assets/img/x.svg" alt="close">
+                    <img class="project-card-img" src="assets/img/{{ project.name.toLocaleLowerCase().replaceAll(' ','_') }}.png" alt="{{ project.name }}">
+                    <button class="btn-next">Next Project <img src="assets/img/arrow_forward.svg" alt="arrow right"></button>
+                </div>
+            </div>
+        </section>
     }
 </main>
-<section class="overlay">
-    <div class="project-card">
-        <div class="project-card-left">
-            <h1>01</h1>
-            <h2>JOIN</h2>
-            <h4>What is this project about?</h4>
-        </div>
-        <div class="project-card-right">
-
-        </div>
-    </div>
-</section>
