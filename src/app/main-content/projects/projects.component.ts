@@ -44,4 +44,14 @@ export class ProjectsComponent {
   closeProjectCard(i: number) {
     this.projects[i].displayCard = false;
   }
+
+  showNextProject(i: number) {
+    this.closeProjectCard(i);
+    if (i >= this.projects.length - 1) {
+      this.openProjectCard(0);
+    } else {
+      i++;
+      this.openProjectCard(i);
+    }
+  }
 }

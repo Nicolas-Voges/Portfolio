@@ -1,1 +1,26 @@
-<p>contact works!</p>
+<main>
+    <section class="text-box">
+
+    </section>
+    <section class="form-box">
+        <form (ngSubmit)="onSubmit()">
+            <div class="btn-form">
+                <label for="name" class="btn-form-headline">What's your name?</label>
+                <input id="name" type="text" placeholder="Your name goes here" required>
+            </div>
+            <div class="btn-form">
+                <label for="email" class="btn-form-headline">What's your email?</label>
+                <input id="email" type="text" placeholder="youremail@mail.com" required>
+            </div>
+            <div class="btn-form">
+                <label for="message" class="btn-form-headline">How can I help you?</label>
+                <input id="message" type="text" placeholder="Hello Nicolas, I am interested in..." required>
+            </div>
+            <div class="checkbox-box">
+                <input type="checkbox" required>
+                <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</span>
+            </div>
+            <button class="btn-primary"><span class="btn-primary-text">Say Hallo :)</span></button>
+        </form>
+    </section>
+</main>

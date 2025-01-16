@@ -1,0 +1,61 @@
+@use './../../../styles.scss' as *;
+
+main {
+    @include flex($j: space-between, $g: 88px);
+}
+
+.text-box {
+    @include flex($a: flex-start, $d: column, $f: 1);
+}
+
+.form-box {
+    @include flex($d: column, $f: 1);
+
+    &>form {
+        width: 100%;
+        @include flex($d: column);
+
+        &>button {
+            align-self: center;
+        }
+    }
+}
+
+.btn-form {
+    width: 100%;
+    padding: 32px;
+    border: 1px solid $color-accent;
+    border-left: unset;
+    border-right: unset;
+    @include flex($d: column, $a: flex-start, $g: 16px);
+
+    &>label {
+        font-family: Fira Code;
+        font-size: 24px;
+        color: $color-accent;
+    }
+
+    &>input {
+        font-size: 18px;
+        background-color: unset;
+        color: $color-contrast;
+        outline: unset;
+        border: unset;
+        width: 100%;
+    }
+}
+
+::placeholder {
+    color: rgba($color-contrast, 0.8);
+    font-size: 18px;
+}
+
+.checkbox-box {
+    margin: 46px 0;
+    @include flex($g: 12px);
+    align-self: flex-start;
+    
+    &>span>a {
+        color: $color-accent;
+    }
+}

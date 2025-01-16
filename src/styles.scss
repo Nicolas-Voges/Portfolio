@@ -41,6 +41,7 @@ main {
   @include flex();
   max-width: 1680px;
   margin: 0 auto;
+  padding: 0 $padding-main-sides $padding-main-bottom $padding-main-sides;
 }
 
 a {
@@ -168,13 +169,13 @@ h6 {
   }
 }
 
-.primary-btn-text {
+.btn-primary-text {
   color: $color-contrast;
   display: inline-block;
   font-size: 18px;
 }
 
-.primary-btn {
+.btn-primary {
   padding: 12px 24px;
   border: 1px solid $color-contrast;
   border-radius: 100px;
@@ -185,11 +186,21 @@ h6 {
     border-color: $color-accent;
   }
 
-  &:hover .primary-btn-text {
+  &:hover .btn-primary-text {
     color: $color-accent;
     transition: all 0.125s ease-in-out;
     animation: move-left 2s linear infinite;
     animation-delay: -1s;
+  }
+
+  &:disabled {
+    border: 1px solid rgba($color-contrast, 0.8);
+    color: rgba($color-contrast, 0.6);
+  }
+
+  &:disabled .btn-primary-text{
+    color: rgba($color-contrast, 0.6);
+    animation: unset;
   }
 }
 
@@ -278,19 +289,19 @@ h6 {
   h2 {
     font-size: 60px;
   }
-  
+
   h3 {
     font-size: 32px;
   }
-  
+
   h4 {
     font-size: 20px;
   }
-  
+
   h5 {
     font-size: 20px;
   }
-  
+
   h6 {
     font-size: 24px;
   }
@@ -304,19 +315,19 @@ h6 {
   h2 {
     font-size: 56px;
   }
-  
+
   h3 {
     font-size: 24px;
   }
-  
+
   h4 {
     font-size: 20px;
   }
-  
+
   h5 {
     font-size: 20px;
   }
-  
+
   h6 {
     font-size: 24px;
   }

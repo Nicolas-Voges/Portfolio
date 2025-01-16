@@ -10,11 +10,11 @@
  }
 
  h1 {
-    color: $color-accent;
+     color: $color-accent;
  }
 
  h2 {
-    color: $color-contrast;
+     color: $color-contrast;
  }
 
  .flex-evenly {
@@ -50,7 +50,7 @@
      transition: all 0.125s ease-in-out;
  }
 
- .project-btn {
+ .btn-project {
      max-width: 880px;
      width: 880px;
      padding: 40px 32px;
@@ -108,58 +108,98 @@
      background-image: $linear-gradient;
      border-radius: 32px;
      @include flex($g: 88px);
+     cursor: default;
  }
 
  .project-card-right {
-    @include flex($d: column, $a: flex-end, $j: space-between, $f: 1);
-    height: 100%;
+     @include flex($d: column, $a: flex-end, $j: space-between, $f: 1, $g: 32px);
+     height: 100%;
+     width: 45%;
 
-    &>.btn-close {
-        cursor: pointer;
-    }
+     &>.btn-close {
+         cursor: pointer;
+         transition: all 0.125s ease-in-out;
+
+         &:hover {
+             filter: $filter-accent;
+             transform: scale(1.2);
+         }
+     }
  }
 
  .project-card-img {
-    width: 100%;
-    @include img();
-    border-radius: 30px;
+     width: 100%;
+     @include img();
+     border-radius: 30px;
  }
 
  .btn-next {
-    @include flex($g: 4px);
-    font-size: 18px;
-    color: $color-accent;
+     @include flex($g: 4px);
+     font-size: 18px;
+     color: $color-accent;
+     transition: all 0.125s ease-in-out;
 
-    &>img {
-        width: 24px;
-        height: 18px;
-        @include img();
-        filter: $filter-accent;
-    }
+     &>img {
+         width: 24px;
+         height: 18px;
+         @include img();
+         filter: $filter-accent;
+         transition: all 0.125s ease-in-out;
+     }
+
+     &:hover {
+         color: $color-contrast;
+     }
+
+     &:hover img {
+         transform: translateX(4px) scale(1.2);
+     }
  }
 
  .project-card-left {
-    @include flex($d: column, $a: flex-start, $f: 1);
+     @include flex($d: column, $a: flex-start, $f: 1);
+     width: 45%;
  }
 
  .project-card-skills-box {
-    margin: 32px 0 40px 0;
-    @include flex($j: flex-start, $g: 16px);
+     margin: 32px 0 40px 0;
+     @include flex($j: flex-start, $g: 16px);
  }
 
  .project-card-skill {
-    @include flex($g: 4px);
+     @include flex($g: 4px);
  }
 
  .project-card-skill-img {
-    @include img();
-    width: 24px;
-    height: 24px;
-    filter: $filter-accent;
+     @include img();
+     width: 24px;
+     height: 24px;
+     filter: $filter-accent;
  }
 
  .project-card-describtion {
-    font-size: 18px;
+     font-size: 18px;
+ }
+
+ .project-card-btn-box {
+     @include flex($g: 32px);
+     transition: all 0.125s ease-in-out;
+
+     &>button {
+         @include flex($g: 8px);
+     }
+
+     &>button>img {
+         transition: all 0.125s ease-in-out;
+     }
+
+     &>button:hover {
+         color: $color-accent;
+     }
+
+     &>button:hover>img {
+         transform: translate(4px, -4px);
+     }
  }
 
  @media (max-width: 1200px) {
@@ -173,7 +213,7 @@
          display: none;
      }
 
-     .project-btn {
+     .btn-project {
          max-width: 880px;
          width: 100%;
          padding: 40px 32px;
