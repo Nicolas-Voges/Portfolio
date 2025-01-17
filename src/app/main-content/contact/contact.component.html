@@ -29,7 +29,10 @@
                             <img class="checkbox-icon" src="assets/img/checkbox_unchecked.svg" alt="">
                         }
                     </label>
-                    <input ngModel #readPolicy="ngModel" id="policy-check" class="policy-check" type="checkbox" required>
+                    <!-- <input ngModel #readPolicy="ngModel" id="policy-check" class="policy-check" type="checkbox" required> -->
+                    <input [(ngModel)]="readPolicy" id="policy-check" class="policy-check" type="checkbox" required>
+                    {{ readPolicy | json }}
+                    {{ readPolicy }}
                 </div>
                 <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as
                     outlined.</span>
