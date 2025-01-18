@@ -196,6 +196,7 @@ h6 {
   &:disabled {
     border: 1px solid rgba($color-contrast, 0.8);
     color: rgba($color-contrast, 0.6);
+    cursor: default;
   }
 
   &:disabled .btn-primary-text{

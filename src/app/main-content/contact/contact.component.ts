@@ -10,10 +10,24 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  onSubmit() {
-    console.log('läuft');
-    
+  formData = {
+    name: "",
+    email: "",
+    message: "",
+    terms: false
   }
 
-  readPolicy: boolean = false;
+  onSubmit() {
+    console.log('submit form with: ' + JSON.stringify(this.formData, null, 2));
+    console.log(this.formData);
+  }
+
+  onCheckboxChange(event: Event) {
+    const checkbox = event.target as HTMLInputElement;
+    if (checkbox.checked) {
+      this.formData.terms = true;
+    } else {
+      this.formData.terms = false;
+    }
+  }
 }
