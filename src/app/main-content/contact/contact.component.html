@@ -28,9 +28,9 @@
                 <div class="position-relative">
                     <label for="policy-check">
                         @if (formData.terms) {
-                        <img class="checkbox-icon" src="assets/img/checkbox_checked.svg" alt="">
+                        <img class="checkbox-icon" src="assets/img/checkbox_checked.svg" alt="privacy policy accepted">
                         } @else {
-                        <img class="checkbox-icon" src="assets/img/checkbox_unchecked.svg" alt="">
+                        <img class="checkbox-icon" src="assets/img/checkbox_unchecked.svg" alt="privacy policy not accepted">
                         }
                     </label>
                     <input (change)="onCheckboxChange($event)" id="policy-check" class="policy-check" type="checkbox"

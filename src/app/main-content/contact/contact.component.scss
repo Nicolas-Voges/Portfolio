@@ -82,6 +82,7 @@ h2 {
     &>label {
         width: 24px;
         height: 24px;
+       
     }
 }
 
@@ -89,7 +90,7 @@ h2 {
     opacity: 0;
     width: 24px;
     height: 24px;
-    cursor: pointer;
+    // cursor: pointer;
 }
 
 .checkbox-icon {
@@ -97,9 +98,14 @@ h2 {
     width: 24px;
     height: 24px;
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+    cursor: pointer;
+
+    &:hover {
+        background-image: radial-gradient(circle at center, rgba($color-accent, 0.3) 0%, $color-main 12px);
+    }
 }

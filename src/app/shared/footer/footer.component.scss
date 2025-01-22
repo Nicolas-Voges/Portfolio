@@ -1,0 +1,16 @@
+@use './../../../styles.scss' as *;
+
+main {
+    @include flex($j: space-between);
+    padding-bottom: 64px;
+
+    &>p {
+        font-family: fira code;
+        font-size: 18px;
+        color: $color-accent;
+    }
+}
+
+div {
+    @include flex($d: column, $a: flex-start, $g: 8px);
+}
