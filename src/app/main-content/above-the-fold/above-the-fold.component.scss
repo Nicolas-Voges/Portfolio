@@ -140,8 +140,20 @@
     white-space: nowrap;
  }
 
+ @keyframes text-flow {
+    0% {
+       transform: translateX(0);
+    }
+
+    100% {
+       transform: translateX(-49.9%);
+    }
+ }
+
  .text-box {
+    width: max-content;
     @include flex($g: 56px, $j: flex-start);
+    animation: text-flow 20s linear infinite;
  }
 
  .text-view-box {
@@ -150,17 +162,17 @@
  }
 
  @media (min-width: 1980px) {
-   .text-tape {
-      transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.2));
-   }
+    .text-tape {
+       transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.2));
+    }
  }
 
  @media (min-width: 3000px) {
-   :host {
-      overflow: hidden;
-   }
+    :host {
+       overflow: hidden;
+    }
 
-   .text-tape {
-      transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.5));
-   }
+    .text-tape {
+       transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.5));
+    }
  }

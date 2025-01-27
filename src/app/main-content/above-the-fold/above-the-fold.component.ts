@@ -14,6 +14,11 @@ export class AboveTheFoldComponent {
     'Also available for remote work',
     'Frontend Developer',
     'Based in Wolfenbüttel',
+    'Aspiring Full Stack Developer',
+    'Open to work',
+    'Also available for remote work',
+    'Frontend Developer',
+    'Based in Wolfenbüttel',
     'Aspiring Full Stack Developer'
   ];
 }
