@@ -10,11 +10,11 @@
  }
 
  main {
-    padding: 0 $padding-main-sides;
-    width: 100%;
-    height: 98px;
-    @include flex($j: space-between);
-  }
+     padding: 0 $padding-main-sides;
+     width: 100%;
+     height: 98px;
+     @include flex($j: space-between);
+ }
 
  .link-underline {
      position: absolute;
@@ -28,10 +28,10 @@
  }
 
  .logo {
-    width: 32px;
-    height: 48px;
-    object-fit: cover;
-  }
+     width: 32px;
+     height: 48px;
+     object-fit: cover;
+ }
 
  .links-box {
      @include flex($g: 24px);
@@ -44,10 +44,24 @@
          color: $color-contrast;
          font-family: Fira Code;
 
-         &:hover ~ .link-underline {
-            opacity: 1;
+         &:hover~.link-underline {
+             opacity: 1;
          }
      }
+ }
 
-      
+ @media (max-width: 750px) {
+     main {
+         padding: 0 56px;
+     }
+
+     .link-box {
+        display: none;
+     }
+ }
+
+ @media (max-width: 600px) {
+     main {
+         padding: 0 16px;
+     }
  }

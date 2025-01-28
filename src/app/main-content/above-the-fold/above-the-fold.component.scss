@@ -111,6 +111,12 @@
     }
  }
 
+ .green-dot {
+   width: 8px;
+   height: 8px;
+   @include img();
+ }
+
  .social-green-dot {
     position: absolute;
     top: 50%;
@@ -126,7 +132,7 @@
     transform: rotateZ(-3deg) translateY(-2.6205vw);
     z-index: 1;
     width: 105vw;
-    padding: 12px 108px;
+    padding: 12px calc($padding-main-sides + 2.5vw);
     backdrop-filter: blur(3px);
     overflow: hidden;
     background-color: rgba($color: $color-contrast, $alpha: 0.12);
@@ -159,6 +165,81 @@
  .text-view-box {
     overflow: hidden;
     max-width: 1980px;
+ }
+
+ @media (max-width: 750px) {
+   .left-decorator-position {
+      left: 56px;
+   }
+  
+   .right-decorator-position {
+      right: 56px;
+   }
+
+   main {
+      padding: 0 56px;
+   }
+
+   .text-tape {
+      padding: 12px calc(56px + 2.5vw);
+   }
+ }
+
+ @media (max-width: 600px) {
+   .left-decorator-position {
+      left: 16px;
+   }
+  
+   .right-decorator-position {
+      right: 16px;
+   }
+
+   main {
+      padding: 0 16px;
+   }
+
+   .text-tape {
+      padding: 12px calc(16px + 2.5vw);
+   }
+ }
+
+ @media (max-width: 550px) {
+   main {
+      @include flex($d: column, $j: flex-start);
+   }
+
+   h3 {
+      margin-top: 25vh;
+   }
+
+   .e-mail {
+      display: none;
+   }
+ }
+
+ @media (max-width: 430px) {
+   h1 {
+      font-size: 56px;
+   }
+
+   .btn-box {
+    @include flex($g: 24px);
+   }
+ }
+
+ @media (max-width: 390px) {
+   h1 {
+      font-size: 48px;
+   }
+
+   .btn-box {
+    @include flex($g: 12px);
+   }
+
+   .btn-primary-text {
+      font-size: 16px;
+      white-space: nowrap;
+   }
  }
 
  @media (min-width: 1980px) {
