@@ -50,13 +50,42 @@
      }
  }
 
+ .btn-menu {
+     display: none;
+
+     &>img {
+         @include img();
+         width: 32px;
+         height: 21px;
+     }
+ }
+
+ @media (max-width: 900px) {
+     main {
+         padding: 0 72px;
+     }
+ }
+
  @media (max-width: 750px) {
      main {
          padding: 0 56px;
+         height: 80px;
+         position: relative;
      }
 
-     .link-box {
-        display: none;
+     .links-box {
+         position: absolute;
+         top: 80px;
+         right: 16px;
+         padding: 40px 72px;
+         @include flex($g: 24px, $d: column-reverse);
+         background-image: $linear-gradient;
+         border: 1px solid $color-accent;
+         border-radius: 30px;
+     }
+
+     .btn-menu {
+         display: unset;
      }
  }
 
