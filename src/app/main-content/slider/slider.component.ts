@@ -65,7 +65,7 @@ export class SliderComponent {
       }
       this.animateLeft = false;
       clearTimeout(id);
-    }, 1000);
+    }, 975);
   }
 
   rightAnimation() {
@@ -94,7 +94,7 @@ export class SliderComponent {
       }
       this.animateRight = false;
       clearTimeout(id);
-    }, 1000);
+    }, 975);
   }
 
   chooseAction(i: number) {
