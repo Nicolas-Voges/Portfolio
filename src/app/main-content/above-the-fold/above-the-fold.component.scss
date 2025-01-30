@@ -169,55 +169,55 @@
 
  @media (max-width: 900px) {
    .left-decorator-position {
-      left: 72px;
+      left: $padding-main-sides-900;
    }
   
    .right-decorator-position {
-      right: 72px;
+      right: $padding-main-sides-900;
    }
 
    main {
-      padding: 0 72px;
+      padding: 0 $padding-main-sides-900;
    }
 
    .text-tape {
-      padding: 12px calc(72px + 2.5vw);
+      padding: 12px calc($padding-main-sides-900 + 2.5vw);
    }
  }
 
  @media (max-width: 750px) {
    .left-decorator-position {
-      left: 56px;
+      left: $padding-main-sides-750;
    }
   
    .right-decorator-position {
-      right: 56px;
+      right: $padding-main-sides-750;
    }
 
    main {
-      padding: 0 56px;
+      padding: 0 $padding-main-sides-750;
    }
 
    .text-tape {
-      padding: 12px calc(56px + 2.5vw);
+      padding: 12px calc($padding-main-sides-750 + 2.5vw);
    }
  }
 
  @media (max-width: 600px) {
    .left-decorator-position {
-      left: 16px;
+      left: $padding-main-sides-600;
    }
   
    .right-decorator-position {
-      right: 16px;
+      right: $padding-main-sides-600;
    }
 
    main {
-      padding: 0 16px;
+      padding: 0 $padding-main-sides-600;
    }
 
    .text-tape {
-      padding: 12px calc(16px + 2.5vw);
+      padding: 12px calc($padding-main-sides-600 + 2.5vw);
    }
  }
 

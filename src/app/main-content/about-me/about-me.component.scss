@@ -7,15 +7,22 @@ main {
 
 .photo-box {
     position: relative;
+    margin-bottom: 140px;
 
     &:hover .photo-background {
         opacity: 1;
     }
 }
 
+.text-box {
+    align-self: flex-end;
+    max-width: 100%;
+}
+
 .photo {
     width: 560px;
-    height: 560px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
     @include img();
 }
 
@@ -26,7 +33,8 @@ main {
     top: 0;
     bottom: 0;
     width: 560px;
-    height: 560px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
     @include img();
     z-index: -1;
     transform: translate(-46px, 30px);
@@ -59,5 +67,35 @@ main {
     main {
         padding: $padding-main-bottom $padding-main-sides;
         @include flex($d: column, $g: 96px);
+    }
+
+    .text-box {
+        align-self: unset;
+    }
+
+    .photo-box {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        padding: $padding-main-bottom $padding-main-sides-900;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        padding: $padding-main-bottom-750 $padding-main-sides-750;
+    }
+
+    .photo-background {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: $padding-main-bottom-750 $padding-main-sides-600;
     }
 }

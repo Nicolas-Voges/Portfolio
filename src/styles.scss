@@ -4,7 +4,11 @@ $color-accent-50: rgba(61, 207, 182, 0.5);
 $color-contrast: white;
 $filter-accent: invert(68%) sepia(25%) saturate(963%) hue-rotate(120deg) brightness(200%) contrast(89%);
 $padding-main-sides: 96px;
+$padding-main-sides-900: 72px;
+$padding-main-sides-750: 56px;
+$padding-main-sides-600: 16px;
 $padding-main-bottom: 144px;
+$padding-main-bottom-750: 100px;
 $linear-gradient: linear-gradient(35deg, rgb(28, 28, 28), rgb(28, 28, 28), rgb(28, 28, 28), rgb(8, 70, 59), rgb(8, 70, 59), rgb(8, 70, 59));
 
 @mixin flex($d: row, $a: center, $j: center, $g: 0, $w: nowrap, $f: unset) {
@@ -144,6 +148,7 @@ h6 {
 
 .card {
   width: 560px;
+  max-width: 100%;
   cursor: default;
   padding: 32px;
   border: 1px solid $color-accent;
@@ -331,6 +336,12 @@ h6 {
 
   h6 {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  h2 {
+    font-size: 44px;
   }
 }
 
