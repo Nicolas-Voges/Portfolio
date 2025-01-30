@@ -14,7 +14,8 @@
  }
 
  h2 {
-     color: $color-contrast;
+    //  color: $color-contrast;
+    white-space: unset;
  }
 
  .flex-evenly {
@@ -227,3 +228,30 @@
          }
      }
  }
+
+ @media (max-width: 900px) {
+    main {
+        padding: 0 $padding-main-sides-900 $padding-main-bottom $padding-main-sides-900;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        padding: 0 $padding-main-sides-750 $padding-main-bottom-750 $padding-main-sides-750;
+    }
+
+    .photo-background {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 $padding-main-sides-600 $padding-main-bottom-750 $padding-main-sides-600;
+    }
+
+    .btn-project {
+        @include flex($d: column, $a: flex-start, $j: space-between, $g: 10px);
+        padding: 32px 0;
+    }
+}
