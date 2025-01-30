@@ -1,5 +1,9 @@
 @use './../../../styles.scss' as *;
 
+h4 {
+    align-self: flex-start;
+}
+
 .background {
     background-image: radial-gradient(circle at left, rgba($color-accent, 0.3) 0%, $color-main 300px);
     @include flex($a: flex-start, $d: column);
@@ -18,6 +22,7 @@ main {
 
 .skills-box {
     max-width: 632px;
+    width: 100%;
     @include flex($g: 72px, $w: wrap, $a: flex-start, $j: flex-start);
 }
 
@@ -54,7 +59,7 @@ main {
 .skill-icon {
     @include img($f: contain);
     width: 56px;
-    height: 65px;
+    height: 56px;
     transition: all 0.125s ease-in-out;
 }
 
@@ -96,7 +101,53 @@ main {
         @include flex($d: column, $g: 96px);
     }
 
+    h4 {
+        align-self: center;
+        transform: translateX(calc(50% - 280px));
+    }
+}
+
+@media (max-width: 900px) {
     main {
-        width: unset;
+        padding: 0 $padding-main-sides-900 $padding-main-bottom $padding-main-sides-900;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        padding: 0  $padding-main-sides-750 $padding-main-bottom-750 $padding-main-sides-750;
+    }
+}
+
+@media (max-width: 689px) {
+    h4 {
+        align-self: flex-start;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0  $padding-main-sides-600 $padding-main-bottom-750 $padding-main-sides-600;
+    }
+
+    h5 {
+        white-space: unset;
+    }
+
+    .skills-box {
+        @include flex($g: 32px, $w: wrap, $a: flex-start, $j: flex-start);
+    }
+
+    .skill-box {
+        padding: 0 16px;
+        &>p {
+            font-size: 16px;
+        }
+    }
+
+    .skill-icon {
+        width: 48px;
+        height: 48px;
     }
 }
