@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,11 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent{
   showMenu = true;
   bigScreen = true;
+  @ViewChild('menu') menu?: ElementRef;
+  @ViewChild('menuToggle') menuToggle?: ElementRef;
 
   constructor() {
     this.checkMenuStatus();
@@ -38,5 +40,22 @@ export class HeaderComponent {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.checkMenuStatus();
+  }
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    if (this.menuIsClicked(event) || this.menuBtnIsClicked(event)) {
+      return;
+    } else if (window.innerWidth <= 750 && this.showMenu) {
+      this.showMenu = false;
+    }
+  }
+
+  menuIsClicked(event: MouseEvent): boolean {
+    return this.menu && this.menu.nativeElement.contains(event.target);
+  }
+
+  menuBtnIsClicked(event: MouseEvent): boolean {
+    return this.menuToggle && this.menuToggle.nativeElement.contains(event.target);
   }
 }

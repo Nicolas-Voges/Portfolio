@@ -1,6 +1,6 @@
 <main>
     @if (showMenu) {
-        <div class="links-box">
+        <div #menu class="links-box">
             <div class="translation-box">
                 <input type="checkbox" name="checkbox" id="translation" class="btn-translation">
                 <label for="translation"></label>
@@ -20,5 +20,5 @@
         </div>
     }
     <img class="logo" src="assets/img/logo.png" alt="logo">
-    <button (click)="toggleMenu()" class="btn-menu"><img class="btn-menu-img" src="assets/img/menu.svg" alt="menu"></button>
+    <button #menuToggle (click)="toggleMenu()" class="btn-menu"><img class="btn-menu-img" src="assets/img/menu.svg" alt="menu"></button>
 </main>
