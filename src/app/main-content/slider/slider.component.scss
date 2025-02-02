@@ -186,3 +186,173 @@ nav {
 .move-out-from-right {
     animation: right-out 1s ease-in-out backwards;
 }
+
+@media (max-width: 900px) {
+    main {
+        padding: 0 $padding-main-sides-900 $padding-main-bottom $padding-main-sides-900;
+    }
+
+    .slider-card {
+        padding: 48px 40px;
+        width: 66vw;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        padding: 0 $padding-main-sides-750 $padding-main-bottom-750 $padding-main-sides-750;
+    }
+
+    .slider-card {
+        padding: 48px 40px;
+        width: 70vw;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 $padding-main-sides-600 $padding-main-bottom-750 $padding-main-sides-600;
+    }
+
+    .slider-cards-box {
+        @include flex($g: 16px);
+    }
+
+    .slider-card {
+        padding: 48px 40px;
+        width: 85vw;
+    }
+
+    @keyframes out-right-mobile {
+        0% {
+    
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9);
+        }
+    
+        100% {
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9) translateX(calc(-100% - 16px));
+        }
+    }
+    
+    .move-right-from-out {
+        animation: out-right-mobile 1s ease-in-out backwards;
+    }
+    
+    @keyframes right-center-mobile {
+        0% {
+    
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9);
+        }
+    
+        100% {
+            background-color: rgba($color-accent, 0.3);
+            transform: scaleY(1) translateX(calc(-100% - 16px));
+        }
+    }
+    
+    .move-center-from-right {
+        animation: right-center-mobile 1s ease-in-out backwards;
+    }
+    
+    @keyframes center-left-mobile {
+        0% {
+            background-color: rgba($color-accent, 0.3);
+            transform: scaleY(1);
+        }
+    
+        100% {
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9) translateX(calc(-100% - 16px));
+        }
+    }
+    
+    .move-left-from-center {
+        animation: center-left-mobile 1s ease-in-out backwards;
+    }
+    
+    @keyframes left-out-mobile {
+        0% {
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9);
+        }
+    
+        100% {
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9) translateX(calc(-100% - 16px));
+        }
+    }
+    
+    .move-out-from-left {
+        animation: left-out-mobile 1s ease-in-out backwards;
+    }
+    
+    
+    @keyframes out-left-mobile {
+        0% {
+    
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9);
+        }
+    
+        100% {
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9) translateX(calc(100% + 16px));
+        }
+    }
+    
+    .move-left-from-out {
+        animation: out-left-mobile 1s ease-in-out backwards;
+    }
+    
+    @keyframes left-center-mobile {
+        0% {
+    
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9);
+        }
+    
+        100% {
+            background-color: rgba($color-accent, 0.3);
+            transform: scaleY(1) translateX(calc(100% + 16px));
+        }
+    }
+    
+    .move-center-from-left {
+        animation: left-center-mobile 1s ease-in-out backwards;
+    }
+    
+    @keyframes center-right-mobile {
+        0% {
+            background-color: rgba($color-accent, 0.3);
+            transform: scaleY(1);
+        }
+    
+        100% {
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9) translateX(calc(100% + 16px));
+        }
+    }
+    
+    .move-right-from-center {
+        animation: center-right-mobile 1s ease-in-out backwards;
+    }
+    
+    @keyframes right-out-mobile {
+        0% {
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9);
+        }
+    
+        100% {
+            background-color: rgba($color-accent, 0.1);
+            transform: scaleY(0.9) translateX(calc(100% + 16px));
+        }
+    }
+    
+    .move-out-from-right {
+        animation: right-out-mobile 1s ease-in-out backwards;
+    }
+}

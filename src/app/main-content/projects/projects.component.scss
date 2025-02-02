@@ -233,12 +233,11 @@
 
      .scroll-box {
          @include flex($d: column-reverse, $g: 32px);
-
      }
 
      .btn-next {
          position: absolute;
-         bottom: 44px;
+         bottom: 0;
          right: 44px;
      }
 
@@ -313,6 +312,14 @@
          padding: 0 $padding-main-sides-600 $padding-main-bottom-750 $padding-main-sides-600;
      }
 
+     .scroll-box {
+        @include flex($d: column-reverse, $g: 16px);
+    }
+
+     .project-card-right {
+         padding: 0;
+     }
+
      .btn-project {
          @include flex($d: column, $a: flex-start, $j: space-between, $g: 10px);
          padding: 32px 0;
@@ -324,7 +331,7 @@
      }
 
      .project-card-btn-box {
-         margin-bottom: 232px;
+         margin-bottom: 80px;
          @include flex($g: 8px);
      }
  }
