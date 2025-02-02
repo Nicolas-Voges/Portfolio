@@ -118,31 +118,10 @@ h2 {
 
     main {
         @include flex($d: column, $j: space-between, $g: 64px);
-        padding: 0 $padding-main-sides-900 $padding-main-bottom $padding-main-sides-900;
-    }
-}
-
-@media (max-width: 750px) {
-    section {
-        max-width: 100%;
-    }
-
-    main {
-        @include flex($d: column, $j: space-between, $g: 64px);
-        padding: 0 $padding-main-sides-750 $padding-main-bottom-750 $padding-main-sides-750;
     }
 }
 
 @media (max-width: 600px) {
-    section {
-        max-width: 100%;
-    }
-
-    main {
-        @include flex($d: column, $j: space-between, $g: 64px);
-        padding: 0 $padding-main-sides-600 $padding-main-bottom-750 $padding-main-sides-600;
-    }
-
     .btn-form {
         padding: 16px;
     }

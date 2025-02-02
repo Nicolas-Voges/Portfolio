@@ -12,7 +12,6 @@ h4 {
 main {
     @include flex($d: column);
     padding: 0 $padding-main-sides $padding-main-bottom $padding-main-sides;
-    // max-width: calc(1288px + (2 * $padding-main-sides));
 }
 
 .skill-content {
@@ -22,13 +21,17 @@ main {
 
 .skills-box {
     max-width: 632px;
-    width: 100%;
-    @include flex($g: 72px, $w: wrap, $a: flex-start, $j: flex-start);
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    gap: 72px;
+    grid-template-columns: repeat(auto-fit, 104px);
 }
 
 .skill-box {
     cursor: default;
     width: 104px;
+    max-width: 104px;
     padding: 0 22px;
     @include flex($d: column, $g: 8px, $j: space-between);
 
@@ -101,6 +104,10 @@ main {
         @include flex($d: column, $g: 96px);
     }
 
+    .skills-box {
+        width: 100%;
+    }
+
     h4 {
         align-self: center;
         transform: translateX(calc(50% - 280px));
@@ -134,11 +141,7 @@ main {
     h5 {
         white-space: unset;
     }
-
-    .skills-box {
-        @include flex($g: 32px, $w: wrap, $a: flex-start, $j: flex-start);
-    }
-
+    
     .skill-box {
         padding: 0 16px;
         &>p {
