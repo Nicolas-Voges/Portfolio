@@ -1,16 +1,43 @@
 @use './../../../styles.scss' as *;
 
 main {
-    @include flex($j: space-between);
     padding-bottom: 64px;
+    display: grid;
+    grid-template-areas:
+        "l c r";
+    justify-content: space-between;
 
-    &>p {
+    &>.left {
+        grid-area: l;
+    }
+
+    &>.center {
         font-family: fira code;
         font-size: 18px;
         color: $color-accent;
+        grid-area: c;
+        white-space: nowrap;
+    }
+
+    &>.right {
+        grid-area: r;
     }
 }
 
 div {
     @include flex($d: column, $a: flex-start, $g: 8px);
+}
+
+@media (max-width: 900px) {
+    main {
+        gap: 32px;
+
+        grid-template-areas:
+            "l . r"
+            "c c c";
+
+        &>.center {
+            text-align: center;
+        }
+    }
 }
