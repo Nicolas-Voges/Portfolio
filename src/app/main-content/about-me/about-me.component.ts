@@ -13,14 +13,14 @@ export class AboutMeComponent {
     text: string;
   }[] = [{
     name: 'location',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsum quisquam iusto accusamus dolores tenetur quis corrupti, simil'
+    text: 'Ich lebe in Wolfenbüttel, bin aber auch mobil und ebnso für Heimarbeit zu haben.'
   },
   {
     name: 'mind',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsum quisquam iusto accusamus dolores tenetur quis corrupti, simil'
+    text: 'Gern arbeite ich mich in neue und bei Ihnen benötigte Technologien ein.'
   },
   {
     name: 'hook',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore ipsum quisquam iusto accusamus dolores tenetur quis corrupti, simil'
+    text: 'Meinen neuen Aufgaben und Herausforderungen widme ich mich stets mit großer Motivation und vollem Einsatz.'
   }];
 }

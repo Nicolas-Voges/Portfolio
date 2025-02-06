@@ -1,9 +1,11 @@
-import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef, inject } from '@angular/core';
+import {TranslateModule} from "@ngx-translate/core";
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -16,6 +18,8 @@ export class HeaderComponent{
   constructor() {
     this.checkMenuStatus();
   }
+
+  translation = inject(TranslationService);
 
   private checkMenuStatus() {
     if (window.innerWidth > 750) {

@@ -21,11 +21,15 @@ main {
 
 .skills-box {
     max-width: 632px;
-    width: 50%;
+    width: 45%;
     display: grid;
     justify-content: center;
     gap: 72px;
     grid-template-columns: repeat(auto-fit, 104px);
+}
+
+.card {
+    width: 45%;
 }
 
 .skill-box {
@@ -111,6 +115,11 @@ main {
     h4 {
         align-self: center;
         transform: translateX(calc(50% - 280px));
+    }
+
+    .card {
+        width: 100%;
+        max-width: 560px;
     }
 }
 
