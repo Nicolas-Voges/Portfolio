@@ -1,12 +1,12 @@
 <main>
     @if (showMenu) {
         <div #menu class="links-box">
-            <div class="translation-box">
+            <div (change)="translation.changeLanguage()" class="translation-box">
                 <input type="checkbox" name="checkbox" id="translation" class="btn-translation">
                 <label for="translation"></label>
             </div>
             <div class="link-box">
-                <a>About me{{ 'test' | translate }}</a>
+                <a>{{ 'header.about-me' | translate }}</a>
                 <img class="link-underline" src="assets/img/green_dot.svg" alt="underline">
             </div>
             <div class="link-box">
@@ -14,7 +14,7 @@
                 <img class="link-underline" src="assets/img/green_dot.svg" alt="underline">
             </div>
             <div class="link-box">
-                <a>Projects</a>
+                <a>{{ 'header.projects' | translate }}</a>
                 <img class="link-underline" src="assets/img/green_dot.svg" alt="underline">
             </div>  
         </div>

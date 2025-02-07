@@ -1,3 +1,20 @@
 {
-    "test": "test en"
+    "header": {
+        "about-me": "About me",
+        "projects": "Projects"
+    },
+    "atf": {
+        "dev": "Developer",
+        "btn": {
+            "projects": "Check my work",
+            "contact": "Contact me"
+        },
+        "text-tape": {
+            "open-to-work": "Open to work",
+            "remote": "Also available for remote work",
+            "dev": "Frontend Developer",
+            "location": "Based in Wolfenbüttel",
+            "next": "Aspiring Full Stack Developer"
+        }
+    }
 }

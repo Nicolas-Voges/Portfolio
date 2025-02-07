@@ -1,3 +1,20 @@
 {
-    "test": "test de"
+    "header": {
+        "about-me": "Über mich",
+        "projects": "Portfolio"
+    },
+    "atf": {
+        "dev": "Entwickler",
+        "btn": {
+            "projects": "Meine Arbeiten",
+            "contact": "Kontakt"
+        },
+        "text-tape": {
+            "open-to-work": "Offen für neue Herausforderungen",
+            "remote": "Auch für´s Home Office zu haben",
+            "dev": "Frontend Entwickler",
+            "location": "In Wolfenbüttel zu Hause",
+            "next": "Angehender Fullstack Entwickler"
+        }
+    }
 }

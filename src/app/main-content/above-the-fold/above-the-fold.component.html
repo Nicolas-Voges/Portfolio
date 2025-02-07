@@ -1,9 +1,9 @@
 <main>
-    <h3>Frontend Developer</h3>
+    <h3>Frontend {{ "atf.dev" | translate }}</h3>
     <h1>Nicolas Voges</h1>
     <div class="btn-box">
-        <button class="btn-primary"><span class="btn-primary-text">Check my work</span></button>
-        <button class="btn-primary"><span class="btn-primary-text">Contact me</span></button>
+        <button class="btn-primary"><span class="btn-primary-text">{{ "atf.btn.projects" | translate }}</span></button>
+        <button class="btn-primary"><span class="btn-primary-text">{{ "atf.btn.contact" | translate }}</span></button>
     </div>
     <aside class="decorator left-decorator-position">
         <div class="arrow-box">
@@ -29,10 +29,14 @@
         <div class="text-view-box">
             <div class="text-box">
                     <img class="green-dot" src="assets/img/green_dot.svg" alt="">
-                    @for (item of texts; track $index) {
-                    <span class="text-tape-text">{{ item }}</span>
-                    <img class="green-dot" src="assets/img/green_dot.svg" alt="">
-                }
+                    @for (item of translation.textTape; track $index) {
+                        <span class="text-tape-text">{{ item }}</span>
+                        <img class="green-dot" src="assets/img/green_dot.svg" alt="">
+                    }
+                    @for (item of translation.textTape; track $index) {
+                        <span class="text-tape-text">{{ item }}</span>
+                        <img class="green-dot" src="assets/img/green_dot.svg" alt="">
+                    }
             </div>
         </div>
     </section>
