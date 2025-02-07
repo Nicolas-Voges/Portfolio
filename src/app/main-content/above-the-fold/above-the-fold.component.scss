@@ -157,10 +157,13 @@
  }
 
  .text-box {
-    width: max-content;
-    @include flex($g: 56px, $j: flex-start);
-    animation: text-flow 20s linear infinite;
- }
+   width: max-content;
+   @include flex($g: 56px, $j: flex-start);
+}
+
+.text-box-animation {
+   animation: text-flow 20s linear infinite;
+}
 
  .text-view-box {
     overflow: hidden;

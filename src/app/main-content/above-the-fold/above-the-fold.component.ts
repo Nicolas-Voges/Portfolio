@@ -14,27 +14,40 @@ import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
 export class AboveTheFoldComponent {
   translation = inject(TranslationService);
   public texts: string[] = [];
+  toggled = false;
+  textboxAnimated = true;
 
   constructor() {
-    // this.texts = [
-    //     'Open to work',
-    //     'Also available for remote work',
-    //     'Frontend Developer',
-    //     'Based in Wolfenbüttel',
-    //     'Aspiring Full Stack Developer',
-    //     'Open to work',
-    //     'Also available for remote work',
-    //     'Frontend Developer',
-    //     'Based in Wolfenbüttel',
-    //     'Aspiring Full Stack Developer'
-    //   ];
+    this.texts = [
+      'Open to work',
+      'Also available for remote work',
+      'Frontend Developer',
+      'Based in Wolfenbüttel',
+      'Aspiring Full Stack Developer',
+      'Open to work',
+      'Also available for remote work',
+      'Frontend Developer',
+      'Based in Wolfenbüttel',
+      'Aspiring Full Stack Developer'
+    ];
     this.texts = this.translation.textTape;
     console.log(this.texts);
     console.log('this.texts');
+    this.toggelAnimation();
+  }
+
+  toggelAnimation() {
+    let id = setInterval(() => {
+      this.textboxAnimated = false;
+      if (this.toggled) {
+      this.textboxAnimated = true;
+      clearInterval(id);
+      }
+      this.toggled = true;
+    }, 50);
   }
 
   ngOninit() {
     this.texts = this.translation.textTape;
-    
   }
 }
