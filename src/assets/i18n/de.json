@@ -16,5 +16,33 @@
             "location": "In Wolfenbüttel zu Hause",
             "next": "Angehender Fullstack Entwickler"
         }
+    },
+    "about-me": {
+        "headline": "Wer ich bin",
+        "card-headline": "Über mich",
+        "main-text": "Hallo, mit mir als Frontendentwickler gewinnt Ihr Unternehmen einen strukturierten, verantwortungsbewusten und teamfähigen Mitarbeiter. Zudem verfüge ich über analytisches Denken und eine gute Ausdrucksfähigkeit.",
+        "location": "Ich lebe in Wolfenbüttel, bin mobil und ebnso offen für Heimarbeit.",
+        "mind": "Gern arbeite ich mich in neue und bei Ihnen benötigte Technologien ein.",
+        "hook": "Meinen neuen Aufgaben und Herausforderungen widme ich mich stets mit großer Motivation und vollem Einsatz."
+    },
+    "skill-set": {
+        "headline": "Technologien",
+        "card-headline": "Skills",
+        "main-text": "In Gruppen- sowie Solo- Projecten habe ich mich bereits in einige Frontendtechnologien einarbeiten können, insbesonder in JavaScript, HTML, SCSS, Typscript und Angular.",
+        "question-first": "Sie brauchen",
+        "question-second": " eine andere Fähigkeit?",
+        "main-text-second": "Meinen neuen Aufgaben und Herausforderungen widme ich mich stets mit großer Motivation und vollem Einsatz.",
+        "card-end": "Reden wir!",
+        "speech-bubble": "Ich habe großes Interesse an"
+    },
+    "projects": {
+        "headline": "Portfolio",
+        "second-headline": "Projekte",
+        "main-text": "Entdecken Sie eine Audwahl meiner Projekte - Testen Sie die Apps, um meine Skills in Aktion zu sehen.",
+        "card-headline": "Worum geht es in diesem Projekt?",
+        "join": "Join ist...",
+        "game": "El Pollo Loco ist...",
+        "bubble": "DABubble ist...",
+        "button": "Nächstes Projekt"
     }
 }

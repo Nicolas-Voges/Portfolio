@@ -1,13 +1,10 @@
 <main>
     <div class="flex-between width-100">
         <div>
-            <h4>Portfolio</h4>
-            <h2>Featured Projects</h2>
-            <p class="margin-bottom-40">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+            <h4>{{ "projects.headline" | translate }}</h4>
+            <h2>{{ "projects.second-headline" | translate }}</h2>
+            <p class="margin-bottom-40">{{ "projects.main-text" | translate }}</p>
         </div>
-        <!-- <div> -->
-            <!-- Placeholder -->
-        <!-- </div> -->
     </div>
     @for (project of projects; track project; let i = $index) {
         <div class="project">
@@ -52,9 +49,9 @@
                         } @else {
                             <h1>{{ project.number }}</h1>
                         }
-                        <h2>{{  project.name}}</h2>
-                        <h4>What is this project about?</h4>
-                        <p class="project-card-describtion">{{ project.description }}</p>
+                        <h2>{{ project.name }}</h2>
+                        <h4>{{ "projects.card-headline" | translate }}</h4>
+                        <p class="project-card-describtion">{{ "projects." + project.description | translate }}</p>
                         <p class="project-card-skills-box">
                             @for (skill of project.skills; track $index) {
                                 <span class="project-card-skill"><img class="project-card-skill-img" src="assets/img/skill_set_icons/{{ skill.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ skill }}">{{ skill }}</span>

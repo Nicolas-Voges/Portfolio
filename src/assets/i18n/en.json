@@ -16,5 +16,33 @@
             "location": "Based in Wolfenbüttel",
             "next": "Aspiring Full Stack Developer"
         }
+    },
+    "about-me": {
+        "headline": "Who I Am",
+        "card-headline": "About me",
+        "main-text": "no translation available yet",
+        "location": "no translation available yet",
+        "mind": "no translation available yet",
+        "hook": "no translation available yet"
+    },
+    "skill-set": {
+        "headline": "Technologies",
+        "card-headline": "Skill Set",
+        "main-text": "no translation available yet",
+        "question-first": "You need",
+        "question-second": " another Skill?",
+        "main-text-second": "no translation available yet",
+        "card-end": "Let´s talk!",
+        "speech-bubble": "I have a special interest in lerning"
+    },
+    "projects": {
+        "headline": "Projects",
+        "second-headline": "Featured Projects",
+        "main-text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "card-headline": "What is this project about?",
+        "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
+        "game": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+        "bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+        "button": "Next Project"
     }
 }

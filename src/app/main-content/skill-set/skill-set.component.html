@@ -1,14 +1,14 @@
 <div class="background">
     <main>
-        <h4>Technologies</h4>
+        <h4>{{ "skill-set.headline" | translate}}</h4>
         <div class="skill-content">
             <section class="card">
-                <h2>Skill Set</h2>
-                <p class="main-text">In Gruppen- sowie Solo- Projecten habe ich mich bereits in einige Frontendtechnologien einarbeiten können, insbesonder in JavaScript, HTML, SCSS, Typscript und Angular.</p>
-                <h5><span class="color-contrast">Sie brauchen</span> eine andere Fähigkeit?</h5>
-                <span>Mit Begeisterung lerne ich mich in Technologien ein, die für Sie relevant sind. Kontaktieren Sie mich gern, um mich und meine Arbeit kennen zu lernen.</span>
+                <h2>{{ "skill-set.card-headline" | translate}}</h2>
+                <p class="main-text">{{ "skill-set.main-text" | translate}}</p>
+                <h5><span class="color-contrast">{{ "skill-set.question-first" | translate}}</span>{{ "skill-set.question-second" | translate}}</h5>
+                <span>{{ "skill-set.main-text-second" | translate}}</span>
                 <div class="margin-top-40">
-                    <button class="primary-btn"><span class="primary-btn-text">Let´s talk</span></button>
+                    <button class="primary-btn"><span class="primary-btn-text">{{ "skill-set.card-end" | translate}}</span></button>
                 </div>
             </section>
             <section class="skills-box">
@@ -18,7 +18,7 @@
                             <img class="skill-icon" src="assets/img/skill_set_icons/{{ item.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ item }}">
                             <p>{{ item.replaceAll('-','&#8209;') }}</p>
                             <div class="speech-bubble">
-                                <p>I have a special interest in lerning</p>
+                                <p>{{ "skill-set.speech-bubble" | translate}}</p>
                                 <div class="interests-box">
                                     @for (interest of interests; track $index) {
                                         <div class="interest-box">

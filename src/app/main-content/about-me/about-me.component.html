@@ -4,17 +4,17 @@
         <img class="photo-background" src="assets/img/hover_photo.svg" alt="photo background">
     </section>
     <section class="text-box">
-        <h4>Who I Am</h4>
+        <h4>{{ "about-me.headline" | translate }}</h4>
         <div class="card">
-            <h2>About me</h2>
-            <p class="main-text">Hallo, mit mir als Frontendentwickler gewinnt Ihr Unternehmen einen strukturierten, verantwortungsbewusten und teamfähigen Mitarbeiter. Zudem verfüge ich über analytisches Denken und eine gute Ausdrucksfähigkeit.</p>
+            <h2>{{ "about-me.card-headline" | translate }}</h2>
+            <p class="main-text">{{ "about-me.main-text" | translate }}</p>
             <div class="sub-text-box">
-                @for (item of aboutMeTexts; track $index) {
+                @for (item of translationRefs; track translationRefs; let j = $index) {
                     <div class="icon-text-box">
                         <div class="icon-box">
-                            <img class="img-contain" src="assets/img/{{ item.name }}.svg" alt="{{ item.name }}">
+                            <img class="img-contain" src="assets/img/{{ item }}.svg" alt="{{ item }}">
                         </div>
-                         <span>{{ item.text }}</span>
+                         <span>{{ "about-me." + translationRefs[j] | translate }}</span>
                     </div>
                 }
             </div>

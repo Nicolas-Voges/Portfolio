@@ -1,14 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import {TranslateModule} from "@ngx-translate/core";
+import { TranslationService } from '../../shared/translation.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  translation = inject(TranslationService)
   public projects: {
     name: string;
     skills: string[];
@@ -19,21 +22,21 @@ export class ProjectsComponent {
     name: 'Join',
     skills: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
     number: 1,
-    description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
+    description: 'join',
     displayCard: false
   },
   {
     name: 'El Pollo Loco',
     skills: ['HTML', 'CSS', 'JavaScript'],
     number: 2,
-    description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+    description: 'game',
     displayCard: false
   },
   {
     name: 'DA Bubble',
     skills: ['Angular', 'Firebase', 'TypeScript'],
     number: 3,
-    description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
+    description: 'bubble',
     displayCard: false
   }];
 

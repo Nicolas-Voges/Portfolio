@@ -18,21 +18,7 @@ export class AboveTheFoldComponent {
   textboxAnimated = true;
 
   constructor() {
-    this.texts = [
-      'Open to work',
-      'Also available for remote work',
-      'Frontend Developer',
-      'Based in Wolfenbüttel',
-      'Aspiring Full Stack Developer',
-      'Open to work',
-      'Also available for remote work',
-      'Frontend Developer',
-      'Based in Wolfenbüttel',
-      'Aspiring Full Stack Developer'
-    ];
     this.texts = this.translation.textTape;
-    console.log(this.texts);
-    console.log('this.texts');
     this.toggelAnimation();
   }
 
