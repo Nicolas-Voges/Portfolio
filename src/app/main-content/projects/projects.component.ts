@@ -11,32 +11,32 @@ import { TranslationService } from '../../shared/translation.service';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  translation = inject(TranslationService)
+  translation = inject(TranslationService);
   public projects: {
     name: string;
     skills: string[];
     number: number;
-    description: string;
+    descriptionRef: string;
     displayCard: boolean;
   }[] = [{
     name: 'Join',
     skills: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
     number: 1,
-    description: 'join',
+    descriptionRef: 'join',
     displayCard: false
   },
   {
     name: 'El Pollo Loco',
     skills: ['HTML', 'CSS', 'JavaScript'],
     number: 2,
-    description: 'game',
+    descriptionRef: 'game',
     displayCard: false
   },
   {
     name: 'DA Bubble',
     skills: ['Angular', 'Firebase', 'TypeScript'],
     number: 3,
-    description: 'bubble',
+    descriptionRef: 'bubble',
     displayCard: false
   }];
 

@@ -44,5 +44,37 @@
         "game": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
         "bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
         "button": "Next Project"
+    },
+    "slider": {
+
+    },
+    "contact": {
+        "headline": "Contact me",
+        "second-headline": "Let's work together",
+        "question": "Got a problem to solve?",
+        "main-text": "no translation available yet",
+        "end-first": "You need a Frontend Developer? ",
+        "end-second": "Let´s talk!",
+        "form": {
+            "name": "What's your Name?",
+            "name-placeholder": "Your namen goes here",
+            "name-failure": "Oops! it seems your name is missing",
+            "email": "What's your email?",
+            "email-placeholder": "your.email@email.com",
+            "email-failure": "Hoppla! your email is required",
+            "message": "How can I help you?",
+            "message-placeholder": "Hey Nicolas, I am interested in...",
+            "message-failure": "What do you need to develop?",
+            "check-box-first": "I've read the",
+            "check-box-link": " privacy policy ",
+            "check-box-end": "and agree to the processing of my data as outlined.",
+            "btn": "Say Hello :)"
+        }
+    },
+    "footer": {
+        "dev": "Developer",
+        "ger": "Germany",
+        "email": "Email",
+        "legal-notice": "Legal Notice"
     }
 }

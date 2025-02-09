@@ -22,7 +22,7 @@
         "card-headline": "Über mich",
         "main-text": "Hallo, mit mir als Frontendentwickler gewinnt Ihr Unternehmen einen strukturierten, verantwortungsbewusten und teamfähigen Mitarbeiter. Zudem verfüge ich über analytisches Denken und eine gute Ausdrucksfähigkeit.",
         "location": "Ich lebe in Wolfenbüttel, bin mobil und ebnso offen für Heimarbeit.",
-        "mind": "Gern arbeite ich mich in neue und bei Ihnen benötigte Technologien ein.",
+        "mind": "Es ist das Gefühl, wenn ein Problem gelöst ist, das mich motiviert.",
         "hook": "Meinen neuen Aufgaben und Herausforderungen widme ich mich stets mit großer Motivation und vollem Einsatz."
     },
     "skill-set": {
@@ -30,8 +30,8 @@
         "card-headline": "Skills",
         "main-text": "In Gruppen- sowie Solo- Projecten habe ich mich bereits in einige Frontendtechnologien einarbeiten können, insbesonder in JavaScript, HTML, SCSS, Typscript und Angular.",
         "question-first": "Sie brauchen",
-        "question-second": " eine andere Fähigkeit?",
-        "main-text-second": "Meinen neuen Aufgaben und Herausforderungen widme ich mich stets mit großer Motivation und vollem Einsatz.",
+        "question-second": " einen anderen Skill?",
+        "main-text-second": "Gern erlerne ich neue Skills und arbeite ich mich in neue und bei Ihnen benötigte Technologien ein.",
         "card-end": "Reden wir!",
         "speech-bubble": "Ich habe großes Interesse an"
     },
@@ -44,5 +44,35 @@
         "game": "El Pollo Loco ist...",
         "bubble": "DABubble ist...",
         "button": "Nächstes Projekt"
+    },
+    "slider": {},
+    "contact": {
+        "headline": "Kontakt",
+        "second-headline": "Arbeiten wir zusammen",
+        "question": "Sie haben ein Problem zu lösen?",
+        "main-text": "Kontaktieren Sie mich mittels nebenstehendem Formular. Ich freue mich von Ihnen zu hören und mit meiner Arbeit einen Mehrwert in Ihren Projekten zu schaffen.",
+        "end-first": "Sie suchen einen Frontendentwickler? ",
+        "end-second": "Sprechen Sie mich gern an!",
+        "form": {
+            "name": "Wie ist Ihr Name?",
+            "name-placeholder": "Hier Ihren Namen eingeben",
+            "name-failure": "Bitte tragen Sie ihren Namen ein.",
+            "email": "Wie lautet Ihr E-Mail-Adresse?",
+            "email-placeholder": "ihre.email@email.com",
+            "email-failure": "Bitte tragen Sie ihren Namen ein.",
+            "message": "Wie kann ich Ihnen helfen?",
+            "message-placeholder": "Hey Nicolas, ich habe folgendes Anliegen...",
+            "message-failure": "Bitte tragen Sie ihren Namen ein.",
+            "check-box-first": "Ich habe die",
+            "check-box-link": " Datenschutzerklärung ",
+            "check-box-end": " gelesen und stimme dem Prozess der Verarbeitung meiner Daten zu.",
+            "btn": "Senden"
+        }
+    },
+    "footer": {
+        "dev": "Entwickler",
+        "ger": "Deutschland",
+        "email": "E-Mail",
+        "legal-notice": "Datenschutzerklärung"
     }
 }

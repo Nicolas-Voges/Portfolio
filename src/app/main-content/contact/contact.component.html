@@ -1,27 +1,24 @@
 <main>
     <section class="text-box">
-        <h4 class="h4">Contact me</h4>
-        <h2>Let's work together</h2>
-        <h4 class="font-fira">Got a problem to solve?</h4>
-        <p>Kontaktieren Sie mich mittels nebenstehendem Formular. Ich freue mich von Ihnen zu hören und mit meiner Arbeit einen Mehrwert in Ihren Projekten zu schaffen.</p>
-        <p>Sie brauchen einen Frondendentwickler? <span class="color-accent">Sprechen Sie gern mit mir!</span></p>
+        <h4 class="h4">{{ "contact.headline" | translate }}</h4>
+        <h2>{{ "contact.second-headline" | translate }}</h2>
+        <h4 class="font-fira">{{ "contact.question" | translate }}</h4>
+        <p>{{ "contact.main-text" | translate }}</p>
+        <p>{{ "contact.end-first" | translate }}<span class="color-accent">{{ "contact.end-second" | translate }}</span></p>
     </section>
     <section class="form-box">
         <form (ngSubmit)="onSubmit()">
             <div class="btn-form">
-                <label for="name" class="btn-form-headline">What's your name?</label>
-                <input autocomplete="off" [(ngModel)]="formData.name" [ngModelOptions]="{standalone: true}" id="name" type="text"
-                    placeholder="Your name goes here" required>
+                <label for="name" class="btn-form-headline">{{ "contact.form.name" | translate }}</label>
+                <input autocomplete="off" [(ngModel)]="formData.name" [ngModelOptions]="{standalone: true}" id="name" type="text" [placeholder]="translation.formPlaceholder[0]" required>
             </div>
             <div class="btn-form">
-                <label for="email" class="btn-form-headline">What's your email?</label>
-                <input autocomplete="off" [(ngModel)]="formData.email" [ngModelOptions]="{standalone: true}" id="email" type="text"
-                    placeholder="youremail@mail.com" required>
+                <label for="email" class="btn-form-headline">{{ "contact.form.email" | translate }}</label>
+                <input autocomplete="off" [(ngModel)]="formData.email" [ngModelOptions]="{standalone: true}" id="email" type="text" [placeholder]="translation.formPlaceholder[1]" required>
             </div>
             <div class="btn-form">
-                <label for="message" class="btn-form-headline">How can I help you?</label>
-                <input autocomplete="off" [(ngModel)]="formData.message" [ngModelOptions]="{standalone: true}" id="message" type="text"
-                    placeholder="Hello Nicolas, I am interested in..." required>
+                <label for="message" class="btn-form-headline">{{ "contact.form.message" | translate }}</label>
+                <input autocomplete="off" [(ngModel)]="formData.message" [ngModelOptions]="{standalone: true}" id="message" type="text" [placeholder]="translation.formPlaceholder[2]" required>
             </div>
             <div class="checkbox-box">
                 <div class="position-relative">
@@ -32,16 +29,14 @@
                         <img class="checkbox-icon" src="assets/img/checkbox_unchecked.svg" alt="privacy policy not accepted">
                         }
                     </label>
-                    <input (change)="onCheckboxChange($event)" id="policy-check" class="policy-check" type="checkbox"
-                        required>
+                    <input (change)="onCheckboxChange($event)" id="policy-check" class="policy-check" type="checkbox" required>
                 </div>
-                <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as
-                    outlined.</span>
+                <span>{{ "contact.form.check-box-first" | translate }}<a href="">{{ "contact.form.check-box-link" | translate }}</a>{{ "contact.form.check-box-end" | translate }}</span>
             </div>
             @if (formData.terms) {
-            <button class="btn-primary"><span class="btn-primary-text">Say Hallo :)</span></button>
+            <button class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>
             } @else {
-            <button disabled class="btn-primary"><span class="btn-primary-text">Say Hallo :)</span></button>
+            <button disabled class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>
             }
         </form>
     </section>

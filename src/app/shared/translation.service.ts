@@ -10,16 +10,22 @@ import { Subscription } from "rxjs";
 export class TranslationService {
   de = true;
   public textTape: string[] = [];
-  texts = ["next", "location", "dev", "remote", "open-to-work"];
+  public formPlaceholder: string[] = [];
+  texts = {
+    'text-tape': ["next", "location", "dev", "remote", "open-to-work"],
+    'form': ["name", "email", "message"],
+  };
   doubled = false;
 
-  private subscription: Subscription;
+  private subscriptionTextTape: Subscription;
+  private subscriptionForm: Subscription;
 
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('de');
     this.translate.use(this.translate.getBrowserLang() || "de");
-    this.subscription = translate.stream(_(`atf.text-tape.`)).subscribe((text: string) => {});
+    this.subscriptionTextTape = translate.stream(_(`atf.text-tape.`)).subscribe((text: string) => {});
+    this.subscriptionForm = translate.stream(_(`atf.text-tape.`)).subscribe((text: string) => {});
     this.useLanguage();
   }
 
@@ -35,29 +41,39 @@ export class TranslationService {
   useLanguage(): void {
     if (this.de) {
       this.translate.use('de');
-      this.updateAtfTextTape();
+      this.updateTexts();
     } else {
       this.translate.use('en');
-      this.updateAtfTextTape();
+      this.updateTexts();
     }
   }
 
-  updateAtfTextTape() {
+  updateTexts() {
     this.textTape = [];
-    this.fillTextTape();
+    this.formPlaceholder = [];
+    this.fillTexts();
   }
 
-  fillTextTape() {
-    for (let i = 0; i < this.texts.length; i++) {
-      this.subscription = this.translate.stream(_(`atf.text-tape.${this.texts[i]}`)).subscribe((text: string) => {
-        if (this.textTape.length < this.texts.length) {
+  fillTexts() {
+    for (let i = 0; i < this.texts['text-tape'].length; i++) {
+      this.subscriptionTextTape = this.translate.stream(_(`atf.text-tape.${this.texts['text-tape'][i]}`)).subscribe((text: string) => {
+        if (this.textTape.length < this.texts['text-tape'].length) {
           this.textTape.push(text);
+        }
+      });
+    }
+
+    for (let i = 0; i < this.texts['form'].length; i++) {
+      this.subscriptionForm = this.translate.stream(_(`contact.form.${this.texts['form'][i]}-placeholder`)).subscribe((text: string) => {
+        if (this.formPlaceholder.length < this.texts['form'].length) {
+          this.formPlaceholder.push(text);
         }
       });
     }
   }
 
   ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+    this.subscriptionTextTape.unsubscribe();
+    this.subscriptionForm.unsubscribe();
   }
 }

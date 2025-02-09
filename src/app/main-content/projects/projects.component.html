@@ -51,7 +51,7 @@
                         }
                         <h2>{{ project.name }}</h2>
                         <h4>{{ "projects.card-headline" | translate }}</h4>
-                        <p class="project-card-describtion">{{ "projects." + project.description | translate }}</p>
+                        <p class="project-card-describtion">{{ "projects." + project.descriptionRef | translate }}</p>
                         <p class="project-card-skills-box">
                             @for (skill of project.skills; track $index) {
                                 <span class="project-card-skill"><img class="project-card-skill-img" src="assets/img/skill_set_icons/{{ skill.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ skill }}">{{ skill }}</span>
