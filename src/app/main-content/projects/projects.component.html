@@ -1,5 +1,5 @@
 <main>
-    <div class="flex-between width-100">
+    <div data-aos="fade-down" class="flex-between width-100">
         <div>
             <h4>{{ "projects.headline" | translate }}</h4>
             <h2>{{ "projects.second-headline" | translate }}</h2>
@@ -7,7 +7,7 @@
         </div>
     </div>
     @for (project of projects; track project; let i = $index) {
-        <div class="project">
+        <div data-aos="flip-left" class="project">
             <div class="btn-project" (click)="openProjectCard(i)">
                 <span class="name">{{ project.name }}</span>
                 <span class="skill">

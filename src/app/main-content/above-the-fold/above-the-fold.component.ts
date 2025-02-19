@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../../shared/translation.service';
 import { marker as _ } from '@colsen1991/ngx-translate-extract-marker';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-above-the-fold',
@@ -26,14 +27,26 @@ export class AboveTheFoldComponent {
     let id = setInterval(() => {
       this.textboxAnimated = false;
       if (this.toggled) {
-      this.textboxAnimated = true;
-      clearInterval(id);
+        this.textboxAnimated = true;
+        clearInterval(id);
       }
       this.toggled = true;
     }, 50);
   }
 
-  ngOninit() {
+  ngOnInit() {
     this.texts = this.translation.textTape;
+
+    AOS.init({
+      offset: 0,
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      delay: 100,
+    });
+  }
+
+  ngAfterViewInit(): void {
+    AOS.refresh();
   }
 }

@@ -1,12 +1,12 @@
 <main>
-    <section class="text-box">
+    <section data-aos="fade-right" class="text-box">
         <h4 class="h4">{{ "contact.headline" | translate }}</h4>
         <h2>{{ "contact.second-headline" | translate }}</h2>
         <h4 class="font-fira">{{ "contact.question" | translate }}</h4>
         <p>{{ "contact.main-text" | translate }}</p>
         <p>{{ "contact.end-first" | translate }}<span class="color-accent">{{ "contact.end-second" | translate }}</span></p>
     </section>
-    <section class="form-box">
+    <section data-aos="fade-left" class="form-box">
         <form (ngSubmit)="onSubmit()">
             <div class="btn-form">
                 <label for="name" class="btn-form-headline">{{ "contact.form.name" | translate }}</label>

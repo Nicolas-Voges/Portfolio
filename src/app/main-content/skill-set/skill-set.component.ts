@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
-import {TranslateModule} from "@ngx-translate/core";
+import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../../shared/translation.service';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-skill-set',
@@ -29,4 +30,18 @@ export class SkillSetComponent {
     'React',
     'Vue Js'
   ];
+
+  ngOnInit() {
+    AOS.init({
+      offset: 200,
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      delay: 100,
+    });
+  }
+
+  ngAfterViewInit(): void {
+    AOS.refresh();
+  }
 }

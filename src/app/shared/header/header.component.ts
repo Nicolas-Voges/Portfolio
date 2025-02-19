@@ -1,6 +1,7 @@
 import { Component, HostListener, ViewChild, ElementRef, inject } from '@angular/core';
-import {TranslateModule} from "@ngx-translate/core";
+import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../translation.service';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { TranslationService } from '../translation.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent{
+export class HeaderComponent {
   showMenu = true;
   bigScreen = true;
   @ViewChild('menu') menu?: ElementRef;
@@ -61,5 +62,19 @@ export class HeaderComponent{
 
   menuBtnIsClicked(event: MouseEvent): boolean {
     return this.menuToggle && this.menuToggle.nativeElement.contains(event.target);
+  }
+
+  ngOnInit() {
+    AOS.init({
+      offset: 0,
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      delay: 100,
+    });
+  }
+
+  ngAfterViewInit(): void {
+    AOS.refresh();
   }
 }

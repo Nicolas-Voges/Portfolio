@@ -1,14 +1,18 @@
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../../shared/translation.service';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
 })
 export class SliderComponent {
+  translation = inject(TranslationService);
   public activIndex: number = 1;
   public slides: {
     text: string;
@@ -108,5 +112,19 @@ export class SliderComponent {
       default:
         break;
     }
+  }
+
+  ngOnInit() {
+    AOS.init({
+      offset: 200,
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      delay: 100,
+    });
+  }
+
+  ngAfterViewInit(): void {
+    AOS.refresh();
   }
 }

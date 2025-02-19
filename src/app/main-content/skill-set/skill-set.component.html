@@ -1,8 +1,8 @@
 <div class="background">
     <main>
-        <h4>{{ "skill-set.headline" | translate}}</h4>
+        <h4 data-aos="fade-up">{{ "skill-set.headline" | translate}}</h4>
         <div class="skill-content">
-            <section class="card">
+            <section data-aos="fade-up" class="card">
                 <h2>{{ "skill-set.card-headline" | translate}}</h2>
                 <p class="main-text">{{ "skill-set.main-text" | translate}}</p>
                 <h5><span class="color-contrast">{{ "skill-set.question-first" | translate}}</span>{{ "skill-set.question-second" | translate}}</h5>
@@ -11,7 +11,7 @@
                     <button class="primary-btn"><span class="primary-btn-text">{{ "skill-set.card-end" | translate}}</span></button>
                 </div>
             </section>
-            <section class="skills-box">
+            <section data-aos="fade-down" class="skills-box">
                 @for (item of skills; track item; let i = $index) {
                     @if (i === skills.length -1) {
                         <div class="skill-box position-relative last-skill-box">
