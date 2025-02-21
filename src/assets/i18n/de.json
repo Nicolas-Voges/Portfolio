@@ -58,7 +58,7 @@
             "name-placeholder": "Hier Ihren Namen eingeben",
             "name-failure": "Bitte tragen Sie ihren Namen ein.",
             "email": "Wie lautet Ihr E-Mail-Adresse?",
-            "email-placeholder": "ihre.email@email.com",
+            "email-placeholder": "Ihre.email@email.com",
             "email-failure": "Bitte tragen Sie ihren Namen ein.",
             "message": "Wie kann ich Ihnen helfen?",
             "message-placeholder": "Hey Nicolas, ich habe folgendes Anliegen...",

@@ -101,7 +101,7 @@ h4 {
   font-size: 24px;
   font-weight: 700;
   color: $color-accent;
-  white-space: nowrap;
+  // white-space: nowrap;
   cursor: default;
 }
 
@@ -207,6 +207,10 @@ h6 {
     color: rgba($color-contrast, 0.6);
     animation: unset;
   }
+}
+
+.aos-animation-parent {
+  overflow-x: hidden !important;
 }
 
 .translation-box {

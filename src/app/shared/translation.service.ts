@@ -12,7 +12,7 @@ export class TranslationService {
   public textTape: string[] = [];
   public formPlaceholder: string[] = [];
   texts = {
-    'text-tape': ["next", "location", "dev", "remote", "open-to-work"],
+    'text-tape': ["remote", "next", "location", "dev", "open-to-work"],
     'form': ["name", "email", "message"],
   };
   doubled = false;
