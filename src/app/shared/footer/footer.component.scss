@@ -41,3 +41,44 @@ div {
         }
     }
 }
+
+@media (max-width: 360px) {
+    main {
+        gap: 32px;
+        justify-content: center;
+        text-align: center;
+
+        grid-template-areas:
+            "l"
+            "r"
+            "c";
+
+        &>.right {
+
+            &>p,
+            a {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        &>.left {
+            align-self: center;
+
+            &>p,
+            a {
+                text-align: center;
+                width: 100%;
+            }
+
+            &>img {
+                align-self: center;
+            }
+        }
+
+        &>.center {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

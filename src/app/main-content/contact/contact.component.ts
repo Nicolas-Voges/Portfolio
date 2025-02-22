@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../../shared/translation.service';
 import AOS from 'aos';
@@ -14,17 +14,27 @@ import AOS from 'aos';
 })
 export class ContactComponent {
   translation = inject(TranslationService);
-
+  ngForm: NgForm | undefined;
   formData = {
     name: "",
     email: "",
     message: "",
     terms: false
   }
+  sendMessage  = false;
 
-  onSubmit() {
-    console.log('submit form with: ' + JSON.stringify(this.formData, null, 2));
-    console.log(this.formData);
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted) {
+      console.log('submit form with: ' + JSON.stringify(this.formData, null, 2));
+      console.log(this.formData);
+      this.formData = {
+        name: "",
+        email: "",
+        message: "",
+        terms: false
+      }
+      this.sendMessage = true;
+    }
   }
 
   onCheckboxChange(event: Event) {
@@ -35,18 +45,27 @@ export class ContactComponent {
       this.formData.terms = false;
     }
   }
-  
+
+  getForm(form: NgForm) {
+    this.ngForm = form;
+  }
+
+  checkValidationError() {
+    console.error('err');
+    
+  }
+
   ngOnInit() {
-      AOS.init({
-        offset: 200,
-        duration: 1000,
-        easing: 'ease-in-out',
-        once: true,
-        delay: 100,
-      });
-    }
-  
-    ngAfterViewInit(): void {
-      AOS.refresh();
-    }
+    AOS.init({
+      offset: 200,
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      delay: 100,
+    });
+  }
+
+  ngAfterViewInit(): void {
+    AOS.refresh();
+  }
 }

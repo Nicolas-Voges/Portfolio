@@ -7,18 +7,18 @@
         <p>{{ "contact.end-first" | translate }}<span class="color-accent">{{ "contact.end-second" | translate }}</span></p>
     </section>
     <section data-aos="fade-left" class="form-box">
-        <form (ngSubmit)="onSubmit()">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <div class="btn-form">
                 <label for="name" class="btn-form-headline">{{ "contact.form.name" | translate }}</label>
-                <input autocomplete="off" [(ngModel)]="formData.name" [ngModelOptions]="{standalone: true}" id="name" type="text" [placeholder]="translation.formPlaceholder[0]" required>
+                <input (click)="getForm(contactForm)" autocomplete="off" [(ngModel)]="formData.name" name="name" id="name" type="text" [placeholder]="translation.formPlaceholder[0]" required pattern="[a-zA-Z.\- ]{3,}">
             </div>
             <div class="btn-form">
                 <label for="email" class="btn-form-headline">{{ "contact.form.email" | translate }}</label>
-                <input autocomplete="off" [(ngModel)]="formData.email" [ngModelOptions]="{standalone: true}" id="email" type="text" [placeholder]="translation.formPlaceholder[1]" required>
+                <input (click)="getForm(contactForm)" autocomplete="off" [(ngModel)]="formData.email" name="email" id="email" type="text" [placeholder]="translation.formPlaceholder[1]" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             </div>
             <div class="btn-form">
                 <label for="message" class="btn-form-headline">{{ "contact.form.message" | translate }}</label>
-                <input autocomplete="off" [(ngModel)]="formData.message" [ngModelOptions]="{standalone: true}" id="message" type="text" [placeholder]="translation.formPlaceholder[2]" required>
+                <input (click)="getForm(contactForm)" autocomplete="off" [(ngModel)]="formData.message" name="message" id="message" type="text" [placeholder]="translation.formPlaceholder[2]" required pattern="[a-zA-Z.\- ]{10,}">
             </div>
             <div class="checkbox-box">
                 <div class="position-relative">
@@ -29,14 +29,14 @@
                         <img class="checkbox-icon" src="assets/img/checkbox_unchecked.svg" alt="privacy policy not accepted">
                         }
                     </label>
-                    <input (change)="onCheckboxChange($event)" id="policy-check" class="policy-check" type="checkbox" required>
+                    <input (change)="onCheckboxChange($event); getForm(contactForm);" id="policy-check" class="policy-check" type="checkbox" required>
                 </div>
                 <span>{{ "contact.form.check-box-first" | translate }}<a href="">{{ "contact.form.check-box-link" | translate }}</a>{{ "contact.form.check-box-end" | translate }}</span>
             </div>
-            @if (formData.terms) {
+            @if (formData.terms && ngForm?.valid) {
             <button class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>
             } @else {
-            <button disabled class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>
+            <button (click)="checkValidationError()" disabled class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>
             }
         </form>
     </section>
