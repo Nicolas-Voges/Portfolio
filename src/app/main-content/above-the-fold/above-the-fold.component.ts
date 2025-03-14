@@ -38,7 +38,7 @@ export class AboveTheFoldComponent {
     this.texts = this.translation.textTape;
 
     AOS.init({
-      offset: 0,
+      offset: 200,
       duration: 1000,
       easing: 'ease-in-out',
       once: true,

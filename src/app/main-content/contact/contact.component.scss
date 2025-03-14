@@ -41,13 +41,20 @@ h2 {
     }
 }
 
+.error-message {
+    // position: absolute;
+    color: #c56a6a;
+    opacity: 0;
+    height: 0;
+}
+
 .btn-form {
     width: 100%;
     padding: 32px;
     border: 1px solid $color-accent;
     border-left: unset;
     border-right: unset;
-    @include flex($d: column, $a: flex-start, $g: 16px);
+    @include flex($d: column, $a: flex-start, $g: 8px);
 
     &>label {
         font-family: Fira Code;

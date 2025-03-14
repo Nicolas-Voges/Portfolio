@@ -64,7 +64,7 @@ export class TranslationService {
     }
 
     for (let i = 0; i < this.texts['form'].length; i++) {
-      this.subscriptionForm = this.translate.stream(_(`contact.form.${this.texts['form'][i]}-placeholder`)).subscribe((text: string) => {
+      this.subscriptionForm = this.translate.stream(_(`contact.form.${this.texts['form'][i]}.placeholder`)).subscribe((text: string) => {
         if (this.formPlaceholder.length < this.texts['form'].length) {
           this.formPlaceholder.push(text);
         }

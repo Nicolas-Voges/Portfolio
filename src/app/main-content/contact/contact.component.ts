@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../../shared/translation.service';
-import AOS from 'aos';
 
 @Component({
   selector: 'app-contact',
@@ -21,9 +20,13 @@ export class ContactComponent {
     message: "",
     terms: false
   }
-  sendMessage  = false;
+  sendMessage = false;
+  @ViewChild('nameErr') nameErr?: ElementRef;
+  @ViewChild('emailErr') emailErr?: ElementRef;
+  @ViewChild('messageErr') messageErr?: ElementRef;
 
   onSubmit(ngForm: NgForm) {
+    this.removeErrorMessages();
     if (ngForm.valid && ngForm.submitted) {
       console.log('submit form with: ' + JSON.stringify(this.formData, null, 2));
       console.log(this.formData);
@@ -34,6 +37,8 @@ export class ContactComponent {
         terms: false
       }
       this.sendMessage = true;
+    } else {
+      this.checkValidationError(ngForm);
     }
   }
 
@@ -50,22 +55,39 @@ export class ContactComponent {
     this.ngForm = form;
   }
 
-  checkValidationError() {
-    console.error('err');
-    
+  checkValidationError(form: NgForm) {
+    if (form.controls['name'].status == 'INVALID') {
+      if (this.nameErr) {
+        this.nameErr.nativeElement.style.opacity = '1';
+        this.nameErr.nativeElement.style.height = 'auto';
+      }
+    }
+    if (form.controls['email'].status == 'INVALID') {
+      if (this.emailErr) {
+        this.emailErr.nativeElement.style.opacity = '1';
+        this.emailErr.nativeElement.style.height = 'auto';
+      }
+    }
+    if (form.controls['message'].status == 'INVALID') {
+      if (this.messageErr) {
+        this.messageErr.nativeElement.style.opacity = '1';
+        this.messageErr.nativeElement.style.height = 'auto';
+      }
+    }
   }
 
-  ngOnInit() {
-    AOS.init({
-      offset: 200,
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      delay: 100,
-    });
-  }
-
-  ngAfterViewInit(): void {
-    AOS.refresh();
+  removeErrorMessages() {
+    if (this.nameErr) {
+      this.nameErr.nativeElement.style.opacity = '0';
+      this.nameErr.nativeElement.style.height = '0';
+    }
+    if (this.emailErr) {
+      this.emailErr.nativeElement.style.opacity = '0';
+      this.emailErr.nativeElement.style.height = '0';
+    }
+    if (this.messageErr) {
+      this.messageErr.nativeElement.style.opacity = '0';
+      this.messageErr.nativeElement.style.height = '0';
+    }
   }
 }

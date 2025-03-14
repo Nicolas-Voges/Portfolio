@@ -1,8 +1,12 @@
 <main>
     @if (showMenu) {
-        <div data-aos="fade-down" #menu class="links-box">
+        <div #menu class="links-box">
             <div (change)="translation.changeLanguage()" class="translation-box">
-                <input type="checkbox" name="checkbox" id="translation" class="btn-translation">
+                @if (translation.de) {
+                    <input type="checkbox" name="checkbox" id="translation" class="btn-translation">
+                } @else {
+                    <input type="checkbox" name="checkbox" id="translation" class="btn-translation" checked>
+                }
                 <label for="translation"></label>
             </div>
             <div class="link-box">
@@ -19,6 +23,6 @@
             </div>  
         </div>
     }
-    <img data-aos="fade-down" class="logo" src="assets/img/logo.png" alt="logo">
-    <button data-aos="fade-down" #menuToggle (click)="toggleMenu()" class="btn-menu"><img class="btn-menu-img" src="assets/img/menu.svg" alt="menu"></button>
+    <img class="logo" src="assets/img/logo.png" alt="logo">
+    <button #menuToggle (click)="toggleMenu()" class="btn-menu"><img class="btn-menu-img" src="assets/img/menu.svg" alt="menu"></button>
 </main>

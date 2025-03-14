@@ -22,23 +22,23 @@
         "card-headline": "Über mich",
         "main-text": "Hallo, mit mir als Frontendentwickler gewinnt Ihr Unternehmen einen strukturierten, verantwortungsbewusten und teamfähigen Mitarbeiter. Zudem verfüge ich über analytisches Denken und eine gute Ausdrucksfähigkeit.",
         "location": "Ich lebe in Wolfenbüttel, bin mobil und ebnso offen für Heimarbeit.",
-        "mind": "Es ist das Gefühl, wenn ein Problem gelöst ist, das mich motiviert.",
+        "mind": "Das Gefühl, ein Problem zu lösen ist es, das mich motiviert.",
         "hook": "Meinen neuen Aufgaben und Herausforderungen widme ich mich stets mit großer Motivation und vollem Einsatz."
     },
     "skill-set": {
         "headline": "Technologien",
         "card-headline": "Skills",
-        "main-text": "In Gruppen- sowie Solo- Projecten habe ich mich bereits in einige Frontendtechnologien einarbeiten können, insbesonder in JavaScript, HTML, SCSS, Typscript und Angular.",
+        "main-text": "In Gruppen- sowie Solo- Projekten habe ich mich bereits in einige Frontendtechnologien einarbeiten können. Zu meinen täglich benötigten Skills zählen unter Anderem insbesonder JavaScript, HTML, SCSS, Typscript, Angular und Git.",
         "question-first": "Sie brauchen",
         "question-second": " einen anderen Skill?",
-        "main-text-second": "Gern erlerne ich neue Skills und arbeite ich mich in neue und bei Ihnen benötigte Technologien ein.",
+        "main-text-second": "Gern erlerne ich neue Skills und arbeite mich in neue und bei Ihnen benötigte Technologien ein.",
         "card-end": "Reden wir!",
         "speech-bubble": "Ich habe großes Interesse an"
     },
     "projects": {
         "headline": "Portfolio",
         "second-headline": "Projekte",
-        "main-text": "Entdecken Sie eine Audwahl meiner Projekte - Testen Sie die Apps, um meine Skills in Aktion zu sehen.",
+        "main-text": "Entdecken Sie eine Auswahl meiner Projekte - Testen Sie die Apps, um meine Skills in Aktion zu sehen.",
         "card-headline": "Worum geht es in diesem Projekt?",
         "join": "Join ist...",
         "game": "El Pollo Loco ist...",
@@ -54,15 +54,23 @@
         "end-first": "Sie suchen einen Frontendentwickler? ",
         "end-second": "Sprechen Sie mich gern an!",
         "form": {
-            "name": "Wie ist Ihr Name?",
-            "name-placeholder": "Hier Ihren Namen eingeben",
-            "name-failure": "Bitte tragen Sie ihren Namen ein.",
-            "email": "Wie lautet Ihr E-Mail-Adresse?",
-            "email-placeholder": "Ihre.email@email.com",
-            "email-failure": "Bitte tragen Sie ihren Namen ein.",
-            "message": "Wie kann ich Ihnen helfen?",
-            "message-placeholder": "Hey Nicolas, ich habe folgendes Anliegen...",
-            "message-failure": "Bitte tragen Sie ihren Namen ein.",
+            "name": {
+                "headline": "Wie ist Ihr Name?",
+                "placeholder": "Hier Ihren Namen eingeben",
+                "err": "Bitte tragen Sie ihren Namen ein. Min. 3 Zeichen.",
+                "title": "Erlaubte Sonderzeichen: . - /"
+            },
+            "email": {
+                "headline": "Wie lautet Ihr E-Mail-Adresse?",
+                "placeholder": "Ihre.email@email.com",
+                "err": "Bitte geben Sie eine existierende E- Mail- Adresse ein"
+            },
+            "message": {
+                "headline": "Wie kann ich Ihnen helfen?",
+                "placeholder": "Hey Nicolas, mein Anliegen ist...",
+                "err": "Min. 10 Zeichen.",
+                "title": "Erlaubte Sonderzeichen: . , : ; _ % + * - ( ) / "
+            },
             "check-box-first": "Ich habe die",
             "check-box-link": " Datenschutzerklärung ",
             "check-box-end": " gelesen und stimme dem Prozess der Verarbeitung meiner Daten zu.",
