@@ -125,6 +125,16 @@ h6 {
   cursor: default;
 }
 
+.logo {
+  width: 128px;
+  object-fit: contain;
+  cursor: pointer;
+
+  &:hover {
+    filter: drop-shadow(0 0 1px);
+  }
+}
+
 .color-contrast {
   color: $color-contrast;
 }

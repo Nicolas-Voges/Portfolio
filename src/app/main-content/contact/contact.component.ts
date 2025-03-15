@@ -24,6 +24,7 @@ export class ContactComponent {
   @ViewChild('nameErr') nameErr?: ElementRef;
   @ViewChild('emailErr') emailErr?: ElementRef;
   @ViewChild('messageErr') messageErr?: ElementRef;
+  @ViewChild('policyCheck') policyCheck?: ElementRef;
 
   onSubmit(ngForm: NgForm) {
     this.removeErrorMessages();
@@ -36,10 +37,21 @@ export class ContactComponent {
         message: "",
         terms: false
       }
-      this.sendMessage = true;
+      this.mailFeedback();
     } else {
       this.checkValidationError(ngForm);
     }
+  }
+
+  mailFeedback() {
+    this.sendMessage = true;
+    if (this.policyCheck) {
+      this.policyCheck.nativeElement.checked = false;
+    }
+    let id = setTimeout(() => {
+      this.sendMessage = false;
+      clearTimeout(id);
+    }, 4000)
   }
 
   onCheckboxChange(event: Event) {

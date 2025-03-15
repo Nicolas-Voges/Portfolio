@@ -42,7 +42,6 @@ h2 {
 }
 
 .error-message {
-    // position: absolute;
     color: #c56a6a;
     opacity: 0;
     height: 0;
@@ -115,6 +114,10 @@ h2 {
     &:hover {
         background-image: radial-gradient(circle at center, rgba($color-accent, 0.3) 0%, $color-main 12px);
     }
+}
+
+#mail-feedback {
+    border: 5px solid $color-accent;
 }
 
 @media (max-width: 900px) {

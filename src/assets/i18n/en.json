@@ -74,7 +74,8 @@
             "check-box-first": "I've read the",
             "check-box-link": " privacy policy ",
             "check-box-end": "and agree to the processing of my data as outlined.",
-            "btn": "Say Hello :)"
+            "btn": "Say Hello :)",
+            "btn-send": "Email sent successfully"
         }
     },
     "footer": {

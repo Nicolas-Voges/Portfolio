@@ -74,7 +74,8 @@
             "check-box-first": "Ich habe die",
             "check-box-link": " Datenschutzerklärung ",
             "check-box-end": " gelesen und stimme dem Prozess der Verarbeitung meiner Daten zu.",
-            "btn": "Senden"
+            "btn": "Senden",
+            "btn-send": "E- Mail erfolgreich versendet"
         }
     },
     "footer": {

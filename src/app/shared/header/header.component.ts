@@ -56,6 +56,8 @@ export class HeaderComponent {
     }
   }
 
+  // @HostListener('mouse')
+
   menuIsClicked(event: MouseEvent): boolean {
     return this.menu && this.menu.nativeElement.contains(event.target);
   }

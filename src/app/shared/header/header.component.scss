@@ -27,12 +27,6 @@
      transition: all 0.125s ease-in-out;
  }
 
- .logo {
-     width: 32px;
-     height: 48px;
-     object-fit: cover;
- }
-
  .links-box {
      @include flex($g: 24px);
  }
