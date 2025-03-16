@@ -14,22 +14,11 @@ import AOS from 'aos';
 export class SliderComponent {
   translation = inject(TranslationService);
   public activIndex: number = 1;
-  public slides;
-  public headlines;
-
   public animateLeft = false;
   public animateRight = false;
-  
-  constructor() {
-    this.slides = this.translation.sliderTexts;
-    this.headlines = this.translation.sliderHeadlines;
-    console.log(this.slides);
-    console.log(this.headlines);
-    
-  }
 
   getSlidesIndex(): number {
-    if (this.slides.length <= 3) {
+    if (this.translation.sliderTexts.length <= 3) {
       return 0;
     } else {
       return 3;
@@ -46,18 +35,18 @@ export class SliderComponent {
 
   increaseActiveIndex() {
     this.activIndex++
-    if (this.activIndex >= this.slides.length) {
+    if (this.activIndex >= this.translation.sliderTexts.length) {
       this.activIndex = 0;
     }
   }
 
   turnSlidesLeft() {
     let id = setTimeout(() => {
-      let arr = this.slides.shift();
-      let arrH = this.headlines.shift();
+      let arr = this.translation.sliderTexts.shift();
+      let arrH = this.translation.sliderHeadlines.shift();
       if (arr != undefined && arrH != undefined ) {
-        this.slides.push(arr);
-        this.headlines.push(arrH);
+        this.translation.sliderTexts.push(arr);
+        this.translation.sliderHeadlines.push(arrH);
       }
       this.animateLeft = false;
       clearTimeout(id);
@@ -75,17 +64,17 @@ export class SliderComponent {
   decreaseActiveIndex() {
     this.activIndex--
     if (this.activIndex < 0) {
-      this.activIndex = this.slides.length - 1;
+      this.activIndex = this.translation.sliderTexts.length - 1;
     }
   }
 
   turnSlidesRight() {
     let id = setTimeout(() => {
-      let arr = this.slides.pop();
-      let arrH = this.headlines.pop();
+      let arr = this.translation.sliderTexts.pop();
+      let arrH = this.translation.sliderHeadlines.pop();
       if (arr != undefined && arrH != undefined ) {
-        this.slides.unshift(arr);
-        this.headlines.unshift(arrH);
+        this.translation.sliderTexts.unshift(arr);
+        this.translation.sliderHeadlines.unshift(arrH);
       }
       this.animateRight = false;
       clearTimeout(id);
@@ -112,22 +101,7 @@ export class SliderComponent {
       easing: 'ease-in-out',
       once: true,
       delay: 100,
-    });    
-  //   this.slides = [
-  //     {
-  //       text: this.translation.sliderTexts[2],
-  //       // link: '',
-  //     },
-  //     {
-  //       text: this.translation.sliderTexts[0],
-  //       // link: '',
-  //     },
-  //     {
-  //       text: this.translation.sliderTexts[1],
-  //       // link: '',
-  //     }
-  //   ];
-  // console.log(this.translation.sliderTexts);
+    });
   }
 
   ngAfterViewInit(): void {

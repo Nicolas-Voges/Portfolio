@@ -1,11 +1,12 @@
 import { Component, HostListener, ViewChild, ElementRef, inject } from '@angular/core';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../translation.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -56,8 +57,6 @@ export class HeaderComponent {
     }
   }
 
-  // @HostListener('mouse')
-
   menuIsClicked(event: MouseEvent): boolean {
     return this.menu && this.menu.nativeElement.contains(event.target);
   }
@@ -67,20 +66,9 @@ export class HeaderComponent {
   }
 
   ngOnInit() {
-    // AOS.init({
-    //   offset: 0,
-    //   duration: 1000,
-    //   easing: 'ease-in-out',
-    //   once: true,
-    // });
-
     let id = setTimeout( () => {
       this.started = true;
       clearTimeout(id);
     }, 2000);
   }
-
-  // ngAfterViewInit(): void {
-  //   AOS.refresh();
-  // }
 }

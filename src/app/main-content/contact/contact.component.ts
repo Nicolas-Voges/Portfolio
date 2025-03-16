@@ -39,7 +39,7 @@ export class ContactComponent {
       }
       this.mailFeedback();
     } else {
-      this.checkValidationError(ngForm);
+      this.checkValidationErrors(ngForm);
     }
   }
 
@@ -67,39 +67,31 @@ export class ContactComponent {
     this.ngForm = form;
   }
 
-  checkValidationError(form: NgForm) {
-    if (form.controls['name'].status == 'INVALID') {
-      if (this.nameErr) {
-        this.nameErr.nativeElement.style.opacity = '1';
-        this.nameErr.nativeElement.style.height = 'auto';
-      }
-    }
-    if (form.controls['email'].status == 'INVALID') {
-      if (this.emailErr) {
-        this.emailErr.nativeElement.style.opacity = '1';
-        this.emailErr.nativeElement.style.height = 'auto';
-      }
-    }
-    if (form.controls['message'].status == 'INVALID') {
-      if (this.messageErr) {
-        this.messageErr.nativeElement.style.opacity = '1';
-        this.messageErr.nativeElement.style.height = 'auto';
+  checkValidationErrors(form: NgForm) {
+    this.checkValidation(form, 'name', this.nameErr);
+    this.checkValidation(form, 'email', this.emailErr);
+    this.checkValidation(form, 'message', this.messageErr);
+  }
+
+  checkValidation(form: NgForm, field: string, ref: ElementRef | undefined) {
+    if (form.controls[field].status == 'INVALID') {
+      if (ref) {
+        ref.nativeElement.style.opacity = '1';
+        ref.nativeElement.style.height = 'auto';
       }
     }
   }
 
   removeErrorMessages() {
-    if (this.nameErr) {
-      this.nameErr.nativeElement.style.opacity = '0';
-      this.nameErr.nativeElement.style.height = '0';
-    }
-    if (this.emailErr) {
-      this.emailErr.nativeElement.style.opacity = '0';
-      this.emailErr.nativeElement.style.height = '0';
-    }
-    if (this.messageErr) {
-      this.messageErr.nativeElement.style.opacity = '0';
-      this.messageErr.nativeElement.style.height = '0';
+    this.hideError(this.nameErr);
+    this.hideError(this.emailErr);
+    this.hideError(this.messageErr);
+  }
+
+  hideError(ref: ElementRef | undefined) {
+    if (ref) {
+      ref.nativeElement.style.opacity = '0';
+      ref.nativeElement.style.height = '0';
     }
   }
 }

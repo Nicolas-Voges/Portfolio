@@ -293,3 +293,21 @@
        transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.5));
     }
  }
+
+ @media (max-height: 620px) {
+   .e-mail {
+      display: none;
+   }
+ }
+
+ @media (max-height: 620px) and (max-width: 500px) {
+   .decorator {
+      display: none;
+   }
+ }
+
+ @media (max-height: 360px) {
+   .text-tape {
+      display: none;
+   }
+ }

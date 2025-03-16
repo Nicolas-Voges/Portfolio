@@ -18,7 +18,6 @@ export class TranslationService {
     'form': ["name", "email", "message"],
     'slider': ['future', 'snake', 'DA']
   };
-  // sliderTexts = ['slider.snake.text', 'slider.DA.text', 'slider.futur.text'];
   doubled = false;
 
   private subscriptionTextTape: Subscription;
@@ -96,9 +95,6 @@ export class TranslationService {
         }
       });
     }
-    console.log(this.sliderTexts);
-    console.log('works');
-
   }
 
   ngOnDestroy(): void {

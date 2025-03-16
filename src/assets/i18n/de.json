@@ -46,13 +46,14 @@
         "button": "Nächstes Projekt"
     },
     "slider": {
+        "headline": "Mein Weg",
         "snake": {
             "headline": "Snake",
-            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm über ein Jahr weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Information musste ich mir stets selbst suchen."
+            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm fast ein Jahr weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Information musste ich mir stets selbst suchen."
         },
         "DA": {
             "headline": "Developer Akademie",
-            "text": "Bei der Developer Akademie habe ich gelernt, dass es genau dieser Skill ist, der einen voran bringt. Es ist gut, wenn man jemanden fragen kann, aber es ist nachhaltiger, wenn man in der Lage ist, sich nötige Informationen selbst zu beschaffen"
+            "text": "Bei der Developer Akademie habe ich gelernt, dass es genau dieser Skill ist, der einen in der Programmierung voran bringt. Es ist gut, wenn man jemanden fragen kann, aber es ist nachhaltiger, wenn man in der Lage ist, sich nötige Informationen selbst zu beschaffen"
         },
         "future": {
             "headline": "In Zukunft",

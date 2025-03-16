@@ -46,17 +46,18 @@
         "button": "Next Project"
     },
     "slider": {
+        "headline": "My Way",
         "snake": {
             "headline": "Snake",
-            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm über ein Jahr weiterentwickelt. Nach dem Motto:\"Lerne tief, nicht breit\""
+            "text": "snake"
         },
         "DA": {
             "headline": "Developer Akademie",
-            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm über ein Jahr weiterentwickelt. Nach dem Motto:\"Lerne tief, nicht breit\""
+            "text": "DevAk"
         },
         "future": {
             "headline": "Future",
-            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm über ein Jahr weiterentwickelt. Nach dem Motto:\"Lerne tief, nicht breit\""
+            "text": "fut"
         }
     },
     "contact": {
