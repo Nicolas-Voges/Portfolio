@@ -14,26 +14,19 @@ import AOS from 'aos';
 export class SliderComponent {
   translation = inject(TranslationService);
   public activIndex: number = 1;
-  public slides: {
-    text: string;
-    link?: string;
-  }[] = [
-      {
-        text: 'calc',
-        link: '',
-      },
-      {
-        text: 'snake',
-        link: '',
-      },
-      {
-        text: 'poke',
-        link: '',
-      }
-    ];
+  public slides;
+  public headlines;
 
   public animateLeft = false;
   public animateRight = false;
+  
+  constructor() {
+    this.slides = this.translation.sliderTexts;
+    this.headlines = this.translation.sliderHeadlines;
+    console.log(this.slides);
+    console.log(this.headlines);
+    
+  }
 
   getSlidesIndex(): number {
     if (this.slides.length <= 3) {
@@ -60,12 +53,11 @@ export class SliderComponent {
 
   turnSlidesLeft() {
     let id = setTimeout(() => {
-      let obj: {
-        text: string;
-        link?: string;
-      } | undefined = this.slides.shift();
-      if (obj != undefined) {
-        this.slides.push(obj);
+      let arr = this.slides.shift();
+      let arrH = this.headlines.shift();
+      if (arr != undefined && arrH != undefined ) {
+        this.slides.push(arr);
+        this.headlines.push(arrH);
       }
       this.animateLeft = false;
       clearTimeout(id);
@@ -89,12 +81,11 @@ export class SliderComponent {
 
   turnSlidesRight() {
     let id = setTimeout(() => {
-      let obj: {
-        text: string;
-        link?: string;
-      } | undefined = this.slides.pop();
-      if (obj != undefined) {
-        this.slides.unshift(obj);
+      let arr = this.slides.pop();
+      let arrH = this.headlines.pop();
+      if (arr != undefined && arrH != undefined ) {
+        this.slides.unshift(arr);
+        this.headlines.unshift(arrH);
       }
       this.animateRight = false;
       clearTimeout(id);
@@ -121,7 +112,22 @@ export class SliderComponent {
       easing: 'ease-in-out',
       once: true,
       delay: 100,
-    });
+    });    
+  //   this.slides = [
+  //     {
+  //       text: this.translation.sliderTexts[2],
+  //       // link: '',
+  //     },
+  //     {
+  //       text: this.translation.sliderTexts[0],
+  //       // link: '',
+  //     },
+  //     {
+  //       text: this.translation.sliderTexts[1],
+  //       // link: '',
+  //     }
+  //   ];
+  // console.log(this.translation.sliderTexts);
   }
 
   ngAfterViewInit(): void {

@@ -2,39 +2,30 @@
     <div class="overlay"></div>
     <h6>By The Way</h6>
     <div class="slider-cards-box">
-        @for (card of slides; track card.text; let i = $index) {
+        @for (card of slides; track card; let i = $index) {
             @if (i === 0) {
                 <div class="slider-card passive-card" [ngClass]="{'move-left-from-out': animateRight}">
-                    <span>{{ slides[slides.length - 1].text }}</span>
-                    @if (slides[slides.length - 1].link) {
-                        <br>
-                        <a href="{{ slides[slides.length - 1].link }}">See Project</a>
-                    }
+                    <h3>{{ headlines[headlines.length - 1] }}</h3>
+                    <span>{{ slides[slides.length - 1]}}</span>
                 </div>
             }
             @if (i <= 2) {
                 <div (click)="chooseAction(i)" class="slider-card" [ngClass]="{'active-card': i === 1, 'passive-card': i !== 1,  'move-out-from-left': animateLeft && i === 0,  'move-center-from-left': animateRight && i === 0,  'move-left-from-center': animateLeft && i === 1,  'move-right-from-center': animateRight && i === 1,  'move-center-from-right': animateLeft && i === 2,   'move-out-from-right': animateRight && i === 2}">
-                    <span>{{ card.text }}</span>
-                    @if (card.link) {
-                        <br>
-                        <a href="{{ card.link }}">See Project</a>
-                    }
+                    <h3>{{ headlines[i] }}</h3>
+                    <span>{{ card }}</span>
                 </div>
             }
             @if (i === 2) {
                 <div class="slider-card passive-card" [ngClass]="{'move-right-from-out': animateLeft}">
-                    <span>{{ slides[getSlidesIndex()].text }}</span>
-                    @if (slides[getSlidesIndex()].link) {
-                        <br>
-                        <a href="{{ slides[getSlidesIndex()].link }}">See Project</a>
-                    }
+                    <h3>{{ headlines[getSlidesIndex()] }}</h3>
+                    <span>{{ slides[getSlidesIndex()] }}</span>
                 </div>
             }
         }
     </div>
     <nav>
         <button (click)="rightAnimation()"><img src="assets/img/arrow_back.svg" alt="back"></button>
-        @for (card of slides; track card.text; let i = $index) {
+        @for (card of slides; track card; let i = $index) {
             <img src="assets/img/dot.svg" alt="" [ngClass]="{'active-dot': i === activIndex, 'passive-dot': i !== activIndex}">            
         }
         <button (click)="leftAnimation()"><img src="assets/img/arrow_forward.svg" alt="forward"></button>

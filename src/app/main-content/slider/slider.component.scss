@@ -27,7 +27,7 @@ nav {
 
 .slider-card {
     padding: 48px 40px;
-    @include flex();
+    @include flex($d: column, $g: 16px);
     width: 44vw;
     max-width: 632px;
     max-height: 274px;

@@ -45,7 +45,20 @@
         "bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
         "button": "Next Project"
     },
-    "slider": {},
+    "slider": {
+        "snake": {
+            "headline": "Snake",
+            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm über ein Jahr weiterentwickelt. Nach dem Motto:\"Lerne tief, nicht breit\""
+        },
+        "DA": {
+            "headline": "Developer Akademie",
+            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm über ein Jahr weiterentwickelt. Nach dem Motto:\"Lerne tief, nicht breit\""
+        },
+        "future": {
+            "headline": "Future",
+            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm über ein Jahr weiterentwickelt. Nach dem Motto:\"Lerne tief, nicht breit\""
+        }
+    },
     "contact": {
         "headline": "Contact me",
         "second-headline": "Let's work together",
