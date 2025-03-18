@@ -16,7 +16,7 @@ export class TranslationService {
   texts = {
     'text-tape': ["remote", "next", "location", "dev", "open-to-work"],
     'form': ["name", "email", "message"],
-    'slider': ['future', 'snake', 'DA']
+    'slider': ['future', 'start', 'at-now']
   };
   doubled = false;
 
@@ -30,7 +30,7 @@ export class TranslationService {
     this.translate.setDefaultLang('de');
     this.translate.use(this.translate.getBrowserLang() || "de");
     this.subscriptionTextTape = translate.stream(_(`atf.text-tape.`)).subscribe((text: string) => { });
-    this.subscriptionForm = translate.stream(_(`atf.text-tape.`)).subscribe((text: string) => { });
+    this.subscriptionForm = translate.stream(_(`contact.form.`)).subscribe((text: string) => { });
     this.subscriptionSlider = translate.stream(_(`slider.`)).subscribe((text: string) => { });
     this.subscriptionSliderHeadlines = translate.stream(_(`slider.`)).subscribe((text: string) => { });
     this.useLanguage();

@@ -31,7 +31,5 @@ export class AppComponent {
     } else {
       this.highContrast = true;
     }
-    console.log(window.scrollY);
-    
   }
 }

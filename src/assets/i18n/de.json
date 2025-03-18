@@ -47,11 +47,11 @@
     },
     "slider": {
         "headline": "Mein Weg",
-        "snake": {
+        "start": {
             "headline": "Am Anfang",
-            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm fast ein Jahr nebenberuflich weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Information musste ich mir stets selbst suchen."
+            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm fast ein Jahr nebenberuflich weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Informationen musste ich mir stets selbst suchen."
         },
-        "DA": {
+        "at-now": {
             "headline": "Zur Zeit",
             "text": "Bei der Developer Akademie habe ich gelernt, dass es genau dieser Skill ist, der einen in der Programmierung voran bringt. Zusätzlich lässt mich der rote Faden dieser Weiterbildung schnell in den jobrelevanten Skills wachsen, sowie die Codereviews erfahrener Entwickler."
         },

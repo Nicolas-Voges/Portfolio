@@ -20,18 +20,18 @@
     "about-me": {
         "headline": "Who I Am",
         "card-headline": "About me",
-        "main-text": "no translation available yet",
-        "location": "no translation available yet",
-        "mind": "no translation available yet",
-        "hook": "no translation available yet"
+        "main-text": "Hello, with me as a front-end developer, your company will gain a structured, responsible and team-oriented employee. I also have analytical thinking.",
+        "location": "I live in Wolfenbüttel, am mobile and also open to working from home.",
+        "mind": "The feeling of solving a problem is what motivates me.",
+        "hook": "I always dedicate myself to my new tasks and challenges with great motivation and full commitment."
     },
     "skill-set": {
         "headline": "Technologies",
         "card-headline": "Skill Set",
-        "main-text": "no translation available yet",
+        "main-text": "I have already familiarized myself with several front-end technologies in group and solo projects. My daily required skills include JavaScript, HTML, SCSS, Typscript, Angular and Git.",
         "question-first": "You need",
         "question-second": " another Skill?",
-        "main-text-second": "no translation available yet",
+        "main-text-second": "I am happy to learn new skills and familiarize myself with new technologies that you need.",
         "card-end": "Let´s talk!",
         "speech-bubble": "I have a special interest in lerning"
     },
@@ -47,17 +47,17 @@
     },
     "slider": {
         "headline": "My Way",
-        "snake": {
+        "start": {
             "headline": "The Begin",
-            "text": "snake"
+            "text": "I started by recoding a Snake game. Instead of starting the next tutorial afterwards, I continued to develop this program on the side for almost a year. According to the motto: “Learn in depth, not in breadth.” I always had to find informations by myself."
         },
-        "DA": {
+        "at-now": {
             "headline": "At now",
-            "text": "DevAk"
+            "text": "At the Developer Akademie, I learned that it is precisely this skill that gets you ahead in programming. In addition, the common thread of this training course allows me to grow quickly in the job-relevant skills, as well as the code reviews of experienced developers."
         },
         "future": {
             "headline": "Future",
-            "text": "fut"
+            "text": "There are more exciting projects on the agenda in the near future that require skills such as Phyton, Linux and Django. I look forward to expanding my skills and learning new ones in the future. Perhaps with you?"
         }
     },
     "contact": {

@@ -289,6 +289,10 @@
        overflow: hidden;
     }
 
+    main{
+      overflow: hidden;
+    }
+
     .text-tape {
        transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.5));
     }
