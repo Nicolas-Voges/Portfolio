@@ -14,6 +14,7 @@ import AOS from 'aos';
 export class SliderComponent {
   translation = inject(TranslationService);
   public activIndex: number = 1;
+  public dotIndex: number = 0;
   public animateLeft = false;
   public animateRight = false;
 
@@ -28,16 +29,18 @@ export class SliderComponent {
   leftAnimation() {
     if (!this.animateLeft && !this.animateRight) {
       this.animateLeft = true;
-      this.increaseActiveIndex();
+      this.activIndex = this.increaseIndex(this.activIndex, this.translation.sliderTexts);
+      this.dotIndex = this.increaseIndex(this.dotIndex, this.translation.sliderTexts);
       this.turnSlidesLeft();
     }
   }
 
-  increaseActiveIndex() {
-    this.activIndex++
-    if (this.activIndex >= this.translation.sliderTexts.length) {
-      this.activIndex = 0;
+  increaseIndex(i: number, arr: any[]): number {
+    i++;
+    if (i >= arr.length) {
+      i = 0;
     }
+    return i;
   }
 
   turnSlidesLeft() {
@@ -56,16 +59,18 @@ export class SliderComponent {
   rightAnimation() {
     if (!this.animateLeft && !this.animateRight) {
       this.animateRight = true;
-      this.decreaseActiveIndex();
+      this.activIndex = this.decreaseIndex(this.activIndex, this.translation.sliderTexts);
+      this.dotIndex = this.decreaseIndex(this.dotIndex, this.translation.sliderTexts);
       this.turnSlidesRight();
     }
   }
 
-  decreaseActiveIndex() {
-    this.activIndex--
-    if (this.activIndex < 0) {
-      this.activIndex = this.translation.sliderTexts.length - 1;
+  decreaseIndex(i: number, arr: any[]): number {
+    i--;
+    if (i < 0) {
+      i = arr.length - 1;
     }
+    return i;
   }
 
   turnSlidesRight() {

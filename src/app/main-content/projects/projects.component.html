@@ -43,30 +43,32 @@
         <section class="overlay" [ngClass]="{'display-none': !project.displayCard}">
             <div class="project-card">
                 <div class="scroll-box position-relative">
-                    <div class="project-card-left">
-                        @if (project.number < 10) {
-                            <h1>0{{ project.number }}</h1>
-                        } @else {
-                            <h1>{{ project.number }}</h1>
-                        }
-                        <h2>{{ project.name }}</h2>
-                        <h4>{{ "projects.card-headline" | translate }}</h4>
-                        <p class="project-card-describtion">{{ "projects." + project.descriptionRef | translate }}</p>
-                        <p class="project-card-skills-box">
-                            @for (skill of project.skills; track $index) {
-                                <span class="project-card-skill"><img class="project-card-skill-img" src="assets/img/skill_set_icons/{{ skill.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ skill }}">{{ skill }}</span>
+                    <div class="scroll-child">
+                        <div class="project-card-left">
+                            @if (project.number < 10) {
+                                <h1>0{{ project.number }}</h1>
+                            } @else {
+                                <h1>{{ project.number }}</h1>
                             }
-                        </p>
-                        <div class="project-card-btn-box">
-                            <button class="btn-primary">GitHub <img src="assets/img/arrow_up_right.svg" alt=""></button>
-                            <button class="btn-primary">Life Test <img src="assets/img/arrow_up_right.svg" alt=""></button>
+                            <h2>{{ project.name }}</h2>
+                            <h4>{{ "projects.card-headline" | translate }}</h4>
+                            <p class="project-card-describtion">{{ "projects." + project.descriptionRef | translate }}</p>
+                            <p class="project-card-skills-box">
+                                @for (skill of project.skills; track $index) {
+                                    <span class="project-card-skill"><img class="project-card-skill-img" src="assets/img/skill_set_icons/{{ skill.toLocaleLowerCase().replaceAll(' ','_') }}.svg" alt="{{ skill }}">{{ skill }}</span>
+                                }
+                            </p>
+                            <div class="project-card-btn-box">
+                                <button class="btn-primary">GitHub <img src="assets/img/arrow_up_right.svg" alt=""></button>
+                                <button class="btn-primary">Life Test <img src="assets/img/arrow_up_right.svg" alt=""></button>
+                            </div>
+                            <button (click)="showNextProject(i)" class="btn-next">Next Project <img src="assets/img/arrow_forward.svg" alt="arrow right"></button>
                         </div>
-                        <button (click)="showNextProject(i)" class="btn-next">Next Project <img src="assets/img/arrow_forward.svg" alt="arrow right"></button>
-                    </div>
-                    <div class="project-card-right">
-                        <img (click)="closeProjectCard(i)" class="btn-close" src="assets/img/x.svg" alt="close">
-                        <img class="project-card-img" src="assets/img/{{ project.name.toLocaleLowerCase().replaceAll(' ','_') }}.png" alt="{{ project.name }}">
-                        <button (click)="showNextProject(i)" class="btn-next">Next Project <img src="assets/img/arrow_forward.svg" alt="arrow right"></button>
+                        <div class="project-card-right">
+                            <img (click)="closeProjectCard(i)" class="btn-close" src="assets/img/x.svg" alt="close">
+                            <img class="project-card-img" src="assets/img/{{ project.name.toLocaleLowerCase().replaceAll(' ','_') }}.png" alt="{{ project.name }}">
+                            <button (click)="showNextProject(i)" class="btn-next">Next Project <img src="assets/img/arrow_forward.svg" alt="arrow right"></button>
+                        </div>
                     </div>
                 </div>
             </div>

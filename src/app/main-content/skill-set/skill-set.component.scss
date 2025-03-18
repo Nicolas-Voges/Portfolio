@@ -103,6 +103,30 @@ main {
     @include flex($d: column);
 }
 
+@media (min-width: 1980px) {
+    .background {
+        background-image: radial-gradient(circle at 15%, rgba($color-accent, 0.3) 0%, $color-main 300px);
+    }
+}
+
+@media (min-width: 2500px) {
+    .background {
+        background-image: radial-gradient(circle at 25%, rgba($color-accent, 0.3) 0%, $color-main 300px);
+    }
+}
+
+@media (min-width: 2500px) {
+    .background {
+        background-image: radial-gradient(circle at 32%, rgba($color-accent, 0.3) 0%, $color-main 300px);
+    }
+}
+
+@media (min-width: 5000px) {
+    .background {
+        background-image: radial-gradient(circle at 38%, rgba($color-accent, 0.3) 0%, $color-main 300px);
+    }
+}
+
 @media (max-width: 1150px) {
     .skill-content {
         @include flex($d: column, $g: 96px);
@@ -131,7 +155,7 @@ main {
 
 @media (max-width: 750px) {
     main {
-        padding: 0  $padding-main-sides-750 $padding-main-bottom-750 $padding-main-sides-750;
+        padding: 0 $padding-main-sides-750 $padding-main-bottom-750 $padding-main-sides-750;
     }
 }
 
@@ -144,7 +168,7 @@ main {
 
 @media (max-width: 600px) {
     main {
-        padding: 0  $padding-main-sides-600 $padding-main-bottom-750 $padding-main-sides-600;
+        padding: 0 $padding-main-sides-600 $padding-main-bottom-750 $padding-main-sides-600;
     }
 
     h5 {
@@ -157,6 +181,7 @@ main {
 
     .skill-box {
         padding: 0 16px;
+
         &>p {
             font-size: 16px;
         }

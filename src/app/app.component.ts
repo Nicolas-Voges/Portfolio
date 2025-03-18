@@ -26,10 +26,12 @@ export class AppComponent {
       this.lastScrollY = window.scrollY;
       this.hideHeader = true;
     }
-    if (window.scrollY === 0) {
+    if (window.scrollY <= 200) {
       this.highContrast = false;
     } else {
       this.highContrast = true;
     }
+    console.log(window.scrollY);
+    
   }
 }

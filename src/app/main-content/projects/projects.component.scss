@@ -122,6 +122,11 @@
      @include flex($g: 88px);
  }
 
+ .scroll-child {
+    @include flex();
+    height: max-content;
+ }
+
  .project-card-right {
      @include flex($d: column, $a: flex-end, $j: space-between, $f: 1, $g: 32px);
      height: 100%;
@@ -236,6 +241,11 @@
          @include flex($d: column-reverse, $g: 32px);
      }
 
+     .scroll-child {
+        @include flex($d: column-reverse);
+        margin-bottom: calc(10vh + 32px);
+     }
+
     //  .btn-next {
     //      position: absolute;
     //      bottom: 0;
@@ -261,7 +271,7 @@
      }
 
      .project-card-btn-box {
-         margin-bottom: 94px;
+         margin-bottom: 32px;
      }
 
      .project-card-img {

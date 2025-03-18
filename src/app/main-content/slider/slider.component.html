@@ -26,7 +26,7 @@
     <nav>
         <button (click)="rightAnimation()"><img src="assets/img/arrow_back.svg" alt="back"></button>
         @for (card of translation.sliderTexts; track card; let i = $index) {
-            <img src="assets/img/dot.svg" alt="" [ngClass]="{'active-dot': i === activIndex, 'passive-dot': i !== activIndex}">            
+            <img src="assets/img/dot.svg" alt="" [ngClass]="{'active-dot': i === dotIndex, 'passive-dot': i !== dotIndex}">            
         }
         <button (click)="leftAnimation()"><img src="assets/img/arrow_forward.svg" alt="forward"></button>
     </nav>

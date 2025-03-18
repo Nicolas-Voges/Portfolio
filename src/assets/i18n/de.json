@@ -48,16 +48,16 @@
     "slider": {
         "headline": "Mein Weg",
         "snake": {
-            "headline": "Snake",
-            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm fast ein Jahr weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Information musste ich mir stets selbst suchen."
+            "headline": "Am Anfang",
+            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm fast ein Jahr nebenberuflich weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Information musste ich mir stets selbst suchen."
         },
         "DA": {
-            "headline": "Developer Akademie",
-            "text": "Bei der Developer Akademie habe ich gelernt, dass es genau dieser Skill ist, der einen in der Programmierung voran bringt. Es ist gut, wenn man jemanden fragen kann, aber es ist nachhaltiger, wenn man in der Lage ist, sich nötige Informationen selbst zu beschaffen"
+            "headline": "Zur Zeit",
+            "text": "Bei der Developer Akademie habe ich gelernt, dass es genau dieser Skill ist, der einen in der Programmierung voran bringt. Zusätzlich lässt mich der rote Faden dieser Weiterbildung schnell in den jobrelevanten Skills wachsen, sowie die Codereviews erfahrener Entwickler."
         },
         "future": {
             "headline": "In Zukunft",
-            "text": "Ich freue mich künftig meine Skills weiter ausbauen zu können und auch neue zu erlernen. Spannende Projekt, für die Zukunft, sind bereits in Planung."
+            "text": "In naher Zukunft stehen weitere spannende Projekte auf dem Plan, die Skills wie Phyton, Linux und Django erfordern. Ich freue mich künftig meine Skills weiter ausbauen zu können und auch neue zu erlernen. Vielleicht bei Ihnen?"
         }
     },
     "contact": {
