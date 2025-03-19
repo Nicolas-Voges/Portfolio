@@ -10,19 +10,19 @@
                 <label for="translation"></label>
             </div>
             <div class="link-box">
-                <a>{{ 'header.about-me' | translate }}</a>
+                <a routerLink="/" fragment="about-me">{{ 'header.about-me' | translate }}</a>
                 <img class="link-underline" src="assets/img/green_dot.svg" alt="underline">
             </div>
             <div class="link-box">
-                <a>Skills</a>
+                <a routerLink="/" fragment="skill-set">Skills</a>
                 <img class="link-underline" src="assets/img/green_dot.svg" alt="underline">
             </div>
             <div class="link-box">
-                <a>{{ 'header.projects' | translate }}</a>
+                <a routerLink="/" fragment="projects">{{ 'header.projects' | translate }}</a>
                 <img class="link-underline" src="assets/img/green_dot.svg" alt="underline">
             </div>  
         </div>
     }
-    <img class="logo" src="assets/img/logo.svg" alt="logo">
+    <img routerLink="/" fragment="atf" class="logo" src="assets/img/logo.svg" alt="logo">
     <button #menuToggle (click)="toggleMenu()" class="btn-menu"><img class="btn-menu-img" src="assets/img/menu.svg" alt="menu"></button>
 </main>

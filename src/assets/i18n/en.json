@@ -48,8 +48,8 @@
     "slider": {
         "headline": "My Way",
         "start": {
-            "headline": "The Begin",
-            "text": "I started by recoding a Snake game. Instead of starting the next tutorial afterwards, I continued to develop this program on the side for almost a year. According to the motto: “Learn in depth, not in breadth.” I always had to find informations by myself."
+            "headline": "In the beginning",
+            "text": "I started by recoding a Snake game. Instead of starting the next tutorial afterwards, I continued to develop this program on the side for almost a year. According to the motto: “Learn in depth, not in breadth.” I always had to find information by myself."
         },
         "at-now": {
             "headline": "At now",
@@ -64,7 +64,7 @@
         "headline": "Contact me",
         "second-headline": "Let's work together",
         "question": "Got a problem to solve?",
-        "main-text": "no translation available yet",
+        "main-text": "Contact me using the form opposite. I look forward to hearing from you and creating added value in your projects with my work.",
         "end-first": "You need a Frontend Developer? ",
         "end-second": "Let´s talk!",
         "form": {

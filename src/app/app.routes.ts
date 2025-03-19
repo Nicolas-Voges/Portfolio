@@ -5,7 +5,8 @@ import { MainContentComponent } from './main-content/main-content.component';
 
 export const routes: Routes = [
     { path: '', component: MainContentComponent },
-    { path: 'privacy_policy', component: PrivacyPolicyComponent }, // Translate link Ger <-> En?
-    { path: 'legal_notice', component: LegalNoticeComponent },  // Translate link Ger <-> En?
-    // { path: 'impressum', component: LegalNoticeComponent }  // Translate link Ger <-> En? Maybe catch path for translation.
+    { path: 'privacy_policy', component: PrivacyPolicyComponent },
+    { path: 'datenschutzerklaerung', component: PrivacyPolicyComponent },
+    { path: 'legal_notice', component: LegalNoticeComponent },
+    { path: 'impressum', component: LegalNoticeComponent }
 ];
