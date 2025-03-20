@@ -95,7 +95,11 @@
     "footer": {
         "dev": "Entwickler",
         "ger": "Deutschland",
-        "email": "E-Mail",
-        "legal-notice": "Datenschutzerklärung"
+        "legal-notice": "Impressum",
+        "privacy-policy": "Datenschutz",
+        "links": {
+            "privacy-policy": "datenschutz",
+            "legal-notice": "impressum"
+        }
     }
 }

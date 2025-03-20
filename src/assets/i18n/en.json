@@ -95,7 +95,11 @@
     "footer": {
         "dev": "Developer",
         "ger": "Germany",
-        "email": "Email",
-        "legal-notice": "Legal Notice"
+        "legal-notice": "Legal Notize",
+        "privacy-policy": "Privacy Policy",
+        "links": {
+            "privacy-policy": "privacy_policy",
+            "legal-notice": "legal_notice"
+        }
     }
 }

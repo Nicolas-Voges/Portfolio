@@ -1,16 +1,5 @@
  @use './../../../styles.scss' as *;
 
-//  :host {
-//      background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
-//      position: fixed;
-//      top: 0;
-//      left: 0;
-//      right: 0;
-//      z-index: 10;
-//      transition: all 0.125s ease-in-out;
-//      transform: translateY(0);
-//     }
-
  main {
      padding: 0 $padding-main-sides;
      width: 100%;

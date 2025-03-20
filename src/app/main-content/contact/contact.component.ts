@@ -3,11 +3,12 @@ import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../../shared/translation.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, ReactiveFormsModule, TranslateModule],
+  imports: [FormsModule, CommonModule, ReactiveFormsModule, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

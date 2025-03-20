@@ -1,8 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { ScrollService } from './shared/scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ export class AppComponent implements OnInit {
   lastScrollY = 0;
   hideHeader = false;
   highContrast = false;
+  scrollService = inject(ScrollService);
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 

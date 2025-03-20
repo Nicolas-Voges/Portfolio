@@ -1,8 +1,9 @@
 import { Component, HostListener, ViewChild, ElementRef, inject, OnInit } from '@angular/core';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../translation.service';
-import { CommonModule, ViewportScroller } from '@angular/common';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -12,35 +13,25 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  started = false;
   showMenu = true;
   bigScreen = true;
   @ViewChild('menu') menu?: ElementRef;
   @ViewChild('menuToggle') menuToggle?: ElementRef;
+  scrollService = inject(ScrollService);
 
-  constructor(private scroller: ViewportScroller, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute) {
     this.checkMenuStatus();
   }
 
   ngOnInit() {
     this.activatedRoute.fragment.subscribe((fragment: string | null) => {
-      if (fragment) this.jumpToSection(fragment);
+      let id = setTimeout(() => {
+        if (fragment) this.scrollService.jumpToSection(fragment);
+        if (window.innerWidth <= 750) this.showMenu = false;
+        clearTimeout(id);
+      }, 10);
     });
-    let id = setTimeout(() => {
-      this.started = true;
-
-      clearTimeout(id);
-    }, 2000);
   }
-
-  jumpToSection(section: string | null) {
-    if (section) document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  // navigateTo(component: string) {
-  //   this.router.navigate(["/"], { fragment: component });
-  //   // this.scroller.scrollToAnchor(component);
-  // }
 
   translation = inject(TranslationService);
 
@@ -54,6 +45,10 @@ export class HeaderComponent implements OnInit {
       this.showMenu = false;
       this.bigScreen = false;
     }
+  }
+
+  closeMenu() {
+    if (window.innerWidth <= 750) this.showMenu = false;
   }
 
   toggleMenu() {

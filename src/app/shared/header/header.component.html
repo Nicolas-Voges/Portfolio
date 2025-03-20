@@ -1,7 +1,7 @@
 <main>
     @if (showMenu) {
         <div #menu class="links-box">
-            <div (change)="translation.changeLanguage()" class="translation-box">
+            <div (change)="translation.changeLanguage(); closeMenu();" class="translation-box">
                 @if (translation.de) {
                     <input type="checkbox" name="checkbox" id="translation" class="btn-translation">
                 } @else {

@@ -34,7 +34,7 @@
                     </label>
                     <input #policyCheck (change)="onCheckboxChange($event); getForm(contactForm);" id="policy-check" class="policy-check" type="checkbox" required>
                 </div>
-                <span>{{ "contact.form.check-box-first" | translate }}<a href="">{{ "contact.form.check-box-link" | translate }}</a>{{ "contact.form.check-box-end" | translate }}</span>
+                <span>{{ "contact.form.check-box-first" | translate }}<a routerLink='/{{ "footer.links.privacy-policy" | translate }}'>{{ "contact.form.check-box-link" | translate }}</a>{{ "contact.form.check-box-end" | translate }}</span>
             </div>
             @if (sendMessage) {
                 <button id="mail-feedback" disabled class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn-send" | translate }}</span></button>

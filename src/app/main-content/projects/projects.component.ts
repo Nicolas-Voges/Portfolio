@@ -17,12 +17,16 @@ export class ProjectsComponent {
     skills: string[];
     number: number;
     descriptionRef: string;
+    linkGit: string;
+    linkLive: string;
     displayCard: boolean;
   }[] = [{
     name: 'Join',
     skills: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
     number: 1,
     descriptionRef: 'join',
+    linkGit: 'https://github.com/Nicolas-Voges/join',
+    linkLive: '',
     displayCard: false
   },
   {
@@ -30,6 +34,8 @@ export class ProjectsComponent {
     skills: ['HTML', 'CSS', 'JavaScript'],
     number: 2,
     descriptionRef: 'game',
+    linkGit: 'https://github.com/Nicolas-Voges/el-pollo-loco',
+    linkLive: '',
     displayCard: false
   },
   {
@@ -37,6 +43,8 @@ export class ProjectsComponent {
     skills: ['Angular', 'Firebase', 'TypeScript'],
     number: 3,
     descriptionRef: 'bubble',
+    linkGit: '',
+    linkLive: '',
     displayCard: false
   }];
 

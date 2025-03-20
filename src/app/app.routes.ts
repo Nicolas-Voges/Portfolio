@@ -6,7 +6,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 export const routes: Routes = [
     { path: '', component: MainContentComponent },
     { path: 'privacy_policy', component: PrivacyPolicyComponent },
-    { path: 'datenschutzerklaerung', component: PrivacyPolicyComponent },
+    { path: 'datenschutz', component: PrivacyPolicyComponent },
     { path: 'legal_notice', component: LegalNoticeComponent },
     { path: 'impressum', component: LegalNoticeComponent }
 ];

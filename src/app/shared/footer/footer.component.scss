@@ -82,3 +82,11 @@ div {
         }
     }
 }
+
+.link {
+    color: $color-contrast;
+
+    &:hover {
+        color: $color-accent;
+    }
+}

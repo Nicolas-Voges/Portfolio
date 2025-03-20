@@ -84,6 +84,7 @@
     border: 1px solid $color-accent;
     border-radius: 32px;
     @include flex();
+    cursor: pointer;
  }
 
  .arrow-down {
@@ -105,10 +106,12 @@
     &:hover {
        filter: unset;
     }
+ }
 
-    &:hover~.social-green-dot {
-       opacity: 1;
-    }
+ .social-icon-link {
+   &:hover~.social-green-dot {
+      opacity: 1;
+   }
  }
 
  .green-dot {
