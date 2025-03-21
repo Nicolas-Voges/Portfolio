@@ -32,6 +32,8 @@ export class SliderComponent {
       this.activIndex = this.increaseIndex(this.activIndex, this.translation.sliderTexts);
       this.dotIndex = this.increaseIndex(this.dotIndex, this.translation.sliderTexts);
       this.turnSlidesLeft();
+      let text = this.translation.texts.slider.shift();
+      if (text != undefined) this.translation.texts.slider.push(text);
     }
   }
 
@@ -62,6 +64,8 @@ export class SliderComponent {
       this.activIndex = this.decreaseIndex(this.activIndex, this.translation.sliderTexts);
       this.dotIndex = this.decreaseIndex(this.dotIndex, this.translation.sliderTexts);
       this.turnSlidesRight();
+      let text = this.translation.texts.slider.pop();
+      if (text != undefined) this.translation.texts.slider.unshift(text);
     }
   }
 
