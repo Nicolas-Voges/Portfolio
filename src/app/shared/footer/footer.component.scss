@@ -28,6 +28,30 @@ div {
     @include flex($d: column, $a: flex-start, $g: 8px);
 }
 
+.green-dot {
+    width: 8px;
+    height: 8px;
+    @include img();
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -16px;
+    opacity: 0;
+    transition: all 0.125s ease-in-out;
+}
+
+.link {
+    color: $color-contrast;
+    
+    &:hover~.green-dot {
+        opacity: 1;
+    }
+
+    &:hover {
+        color: $color-accent;
+    }
+}
+
 @media (max-width: 900px) {
     main {
         gap: 32px;
@@ -56,9 +80,8 @@ div {
         &>.right {
 
             &>p,
-            a {
-                text-align: center;
-                width: 100%;
+            div {
+                align-self: center;
             }
         }
 
@@ -67,8 +90,7 @@ div {
 
             &>p,
             a {
-                text-align: center;
-                width: 100%;
+                align-self: center;
             }
 
             &>img {
@@ -78,15 +100,6 @@ div {
 
         &>.center {
             text-align: center;
-            width: 100%;
         }
-    }
-}
-
-.link {
-    color: $color-contrast;
-
-    &:hover {
-        color: $color-accent;
     }
 }

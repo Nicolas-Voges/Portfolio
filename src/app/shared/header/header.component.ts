@@ -62,6 +62,7 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.checkMenuStatus();
+    // window.scrollTo({ top: 9999, left: 0, behavior: "instant" }); // styling footer
   }
 
   @HostListener('document:click', ['$event'])

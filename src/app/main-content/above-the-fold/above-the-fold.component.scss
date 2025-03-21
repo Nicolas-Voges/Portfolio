@@ -3,6 +3,7 @@
  :host {
     background-image: $linear-gradient;
     height: 100vh;
+    min-height: 630px;
     width: 100%;
     @include flex();
     overflow-x: hidden;
@@ -13,6 +14,7 @@
     @include flex($d: column);
     text-align: center;
     padding: 0 $padding-main-sides;
+    min-height: 630px;
     height: 100vh;
  }
 
@@ -319,50 +321,8 @@
    }
  }
 
- @media (max-height: 360px) {
-   .text-tape {
-      display: none;
-   }
- }
-
- @media (max-height: 600px) and (min-width: 2000px) {
-   .text-tape {
-      display: none;
-   }
- }
-
- @media (max-height: 570px) and (min-width: 1300px) {
-   .text-tape {
-      display: none;
-   }
- }
-
- @media (max-height: 540px) and (min-width: 1200px) {
-   .text-tape {
-      display: none;
-   }
- }
-
- @media (max-height: 500px) and (min-width: 1000px) {
-   .text-tape {
-      display: none;
-   }
- }
-
- @media (max-height: 460px) and (min-width: 630px) {
-   .text-tape {
-      display: none;
-   }
- }
-
- @media (max-height: 410px) and (min-width: 550px) {
-   .text-tape {
-      display: none;
-   }
- }
-
- @media (max-height: 400px) and (min-width: 350px) {
-   .text-tape {
-      display: none;
+ @media (max-height: 600px) {
+   .decorator {
+      bottom: calc(-315px + 50%);
    }
  }
