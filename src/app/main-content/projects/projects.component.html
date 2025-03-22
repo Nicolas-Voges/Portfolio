@@ -1,4 +1,4 @@
-<main>
+<main class="aos-animation-parent">
     <div data-aos="fade-down" class="flex-between width-100">
         <div>
             <h4>{{ "projects.headline" | translate }}</h4>
@@ -41,9 +41,9 @@
             }
         </div>
         <section class="overlay" [ngClass]="{'display-none': !project.displayCard}">
-            <div class="project-card">
-                <div class="scroll-box position-relative">
-                    <div class="scroll-child">
+            <div class="project-card position-relative">
+                <div class="scroll-box">
+                    <div class="scroll-child position-relative">
                         <div class="project-card-left">
                             @if (project.number < 10) {
                                 <h1>0{{ project.number }}</h1>

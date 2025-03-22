@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
       this.lastScrollY = window.scrollY;
       this.hideHeader = true;
     }
-    if (window.scrollY <= 175) {
+    if (window.scrollY < 100) {
       this.highContrast = false;
     } else {
       this.highContrast = true;

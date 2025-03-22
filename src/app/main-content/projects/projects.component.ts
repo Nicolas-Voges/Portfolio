@@ -49,6 +49,7 @@ export class ProjectsComponent {
   }];
 
   openProjectCard(i: number) {
+    this.scrollToTopCard();
     this.projects[i].displayCard = true;
   }
 
@@ -64,7 +65,17 @@ export class ProjectsComponent {
       i++;
       this.openProjectCard(i);
     }
-    let scrollboxes = document.getElementsByClassName('scroll-child');
-    scrollboxes[0].scrollTo({ top: 0, left: 0, behavior: "instant" });
+    this.scrollToTopCard();
+  }
+
+  scrollToTopCard() {
+    let id = setTimeout(() => {
+      let boxes = document.getElementsByClassName('scroll-child');
+      for (let i = 0; i < boxes.length; i++) {
+        const element = boxes[i];
+        element.scrollIntoView({ behavior: "instant", block: "start" });
+      }
+      clearTimeout(id);
+    }, 5);
   }
 }
