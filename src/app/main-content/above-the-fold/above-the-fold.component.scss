@@ -3,7 +3,6 @@
  :host {
     background-image: $linear-gradient;
     height: 100vh;
-    min-height: 630px;
     width: 100%;
     @include flex();
     overflow-x: hidden;
@@ -14,7 +13,6 @@
     @include flex($d: column);
     text-align: center;
     padding: 0 $padding-main-sides;
-    min-height: 630px;
     height: 100vh;
  }
 
@@ -26,7 +24,7 @@
  .decorator {
     align-self: baseline;
     position: absolute;
-    bottom: calc(-50vh + 50%);
+    bottom: calc(-50% + 50%);
     @include flex($d: column, $a: center, $g: 24px)
  }
 
@@ -133,7 +131,7 @@
 
  .text-tape {
     position: absolute;
-    bottom: 020px;
+    bottom: 20px;
     transform: rotateZ(-3deg) translateY(-2.6205vw);
     z-index: 1;
     width: 105vw;
@@ -175,6 +173,26 @@
     max-width: 1980px;
  }
 
+ @media (max-width: 1980px) {
+   :host {
+      min-height: 580px;
+   }
+  
+   main {
+      min-height: 580px;
+   }
+ }
+
+ @media (max-width: 1200px) {
+   :host {
+      min-height: 540px;
+   }
+  
+   main {
+      min-height: 540px;
+   }
+ }
+
  @media (max-width: 900px) {
    .left-decorator-position {
       left: $padding-main-sides-900;
@@ -194,6 +212,14 @@
  }
 
  @media (max-width: 750px) {
+   :host {
+      min-height: 420px;
+   }
+  
+   main {
+      min-height: 420px;
+   }
+
    .left-decorator-position {
       left: $padding-main-sides-750;
    }
@@ -244,6 +270,14 @@
  }
 
  @media (max-width: 430px) {
+   :host {
+      min-height: 400px;
+   }
+  
+   main {
+      min-height: 400px;
+   }
+
    h1 {
       font-size: 56px;
    }
@@ -254,6 +288,14 @@
  }
 
  @media (max-width: 390px) {
+   :host {
+      min-height: 380px;
+   }
+  
+   main {
+      min-height: 380px;
+   }
+
    h1 {
       font-size: 48px;
    }
@@ -269,6 +311,14 @@
  }
 
  @media (max-width: 340px) {
+   :host {
+      min-height: 360px;
+   }
+  
+   main {
+      min-height: 360px;
+   }
+
    h1 {
       font-size: 44px;
    }
@@ -284,6 +334,14 @@
  }
 
  @media (min-width: 1980px) {
+   :host {
+      min-height: 630px;
+   }
+  
+   main {
+      min-height: 630px;
+   }
+
     .text-tape {
        transform: rotateZ(-3deg) translateY(calc(-1980px * 0.026205 * 1.2));
     }
@@ -292,10 +350,12 @@
  @media (min-width: 3000px) {
     :host {
        overflow: hidden;
+       min-height: 630px;
     }
 
     main{
       overflow: hidden;
+      min-height: 630px;
     }
 
     .text-tape {
@@ -318,11 +378,5 @@
  @media (max-height: 390px) {
    .decorator {
       display: none;
-   }
- }
-
- @media (max-height: 600px) {
-   .decorator {
-      bottom: calc(-315px + 50%);
    }
  }

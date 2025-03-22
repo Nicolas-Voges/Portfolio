@@ -110,28 +110,27 @@
      border-radius: 32px;
      @include flex($g: 88px);
      cursor: default;
-     overflow: hidden;
+     //  overflow: hidden;
  }
 
  .scroll-box {
-     overflow: auto;
+     overflow-y: auto;
      width: 100%;
      height: 100%;
      padding: 16px;
-     background-color: grey;
-     @include flex($g: 88px);
+     @include flex($g: 88px, $j: flex-start);
  }
 
  .scroll-child {
-    @include flex();
-    height: max-content;
+     @include flex($g: 24px);
+     height: max-content;
  }
 
  .project-card-right {
      @include flex($d: column, $a: flex-end, $j: space-between, $f: 1, $g: 32px);
      height: 100%;
-     width: 45%;
-     padding: 56px 0;
+     //  width: 45%;
+     padding-bottom: 56px;
 
      &>.btn-close {
          cursor: pointer;
@@ -148,6 +147,18 @@
      width: 100%;
      @include img();
      border-radius: 30px;
+ }
+
+ .link {
+     color: $color-contrast;
+
+     &:hover {
+         color: $color-accent;
+     }
+
+     &:hover>img {
+        transform: scale(1.14) translate(2px, -2px);
+     }
  }
 
  .btn-next {
@@ -220,6 +231,10 @@
      }
  }
 
+ .mobile {
+    display: none;
+ }
+
  @media (max-width: 1200px) {
      .img-box {
          display: none;
@@ -231,6 +246,14 @@
          margin: 0;
      }
 
+     .mobile {
+        display: unset;
+     }
+
+     .desktop {
+        display: none;
+     }
+
      .project-card {
          height: 90vh;
          width: 90vw;
@@ -238,19 +261,18 @@
      }
 
      .scroll-box {
-         @include flex($d: column-reverse, $g: 32px);
+         @include flex($d: column-reverse, $g: 32px, $j: flex-start);
      }
 
      .scroll-child {
-        @include flex($d: column-reverse);
-        margin-bottom: calc(10vh + 32px);
+         @include flex($d: column-reverse);
      }
 
-    //  .btn-next {
-    //      position: absolute;
-    //      bottom: 0;
-    //      right: 44px;
-    //  }
+     //  .btn-next {
+     //      position: absolute;
+     //      bottom: 0;
+     //      right: 44px;
+     //  }
 
      .btn-close {
          position: fixed;
@@ -260,7 +282,6 @@
 
      .project-card-left {
          width: 100%;
-         margin-bottom: calc(5vh + 94px);
          height: max-content;
      }
 
@@ -326,8 +347,8 @@
      }
 
      .scroll-box {
-        @include flex($d: column-reverse, $g: 16px);
-    }
+         @include flex($d: column-reverse, $g: 16px, $j: flex-start);
+     }
 
      .project-card-right {
          padding: 0;

@@ -64,5 +64,7 @@ export class ProjectsComponent {
       i++;
       this.openProjectCard(i);
     }
+    let scrollboxes = document.getElementsByClassName('scroll-child');
+    scrollboxes[0].scrollTo({ top: 0, left: 0, behavior: "instant" });
   }
 }
