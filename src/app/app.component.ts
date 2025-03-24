@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, OnInit } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   hideHeader = false;
   highContrast = false;
   scrollService = inject(ScrollService);
+  @ViewChild('mouseShadow') mouseShadow?: ElementRef;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
@@ -45,5 +46,13 @@ export class AppComponent implements OnInit {
     } else {
       this.highContrast = true;
     }
+  }
+
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    console.log(event.clientY + ' x');
+    // console.log(event.clientY + ' y');
+    // console.log(this.mouseShadow?.nativeElement);
+    this.mouseShadow?.nativeElement.setAttribute('style', `top: ${event.clientY}px; left: ${event.clientX}px`)
   }
 }

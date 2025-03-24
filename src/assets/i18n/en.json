@@ -83,7 +83,7 @@
                 "headline": "How can I help you?",
                 "placeholder": "Hey Nicolas, I am interested in...",
                 "err": "What do you need to develop?",
-                "title": "Allowed special characters: . , : ; _ % + * - ( ) / "
+                "title": "Allowed special characters: , . ! ? # : ; % & € - * + / "
             },
             "check-box-first": "I've read the",
             "check-box-link": " privacy policy ",

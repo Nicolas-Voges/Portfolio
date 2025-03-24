@@ -1,3 +1,5 @@
+@use './../styles.scss' as *;
+
 .transition {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
     position: fixed;
@@ -15,4 +17,15 @@
 
 .high-contrast {
     background-image: linear-gradient(black, rgba(0, 0, 0, 0.8));
+}
+
+.mouse-shadow {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at center, rgba($color-accent, 0.3), 10%, transparent 75px);
+    pointer-events: none;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    z-index: 0;
 }

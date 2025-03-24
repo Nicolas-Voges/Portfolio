@@ -83,7 +83,7 @@
                 "headline": "Wie kann ich Ihnen helfen?",
                 "placeholder": "Hey Nicolas, mein Anliegen ist...",
                 "err": "Min. 10 Zeichen.",
-                "title": "Erlaubte Sonderzeichen: . , : ; _ % + * - ( ) / "
+                "title": "Erlaubte Sonderzeichen: , . ! ? # : ; % & € - * + / "
             },
             "check-box-first": "Ich habe die",
             "check-box-link": " Datenschutzerklärung ",
