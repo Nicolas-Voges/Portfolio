@@ -50,9 +50,6 @@ export class AppComponent implements OnInit {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    console.log(event.clientY + ' x');
-    // console.log(event.clientY + ' y');
-    // console.log(this.mouseShadow?.nativeElement);
-    this.mouseShadow?.nativeElement.setAttribute('style', `top: ${event.clientY}px; left: ${event.clientX}px`)
+    this.mouseShadow?.nativeElement.setAttribute('style', `top: ${event.clientY}px; left: ${event.clientX}px`);
   }
 }
