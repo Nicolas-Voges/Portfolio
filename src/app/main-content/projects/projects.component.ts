@@ -26,7 +26,7 @@ export class ProjectsComponent {
     number: 1,
     descriptionRef: 'join',
     linkGit: 'https://github.com/Nicolas-Voges/join',
-    linkLive: '',
+    linkLive: 'https://nicolas-voges.de/dev/join/index.html',
     displayCard: false
   },
   {
@@ -35,7 +35,7 @@ export class ProjectsComponent {
     number: 2,
     descriptionRef: 'game',
     linkGit: 'https://github.com/Nicolas-Voges/el-pollo-loco',
-    linkLive: '',
+    linkLive: 'https://nicolas-voges.de/dev/epl/index.html',
     displayCard: false
   },
   {
@@ -43,8 +43,8 @@ export class ProjectsComponent {
     skills: ['Angular', 'Firebase', 'TypeScript'],
     number: 3,
     descriptionRef: 'bubble',
-    linkGit: '',
-    linkLive: '',
+    linkGit: 'https://nicolas-voges.de/dev/bubble/index.html',
+    linkLive: 'https://nicolas-voges.de/dev/bubble/index.html',
     displayCard: false
   }];
 

@@ -4,6 +4,7 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslationService } from '../../shared/translation.service';
 import { RouterLink } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -27,18 +28,37 @@ export class ContactComponent {
   @ViewChild('messageErr') messageErr?: ElementRef;
   @ViewChild('policyCheck') policyCheck?: ElementRef;
 
+  http = inject(HttpClient)
+  mailTest = false;
+
+  post = {
+    endPoint: 'https://nicolas-voges.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
   onSubmit(ngForm: NgForm) {
     this.removeErrorMessages();
-    if (ngForm.valid && ngForm.submitted) {
-      console.log('submit form with: ' + JSON.stringify(this.formData, null, 2));
-      console.log(this.formData);
-      this.formData = {
-        name: "",
-        email: "",
-        message: "",
-        terms: false
-      }
-      this.mailFeedback();
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.formData))
+        .subscribe({
+          next: (response) => {
+            this.mailFeedback();
+            ngForm.resetForm();
+            this.formData.terms = false;
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      ngForm.resetForm();
     } else {
       this.checkValidationErrors(ngForm);
     }
