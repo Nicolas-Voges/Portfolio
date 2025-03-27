@@ -38,7 +38,7 @@
             </div>
             @if (sendMessage) {
                 <button id="mail-feedback" disabled class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn-send" | translate }}</span></button>
-            } @else if (ngForm?.form?.valid) {
+            } @else if (ngForm?.form?.valid && formData.terms) {
                 <button #btnSend class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>
             } @else {
             <button disabled class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>

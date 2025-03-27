@@ -11,7 +11,7 @@
         },
         "text-tape": {
             "open-to-work": "Open to work",
-            "remote": "Also available for remote work",
+            "remote": "Available for remote work also",
             "dev": "Frontend Developer",
             "location": "Based in Wolfenbüttel",
             "next": "Aspiring Full Stack Developer"
@@ -28,12 +28,12 @@
     "skill-set": {
         "headline": "Technologies",
         "card-headline": "Skill Set",
-        "main-text": "I have already familiarized myself with several front-end technologies in group and solo projects. My daily required skills include JavaScript, HTML, SCSS, Typscript, Angular and Git.",
+        "main-text": "I have already familiarized myself with several front-end technologies in group and solo projects. My daily required skills include JavaScript, HTML, SCSS, TypeScript, Angular and Git.",
         "question-first": "You need",
         "question-second": " another Skill?",
         "main-text-second": "I am happy to learn new skills and familiarize myself with new technologies that you need.",
         "card-end": "Let´s talk!",
-        "speech-bubble": "I have a special interest in lerning"
+        "speech-bubble": "I have a special interest in learning"
     },
     "projects": {
         "headline": "Projects",
@@ -49,7 +49,7 @@
         "headline": "My Way",
         "start": {
             "headline": "In the beginning",
-            "text": "I started by recoding a Snake game. Instead of starting the next tutorial afterwards, I continued to develop this program on the side for almost a year. According to the motto: “Learn in depth, not in breadth.” I always had to find information by myself."
+            "text": "I started by reprogramming a Snake game. Instead of starting the next tutorial afterward, I continued to develop this program on the side for almost a year. According to the motto: “Learn in depth, not in breadth.” I always had to find information by myself."
         },
         "at-now": {
             "headline": "At now",
@@ -57,7 +57,7 @@
         },
         "future": {
             "headline": "Future",
-            "text": "There are more exciting projects on the agenda in the near future that require skills such as Phyton, Linux and Django. I look forward to expanding my skills and learning new ones in the future. Perhaps with you?"
+            "text": "There are more exciting projects on the agenda in the near future that require skills such as Python, Linux and Django. I look forward to expanding my skills and learning new ones in the future. Perhaps with you?"
         }
     },
     "contact": {
@@ -70,14 +70,14 @@
         "form": {
             "name": {
                 "headline": "What's your Name?",
-                "placeholder": "Your namen goes here",
-                "err": "Oops! it seems your name is missing",
+                "placeholder": "Your name goes here",
+                "err": "Oops! It seems your name is missing.",
                 "title": "Allowed special characters: . - /"
             },
             "email": {
                 "headline": "What's your email?",
                 "placeholder": "your.email@email.com",
-                "err": "Hoppla! your email is required"
+                "err": "Hoopla! Your email is required."
             },
             "message": {
                 "headline": "How can I help you?",
@@ -95,7 +95,7 @@
     "footer": {
         "dev": "Developer",
         "ger": "Germany",
-        "legal-notice": "Legal Notize",
+        "legal-notice": "Legal Notice",
         "privacy-policy": "Privacy Policy",
         "links": {
             "privacy-policy": "privacy_policy",
