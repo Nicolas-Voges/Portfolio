@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   highContrast = false;
   scrollService = inject(ScrollService);
   @ViewChild('mouseShadow') mouseShadow?: ElementRef;
+  mobileDivice = navigator.maxTouchPoints > 0 && /Android|RIM Tablet|iPhone|HUAWEI|huawei|phone/i.test(navigator.userAgent);
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 

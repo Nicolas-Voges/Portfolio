@@ -1,4 +1,6 @@
 <app-header class="transition" [ngClass]="{'hide': hideHeader, 'high-contrast': highContrast}"></app-header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
-<div #mouseShadow class="mouse-shadow"></div>
+@if (!mobileDivice) {
+    <div #mouseShadow class="mouse-shadow"></div>
+}
