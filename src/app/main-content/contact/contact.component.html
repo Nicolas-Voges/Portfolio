@@ -11,17 +11,17 @@
             <div class="btn-form">
                 <label for="name" class="btn-form-headline">{{ "contact.form.name.headline" | translate }}</label>
                 <p #nameErr class="error-message">{{ "contact.form.name.err" | translate }}</p>
-                <input (click)="getForm(contactForm)" title="{{ 'contact.form.name.title' | translate }}" autocomplete="off" [(ngModel)]="formData.name" name="name" id="name" type="text" [placeholder]="translation.formPlaceholder[0]" required pattern="[a-zA-ZöüäÖÄÜ\.\- ]{3,50}">
+                <input (keyup)="removeErrorMessages(); checkValidationErrors(contactForm); getForm(contactForm);" title="{{ 'contact.form.name.title' | translate }}" autocomplete="off" [(ngModel)]="formData.name" name="name" id="name" type="text" [placeholder]="translation.formPlaceholder[0]" required pattern="[a-zA-ZöüäÖÄÜ\.\- ]{3,50}">
             </div>
             <div class="btn-form">
                 <label for="email" class="btn-form-headline">{{ "contact.form.email.headline" | translate }}</label>
                 <p #emailErr class="error-message">{{ "contact.form.email.err" | translate }}</p>
-                <input (click)="getForm(contactForm)" autocomplete="off" [(ngModel)]="formData.email" name="email" id="email" type="text" [placeholder]="translation.formPlaceholder[1]" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <input (keyup)="removeErrorMessages(); checkValidationErrors(contactForm); getForm(contactForm);" autocomplete="off" [(ngModel)]="formData.email" name="email" id="email" type="text" [placeholder]="translation.formPlaceholder[1]" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             </div>
             <div class="btn-form">
                 <label for="message" class="btn-form-headline">{{ "contact.form.message.headline" | translate }}</label>
                 <p #messageErr class="error-message">{{ "contact.form.message.err" | translate }}</p>
-                <input (click)="getForm(contactForm)" title="{{ 'contact.form.message.title' | translate }}" autocomplete="off" [(ngModel)]="formData.message" name="message" id="message" type="text" [placeholder]="translation.formPlaceholder[2]" required pattern="[a-zA-Z0-9öäüß, !?#:;%&€\-.*+\/]{10,1000}">
+                <input (keyup)="removeErrorMessages(); checkValidationErrors(contactForm); getForm(contactForm);" title="{{ 'contact.form.message.title' | translate }}" autocomplete="off" [(ngModel)]="formData.message" name="message" id="message" type="text" [placeholder]="translation.formPlaceholder[2]" required pattern="[a-zA-Z0-9öäüß, !?#:;%&€\-.*+\/]{10,1000}">
             </div>
             <div class="checkbox-box">
                 <div class="position-relative">
@@ -38,7 +38,7 @@
             </div>
             @if (sendMessage) {
                 <button id="mail-feedback" disabled class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn-send" | translate }}</span></button>
-            } @else if (formData.terms) {
+            } @else if (ngForm?.form?.valid) {
                 <button #btnSend class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>
             } @else {
             <button disabled class="btn-primary"><span class="btn-primary-text">{{ "contact.form.btn" | translate }}</span></button>

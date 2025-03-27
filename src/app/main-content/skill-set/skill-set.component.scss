@@ -21,6 +21,7 @@ main {
 
 .skills-box {
     max-width: 632px;
+    min-width: 460px;
     width: 45%;
     display: grid;
     justify-content: center;
@@ -177,6 +178,7 @@ main {
 
     .skills-box {
         gap: 32px;
+        min-width: unset;
     }
 
     .skill-box {

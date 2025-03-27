@@ -272,8 +272,8 @@ h6 {
 
   &+label:after {
     width: 44px;
-    height: 29px;
-    border-radius: 15px;
+    height: 30px;
+    border-radius: 14px;
     background-color: $color-accent;
     pointer-events: all;
     content: "DE";
@@ -284,7 +284,7 @@ h6 {
     position: absolute;
     top: -1px;
     bottom: 0;
-    right: -1px;
+    right: -2px;
     z-index: 10;
   }
 

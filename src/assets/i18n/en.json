@@ -101,5 +101,12 @@
             "privacy-policy": "privacy_policy",
             "legal-notice": "legal_notice"
         }
+    },
+    "legal-notice": {
+        "h1": "Legal Notice",
+        "h2": "Contact",
+        "phone": "phone",
+        "email": "eMail",
+        "source": "source"
     }
 }

@@ -33,14 +33,21 @@ export class TranslationService {
     this.subscriptionForm = translate.stream(_(`contact.form.`)).subscribe((text: string) => { });
     this.subscriptionSlider = translate.stream(_(`slider.`)).subscribe((text: string) => { });
     this.subscriptionSliderHeadlines = translate.stream(_(`slider.`)).subscribe((text: string) => { });
+    this.checkChoosenLang();
     this.useLanguage();
+  }
+
+  checkChoosenLang() {
+    if (localStorage.getItem('de') === 'false') this.de = false;
   }
 
   changeLanguage() {
     if (this.de) {
       this.de = false;
+      localStorage.setItem('de', 'false');
     } else {
       this.de = true;
+      localStorage.setItem('de', 'true');
     }
     this.useLanguage();
   }
@@ -87,7 +94,7 @@ export class TranslationService {
         }
       });
     }
-    
+
     for (let i = 0; i < this.texts['slider'].length; i++) {
       this.subscriptionSlider = this.translate.stream(_(`slider.${this.texts['slider'][i]}.headline`)).subscribe((text: string) => {
         if (this.sliderHeadlines.length < this.texts['slider'].length) {

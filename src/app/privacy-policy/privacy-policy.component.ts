@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
-
+export class PrivacyPolicyComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    window.scroll({top: 0, left: 0, behavior: 'instant'})
+  }
 }

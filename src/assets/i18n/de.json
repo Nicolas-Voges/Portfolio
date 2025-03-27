@@ -11,7 +11,7 @@
         },
         "text-tape": {
             "open-to-work": "Offen für neue Herausforderungen",
-            "remote": "Auch für´s Home Office zu haben",
+            "remote": "Auch fürs Homeoffice zu haben",
             "dev": "Frontend Entwickler",
             "location": "In Wolfenbüttel zu Hause",
             "next": "Angehender Fullstack Entwickler"
@@ -21,14 +21,14 @@
         "headline": "Wer bin ich",
         "card-headline": "Über mich",
         "main-text": "Hallo, mit mir als Frontendentwickler gewinnt Ihr Unternehmen einen strukturierten, verantwortungsbewussten und teamfähigen Mitarbeiter. Zudem verfüge ich über analytisches Denken und eine gute Ausdrucksfähigkeit.",
-        "location": "Ich lebe in Wolfenbüttel, bin mobil und ebnso offen für Heimarbeit.",
+        "location": "Ich lebe in Wolfenbüttel, bin mobil und ebenso offen für Heimarbeit.",
         "mind": "Das Gefühl, ein Problem zu lösen ist es, das mich motiviert.",
         "hook": "Meinen neuen Aufgaben und Herausforderungen widme ich mich stets mit großer Motivation und vollem Einsatz."
     },
     "skill-set": {
         "headline": "Technologien",
         "card-headline": "Skills",
-        "main-text": "In Gruppen- sowie Solo- Projekten habe ich mich bereits in einige Frontendtechnologien einarbeiten können. Zu meinen täglich benötigten Skills zählen unter Anderem insbesonder JavaScript, HTML, SCSS, Typscript, Angular und Git.",
+        "main-text": "In Gruppen- sowie Solo-Projekten habe ich mich bereits in einige Frontendtechnologien einarbeiten können. Zu meinen täglich benötigten Skills zählen unter anderem, insbesondere JavaScript, HTML, SCSS, TypeScript, Angular und Git.",
         "question-first": "Sie brauchen",
         "question-second": " einen anderen Skill?",
         "main-text-second": "Gern erlerne ich neue Skills und arbeite mich in neue und bei Ihnen benötigte Technologien ein.",
@@ -49,15 +49,15 @@
         "headline": "Mein Weg",
         "start": {
             "headline": "Am Anfang",
-            "text": "Angefangen habe ich mit dem Nachcoden eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm fast ein Jahr nebenberuflich weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Informationen musste ich mir stets selbst suchen."
+            "text": "Angefangen habe ich mit dem Nachprogrammieren eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm fast ein Jahr nebenberuflich weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Informationen musste ich mir stets selbst suchen."
         },
         "at-now": {
             "headline": "Zur Zeit",
-            "text": "Bei der Developer Akademie habe ich gelernt, dass es genau dieser Skill ist, der einen in der Programmierung voran bringt. Zusätzlich lässt mich der rote Faden dieser Weiterbildung schnell in den jobrelevanten Skills wachsen, sowie die Codereviews erfahrener Entwickler."
+            "text": "Bei der Developer Akademie habe ich gelernt, dass es genau dieser Skill ist, der einen in der Programmierung voranbringt. Zusätzlich lässt mich der rote Faden dieser Weiterbildung schnell in den jobrelevanten Skills wachsen, sowie die Codereviews erfahrener Entwickler."
         },
         "future": {
             "headline": "In Zukunft",
-            "text": "In naher Zukunft stehen weitere spannende Projekte auf dem Plan, die Skills wie Phyton, Linux und Django erfordern. Ich freue mich künftig meine Skills weiter ausbauen zu können und auch neue zu erlernen. Vielleicht bei Ihnen?"
+            "text": "In naher Zukunft stehen weitere spannende Projekte auf dem Plan, die Skills wie Python, Linux und Django erfordern. Ich freue mich künftig meine Skills weiter ausbauen zu können und auch neue zu erlernen. Vielleicht bei Ihnen?"
         }
     },
     "contact": {
@@ -77,7 +77,7 @@
             "email": {
                 "headline": "Wie lautet Ihr E-Mail-Adresse?",
                 "placeholder": "Ihre.email@email.com",
-                "err": "Bitte geben Sie eine existierende E- Mail- Adresse ein"
+                "err": "Bitte geben Sie eine existierende E-Mail-Adresse ein"
             },
             "message": {
                 "headline": "Wie kann ich Ihnen helfen?",
@@ -89,7 +89,7 @@
             "check-box-link": " Datenschutzerklärung ",
             "check-box-end": " gelesen und stimme dem Prozess der Verarbeitung meiner Daten zu.",
             "btn": "Senden",
-            "btn-send": "E- Mail erfolgreich versendet"
+            "btn-send": "E-Mail erfolgreich versendet"
         }
     },
     "footer": {
@@ -101,5 +101,12 @@
             "privacy-policy": "datenschutz",
             "legal-notice": "impressum"
         }
+    },
+    "legal-notice": {
+        "h1": "Impressum",
+        "h2": "Kontakt",
+        "phone": "Telefon",
+        "email": "E-Mail",
+        "source": "Quelle"
     }
 }
