@@ -21,8 +21,8 @@ export class SkillSetComponent implements OnInit {
     'TypeScript',
     'Angular',
     'Firebase',
-    'GIT',
-    'Rest-Api',
+    'Git',
+    'REST-API',
     'Scrum',
     'Growth mindset'
   ];

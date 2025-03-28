@@ -75,7 +75,7 @@
                 "title": "Erlaubte Sonderzeichen: . - /"
             },
             "email": {
-                "headline": "Wie lautet Ihr E-Mail-Adresse?",
+                "headline": "Wie lautet Ihre E-Mail-Adresse?",
                 "placeholder": "Ihre.email@email.com",
                 "err": "Bitte geben Sie eine existierende E-Mail-Adresse ein"
             },

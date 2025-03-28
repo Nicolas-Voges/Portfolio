@@ -68,6 +68,8 @@ h2 {
         outline: unset;
         border: unset;
         width: 100%;
+        box-sizing: border-box;
+        padding: 4px;
     }
 }
 

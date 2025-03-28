@@ -20,7 +20,7 @@
     "about-me": {
         "headline": "Who I Am",
         "card-headline": "About me",
-        "main-text": "Hello, with me as a front-end developer, your company will gain a structured, responsible and team-oriented employee. I also have analytical thinking.",
+        "main-text": "Hello, with me as a front-end developer, your company will gain a structured, responsible and team-oriented employee. I also possess analytical thinking skills.",
         "location": "I live in Wolfenbüttel, am mobile and also open to working from home.",
         "mind": "The feeling of solving a problem is what motivates me.",
         "hook": "I always dedicate myself to my new tasks and challenges with great motivation and full commitment."
@@ -28,17 +28,17 @@
     "skill-set": {
         "headline": "Technologies",
         "card-headline": "Skill Set",
-        "main-text": "I have already familiarized myself with several front-end technologies in group and solo projects. My daily required skills include JavaScript, HTML, SCSS, TypeScript, Angular and Git.",
+        "main-text": "I have already familiarized myself with several front-end technologies in group and solo projects.  The skills that I require every day include JavaScript, HTML, SCSS, TypeScript, Angular and Git.",
         "question-first": "You need",
-        "question-second": " another Skill?",
-        "main-text-second": "I am happy to learn new skills and familiarize myself with new technologies that you need.",
+        "question-second": " another skill?",
+        "main-text-second": "I am happy to learn new skills and pick up new technologies that you need.",
         "card-end": "Let´s talk!",
         "speech-bubble": "I have a special interest in learning"
     },
     "projects": {
         "headline": "Projects",
         "second-headline": "Featured Projects",
-        "main-text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+        "main-text": "Explore a selection of my work here - interact with projects to see my skills in action.",
         "card-headline": "What is this project about?",
         "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
         "game": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
@@ -49,10 +49,10 @@
         "headline": "My Way",
         "start": {
             "headline": "In the beginning",
-            "text": "I started by reprogramming a Snake game. Instead of starting the next tutorial afterward, I continued to develop this program on the side for almost a year. According to the motto: “Learn in depth, not in breadth.” I always had to find information by myself."
+            "text": "I started by programming a Snake game. Instead of starting the next tutorial afterward, I continued to develop this program on the side for almost a year. According to the motto: “Learn in depth, not in breadth.” I always had to find information by myself."
         },
         "at-now": {
-            "headline": "At now",
+            "headline": "Now",
             "text": "At the Developer Akademie, I learned that it is precisely this skill that gets you ahead in programming. In addition, the common thread of this training course allows me to grow quickly in the job-relevant skills, as well as the code reviews of experienced developers."
         },
         "future": {
@@ -69,7 +69,7 @@
         "end-second": "Let´s talk!",
         "form": {
             "name": {
-                "headline": "What's your Name?",
+                "headline": "What's your name?",
                 "placeholder": "Your name goes here",
                 "err": "Oops! It seems your name is missing.",
                 "title": "Allowed special characters: . - /"
@@ -88,7 +88,7 @@
             "check-box-first": "I've read the",
             "check-box-link": " privacy policy ",
             "check-box-end": "and agree to the processing of my data as outlined.",
-            "btn": "Say Hello :)",
+            "btn": "Say hello :)",
             "btn-send": "Email sent successfully"
         }
     },
@@ -106,7 +106,7 @@
         "h1": "Legal Notice",
         "h2": "Contact",
         "phone": "phone",
-        "email": "eMail",
+        "email": "e-mail",
         "source": "source"
     }
 }
