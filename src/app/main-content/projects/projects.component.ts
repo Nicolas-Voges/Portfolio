@@ -46,6 +46,24 @@ export class ProjectsComponent {
     linkGit: 'https://github.com/Nicolas-Voges/DaBubble',
     linkLive: 'https://da-bubble.nicolas-voges.de/',
     displayCard: false
+  },
+  {
+    name: 'Coderr',
+    skills: ['Django', 'Python', 'SQLite', 'Linux'],
+    number: 4,
+    descriptionRef: 'coderr',
+    linkGit: 'https://github.com/Nicolas-Voges/Coderr',
+    linkLive: 'https://coderr.nicolas-voges.de/',
+    displayCard: false
+  },
+  {
+    name: 'Videoflix',
+    skills: ['Django', 'Python', 'Docker', 'PostgreSQL', 'Linux', 'Redis'],
+    number: 5,
+    descriptionRef: 'videoflix',
+    linkGit: 'https://github.com/Nicolas-Voges/Videoflix',
+    linkLive: '',
+    displayCard: false
   }];
 
   openProjectCard(i: number) {

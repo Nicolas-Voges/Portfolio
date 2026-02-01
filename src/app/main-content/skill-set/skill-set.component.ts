@@ -24,6 +24,13 @@ export class SkillSetComponent implements OnInit {
     'Git',
     'REST-API',
     'Scrum',
+    'Python',
+    'Django',
+    'SQLite',
+    'Linux',
+    'Docker',
+    'PostgreSQL',
+    'Redis',
     'Growth mindset'
   ];
 
