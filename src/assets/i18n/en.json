@@ -45,6 +45,7 @@
         "bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
         "button": "Next Project",
         "coderr": "Coderr is a social media platform for freelance developers and clients to share offers, place orders, receive feedback, and network. Users can create profiles, post projects, and rate other developers.",
+        "quizzly": "Quizzly is a quiz application that allows users to generate their own quizzes using GeminiAI. Users provide a link to a YouTube video, and the application automatically creates a quiz based on the content of the video.",
         "videoflix": "Videoflix is a streaming platform that allows users to watch movies and series online. With a user-friendly interface, categorical search, and a potentially extensive library, Videoflix offers a seamless entertainment experience."
     },
     "slider": {

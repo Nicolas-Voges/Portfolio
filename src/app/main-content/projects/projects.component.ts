@@ -57,9 +57,18 @@ export class ProjectsComponent {
     displayCard: false
   },
   {
+    name: 'Quizzly',
+    skills: ['Django', 'Python', 'SQLite'],
+    number: 5,
+    descriptionRef: 'quizzly',
+    linkGit: 'https://github.com/Nicolas-Voges/Quizzly',
+    linkLive: '',
+    displayCard: false
+  },
+  {
     name: 'Videoflix',
     skills: ['Django', 'Python', 'Docker', 'PostgreSQL', 'Linux', 'Redis'],
-    number: 5,
+    number: 6,
     descriptionRef: 'videoflix',
     linkGit: 'https://github.com/Nicolas-Voges/Videoflix',
     linkLive: '',
