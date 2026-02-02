@@ -12,15 +12,15 @@
         "text-tape": {
             "open-to-work": "Open to work",
             "remote": "Available for remote work also",
-            "dev": "Frontend Developer",
+            "dev": "Fullstack Developer",
             "location": "Based in Wolfenbüttel",
-            "next": "Aspiring Full Stack Developer"
+            "next": "Aspiring DevSecOps Engineer"
         }
     },
     "about-me": {
         "headline": "Who I Am",
         "card-headline": "About me",
-        "main-text": "Hello, with me as a front-end developer, your company will gain a structured, responsible and team-oriented employee. I also possess analytical thinking skills.",
+        "main-text": "With me as a fullstack developer, your company will gain a structured, responsible and team-oriented employee. I also possess analytical thinking skills.",
         "location": "I live in Wolfenbüttel, am mobile and also open to working from home.",
         "mind": "The feeling of solving a problem is what motivates me.",
         "hook": "I always dedicate myself to my new tasks and challenges with great motivation and full commitment."
@@ -28,7 +28,7 @@
     "skill-set": {
         "headline": "Technologies",
         "card-headline": "Skill Set",
-        "main-text": "I have already familiarized myself with several front-end technologies in group and solo projects.  The skills that I require every day include JavaScript, HTML, SCSS, TypeScript, Angular and Git.",
+        "main-text": "I have already familiarized myself with several frontend and backend technologies in group and solo projects.  The skills that I require every day include JavaScript, HTML, SCSS, TypeScript, Angular, Python, Django and Git.",
         "question-first": "You need",
         "question-second": " another skill?",
         "main-text-second": "I am happy to learn new skills and pick up new technologies that you need.",
@@ -43,21 +43,23 @@
         "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
         "game": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
         "bubble": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
-        "button": "Next Project"
+        "button": "Next Project",
+        "coderr": "Coderr is a social media platform for freelance developers and clients to share offers, place orders, receive feedback, and network. Users can create profiles, post projects, and rate other developers.",
+        "videoflix": "Videoflix is a streaming platform that allows users to watch movies and series online. With a user-friendly interface, categorical search, and a potentially extensive library, Videoflix offers a seamless entertainment experience."
     },
     "slider": {
         "headline": "My Way",
         "start": {
             "headline": "In the beginning",
-            "text": "I started by programming a Snake game. Instead of starting the next tutorial afterward, I continued to develop this program on the side for almost a year. According to the motto: “Learn in depth, not in breadth.” I always had to find information by myself."
+            "text": "From an early age, I was repeatedly drawn to programming. From Unity, Assembler, C++ and Arduino to web development. The latter fascinated me in particular, which prompted me to program my own snake game, which I further developed part-time for almost a year. This was the starting point for my passion as a developer and led me to the Developer Akademie."
         },
         "at-now": {
             "headline": "Now",
-            "text": "At the Developer Akademie, I learned that it is precisely this skill that gets you ahead in programming. In addition, the common thread of this training course allows me to grow quickly in the job-relevant skills, as well as the code reviews of experienced developers."
+            "text": "I have successfully completed the demanding training to become a fullstack developer at the Developer Akademie and am currently working on various own projects to further deepen my skills. I mainly rely on JavaScript, TypeScript, Angular, Python and Django."
         },
         "future": {
             "headline": "Future",
-            "text": "There are more exciting projects on the agenda in the near future that require skills such as Python, Linux and Django. I look forward to expanding my skills and learning new ones in the future. Perhaps with you?"
+            "text": "In future, I would like to work on exciting projects that further develop my skills as a developer. To build up my skills, I plan to further develop myself in the field of DevSecOps. I look forward to expanding my skills and learning new ones in the future. Perhaps with you?"
         }
     },
     "contact": {

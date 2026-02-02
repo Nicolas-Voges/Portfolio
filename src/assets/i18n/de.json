@@ -12,15 +12,15 @@
         "text-tape": {
             "open-to-work": "Offen für neue Herausforderungen",
             "remote": "Auch fürs Homeoffice zu haben",
-            "dev": "Frontend Entwickler",
+            "dev": "Fullstack Entwickler",
             "location": "In Wolfenbüttel zu Hause",
-            "next": "Angehender Fullstack Entwickler"
+            "next": "Angehender DevSecOps Entwickler"
         }
     },
     "about-me": {
         "headline": "Wer bin ich",
         "card-headline": "Über mich",
-        "main-text": "Hallo, mit mir als Frontendentwickler gewinnt Ihr Unternehmen einen strukturierten, verantwortungsbewussten und teamfähigen Mitarbeiter. Zudem verfüge ich über analytisches Denken und eine gute Ausdrucksfähigkeit.",
+        "main-text": "Mit mir als Fullstack Entwickler gewinnt Ihr Unternehmen einen strukturierten, verantwortungsbewussten und teamfähigen Mitarbeiter. Zudem verfüge ich über analytisches Denken und eine gute Ausdrucksfähigkeit.",
         "location": "Ich lebe in Wolfenbüttel, bin mobil und ebenso offen für Heimarbeit.",
         "mind": "Das Gefühl, ein Problem zu lösen ist es, das mich motiviert.",
         "hook": "Meinen neuen Aufgaben und Herausforderungen widme ich mich stets mit großer Motivation und vollem Einsatz."
@@ -28,7 +28,7 @@
     "skill-set": {
         "headline": "Technologien",
         "card-headline": "Skills",
-        "main-text": "In Gruppen- sowie Solo-Projekten habe ich mich bereits in einige Frontendtechnologien einarbeiten können. Zu meinen täglich benötigten Skills zählen unter anderem, insbesondere JavaScript, HTML, SCSS, TypeScript, Angular und Git.",
+        "main-text": "In Gruppen- sowie Solo-Projekten habe ich mich bereits in einige Frontend- und Backendtechnologien einarbeiten können. Zu meinen täglich benötigten Skills zählen unter anderem, insbesondere JavaScript, HTML, SCSS, TypeScript, Angular, Phyton, Django und Git.",
         "question-first": "Sie brauchen",
         "question-second": " einen anderen Skill?",
         "main-text-second": "Gern erlerne ich neue Skills und arbeite mich in neue und bei Ihnen benötigte Technologien ein.",
@@ -43,21 +43,23 @@
         "join": "Join ist ein Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
         "game": "El Pollo Loco ist ein Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
         "bubble": "Diese App ist ein Slack Clone. Sie revolutioniert die Teamkommunikation und -zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeitnachrichten und robuster Kanalorganisation.",
-        "button": "Nächstes Projekt"
+        "button": "Nächstes Projekt",
+        "coderr": "Coderr ist eine Social-Media-Plattform für selbstständige Entwickler und Kunden, um Angebote zu teilen, Bestellungen aufzugeben, Feedback zu erhalten und sich zu vernetzen. Benutzer können Profile erstellen, Projekte posten und anderen Entwickler bewerten.",
+        "videoflix": "Videoflix ist eine Streaming-Plattform, die es Benutzern ermöglicht, Filme und Serien online anzusehen. Mit einer benutzerfreundlichen Oberfläche, ketegorischen Suche und einer potenziell umfangreichen Bibliothek bietet Videoflix ein nahtloses Unterhaltungserlebnis."
     },
     "slider": {
         "headline": "Mein Weg",
         "start": {
             "headline": "Am Anfang",
-            "text": "Angefangen habe ich mit dem Nachprogrammieren eines Snake Spiels. Anstatt danach das nächste Tutorial zu starten, habe ich dieses Programm fast ein Jahr nebenberuflich weiterentwickelt. Nach dem Motto: \"Lerne in die Tiefe, nicht in die Breite\". Informationen musste ich mir stets selbst suchen."
+            "text": "Schon früh hat es mich immer wieder zum Programmieren hingezogen. Über Unity, Assembler, C++ und Arduino bis schließlich hin zur Webentwicklung. Letzteres hat mich besonders gefesselt, was mich dazu bewegte ein eigenes Snake-Spiel zu programmieren, welches ich nebenberuflich fast ein Jahr weiterentwickelt habe. Dies war der Startschuss für meine Leidenschaft als Entwickler und hat mich zur Developer Akademie geführt."
         },
         "at-now": {
             "headline": "Zur Zeit",
-            "text": "Bei der Developer Akademie habe ich gelernt, dass es genau dieser Skill ist, der einen in der Programmierung voranbringt. Zusätzlich lässt mich der rote Faden dieser Weiterbildung schnell in den jobrelevanten Skills wachsen, sowie die Codereviews erfahrener Entwickler."
+            "text": "Nun habe ich die anspruchsvolle Weiterbildung zum Fullstack Entwickler, bei der Developer Akademie, erfolgreich abgeschlossen und arbeite aktuell an verschiedenen eigenen Projekten, um meine Skills weiter zu vertiefen. Dabei setze ich vor allem auf JavaScript, TypeScript, Angular, Python und Django."
         },
         "future": {
             "headline": "In Zukunft",
-            "text": "In naher Zukunft stehen weitere spannende Projekte auf dem Plan, die Skills wie Python, Linux und Django erfordern. Ich freue mich künftig meine Skills weiter ausbauen zu können und auch neue zu erlernen. Vielleicht bei Ihnen?"
+            "text": "Künftig möchte ich weiterhin an spannenden Projekten arbeiten, die mich in meiner Entwicklung als Softwareentwickler vorantreiben. Um auf meinen Fähigkeiten aufzubauen, plane ich, mich im Bereich DevSecOps weiterzuentwickeln. Ich freue mich künftig meine Skills weiter auszubauen und auch neue zu erlernen. Vielleicht bei Ihnen?"
         }
     },
     "contact": {
