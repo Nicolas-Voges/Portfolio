@@ -18,7 +18,7 @@ export class AboutMeComponent {
     text: string;
   }[] = [{
     name: 'location',
-    text: 'Ich lebe in Wolfenbüttel, bin aber auch mobil und ebnso für Heimarbeit zu haben.'
+    text: 'Ich lebe in Wolfenbüttel, bin aber auch mobil und ebnso für Remote- Arbeit zu haben.'
   },
   {
     name: 'mind',
