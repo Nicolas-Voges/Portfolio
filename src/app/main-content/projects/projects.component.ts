@@ -57,11 +57,11 @@ export class ProjectsComponent {
     displayCard: false
   },
   {
-    name: 'Quizzly',
+    name: 'Quizly',
     skills: ['Django', 'Python', 'SQLite'],
     number: 5,
-    descriptionRef: 'quizzly',
-    linkGit: 'https://github.com/Nicolas-Voges/Quizzly',
+    descriptionRef: 'quizly',
+    linkGit: 'https://github.com/Nicolas-Voges/Quizly',
     linkLive: '',
     displayCard: false
   },
